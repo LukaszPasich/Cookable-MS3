@@ -8,21 +8,24 @@
         <!-- Username -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="username" name="username" type="text" class="validate">
+                <input id="username" name="username" type="text" minlength="5"
+                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                 <label for="username">Username</label>
             </div>
         </div>
         <!-- Password -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="password" name="password" type="password" class="validate">
+                <input id="password" name="password" type="password" minlength="5"
+                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                 <label for="password">Password</label>
             </div>
         </div>
         <!-- Confirm Password -->
         <div class="row">
             <div class="input-field col s12">
-                <input id="confirm_password" name="confirm_password" type="password" class="validate">
+                <input id="confirm_password" name="confirm_password" type="password" minlength="5"
+                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                 <label for="confirm_password">Confirm Password</label>
             </div>
         </div>
