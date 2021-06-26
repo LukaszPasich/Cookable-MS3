@@ -1,6 +1,59 @@
+/* Table of Contents */
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+/* Navbar */
+
 nav {
     box-shadow: none;
     background-color: #244846;
     width: 75%;
     margin: auto;
+    margin-top: 15px;
+}
+
+.logo {
+    height: 45px;
+    padding-left: 35px;
+    padding-bottom: 2px;
+    vertical-align: middle;
+}
+
+.button-signup{
+    border: 2px solid #fff;
+    border-radius: 10px;
+    line-height: 34px;
+    margin-top: 14px;
+    font-weight: 500;
+}
+
+.button-signup:hover {
+    background-color: #fff;
+    color: #244846;
+}
+
+.button-login {
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #244846;
+    border-radius: 10px;
+    line-height: 34px;
+    margin: 14px 35px 0px 15px;
+    font-weight: 500;
+}
+
+.button-login:hover {
+    border: 2px solid #fff;
+    background-color: #244846;
+    color: #fff
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1200px) {
+    nav {
+    width: 100%;
+    }
 }
