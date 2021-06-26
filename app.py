@@ -24,6 +24,7 @@ def get_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+# ---------- SIGN UP ----------
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -33,7 +34,7 @@ def signup():
 
         if existing_user:
             flash("Username already exists")
-            return redirect(url_for("register"))
+            return redirect(url_for("signup"))
 
         signup = {
             "username": request.form.get("username").lower(),
