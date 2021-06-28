@@ -40,6 +40,7 @@
 
 body {
     font-family: Montserrat, sans-serif;
+    font-size: 1rem;
 }
 
 h3 {
@@ -77,16 +78,10 @@ nav {
 button {
     padding: 0.5rem 1.5rem;
     border-radius: 10px;
-    background-color: #244846;
-    color: #fff;
     line-height: 3rem;
-    border: none;
     font-size: 1.125rem;
     font-weight: 500;
 }
-
-
-/* Sign up*/
 
 .button-signup{
     border: 2px solid #fff;
@@ -117,6 +112,8 @@ button {
     color: #fff
 }
 
+/* Sign up*/
+
 .input-space {
     background-color: #fff;
     border: 1px solid #999;
@@ -128,6 +125,7 @@ button {
 .input-title {
     font-size: 1.125rem;
     font-weight: 700;
+    margin-top: 0px;
 }
 
 .input-title span {
@@ -135,6 +133,29 @@ button {
     font-size: 1rem;
 }
 
+.green-button-full {
+    background-color: #244846;
+    color: #fff;
+    border: none;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.green-button-full:hover {
+    background-color: #4f807e;
+}
+
+.click-here {
+    font-weight: 600;
+    color: #4f807e;
+}
+
+.click-here:hover {
+    font-weight: 600;
+    color: #244846;
+}
 
 /* Flash messages */
 
