@@ -1,37 +1,40 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">Sign up</h3>
+<h3 class="center-align margin-top-fifty"><span>Sign up</span></h3>
 
-<div class="row">
+<div class="row background-grey-ddd margin-top-fifty padding-top-twentyfive padding-bottom-twentyfive">
     <form class="col s12 m6 offset-m3" method="POST" action="{{ url_for('signup') }}">
         <!-- Username -->
         <div class="row">
-            <div class="input-field col s12">
+            <p class="input-title">Username<span> (a-z, A-Z, 0-9 and max 15 characters)</span></p>
+            <div class="input-field col s12 input-space">
                 <input id="username" name="username" type="text" minlength="5"
                     maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                <label for="username">Username</label>
+                <label for="username">Enter username...</label>
             </div>
         </div>
         <!-- Password -->
         <div class="row">
-            <div class="input-field col s12">
+            <p class="input-title">Password<span> (a-z, A-Z, 0-9 and max 15 characters)</span></p>
+            <div class="input-field col s12 input-space">
                 <input id="password" name="password" type="password" minlength="5"
                     maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                <label for="password">Password</label>
+                <label for="password">Enter password...</label>
             </div>
         </div>
         <!-- Confirm Password -->
         <div class="row">
-            <div class="input-field col s12">
+            <p class="input-title">Confirm Password</p>
+            <div class="input-field col s12 input-space">
                 <input id="confirm_password" name="confirm_password" type="password" minlength="5"
                     maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                <label for="confirm_password">Confirm Password</label>
+                <label for="confirm_password">Confirm Password...</label>
             </div>
         </div>
         <!-- Sign Up Button -->
-        <div class="row">
-            <button type="submit" class="col s12">Sign up</button>
+        <div class="row margin-top-fifty">
+            <button type="submit" class="col s8 offset-s2">Sign up</button>
         </div>
     </form>
   </div>

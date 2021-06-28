@@ -13,6 +13,9 @@ $(document).ready(function () {
 // }
 
 
+// ----- CODE CREDIT -----
+// https://stackoverflow.com/questions/20437938/jquery-disappear-div-with-delay-then-appear-disappear-on-hover
+
 $(document).ready( function() {
     setTimeout(function () {
         $("#flash-message")
@@ -28,3 +31,5 @@ $(document).ready( function() {
     // });
 
 });
+
+// ----- END OF CODE CREDIT -----

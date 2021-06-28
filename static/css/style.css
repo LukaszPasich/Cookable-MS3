@@ -1,8 +1,61 @@
 /* Table of Contents */
 
+
+/* Utility Classes */
+
+.margin-top-twentfive {
+    margin-top: 25px;
+}
+
+.margin-top-fifty {
+    margin-top: 50px;
+}
+
+.margin-bottom-fifty {
+    margin-bottom: 50px;
+}
+
+.padding-top-twentyfive {
+    padding-top: 25px;
+}
+
+.padding-bottom-twentyfive {
+    padding-bottom: 25px;
+}
+
+.padding-top-fifty {
+    padding-top: 50px;
+}
+
+.padding-bottom-fifty {
+    padding-bottom: 50px;
+}
+
+.background-grey-ddd {
+    background-color: #ddd;
+}
+
+
+/* General */
+
 body {
     font-family: Montserrat, sans-serif;
 }
+
+h3 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    color: #244846;
+    border-bottom: 1px solid #999;
+    font-size: 2.5rem;
+    line-height: 0.2rem;
+}
+
+h3 span { 
+    background:#fff; 
+    padding: 0 25px; 
+}
+
 
 /* Navbar */
 
@@ -20,6 +73,18 @@ nav {
     padding-bottom: 2px;
     vertical-align: middle;
 }
+
+button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    background-color: #244846;
+    color: #fff;
+    line-height: 3rem;
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
 
 /* Sign up*/
 
@@ -52,6 +117,24 @@ nav {
     color: #fff
 }
 
+.input-space {
+    background-color: #fff;
+    border: 1px solid #999;
+    border-radius: 10px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.input-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.input-title span {
+    font-weight: 100;
+    font-size: 1rem;
+}
+
 
 /* Flash messages */
 
@@ -59,6 +142,7 @@ nav {
     background-color: #d0ccb4;
     margin: auto;
     margin-top: 10px;
+    margin-bottom: 0px;
     padding: 15px 0px;
     font-size: 1.2rem;
     font-weight: 500;
