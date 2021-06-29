@@ -11,6 +11,10 @@
     margin-top: 50px;
 }
 
+.margin-top-hundred {
+    margin-top: 100px;
+}
+
 .margin-bottom-fifty {
     margin-bottom: 50px;
 }
@@ -41,6 +45,25 @@
 body {
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
+}
+
+.landing-banner-desktop {
+    position: relative;
+    top: -80px;
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    color: #244846;
+    font-size: 3.25rem;
+    margin-top: 125px;
+    margin-bottom: 5px;
+}
+
+h1 + p {
+    font-size: 1.125rem;
 }
 
 h3 {

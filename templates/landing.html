@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block parallax %}
+    <div class="row parallax-container landing-banner-desktop">
+        <h1 class="col s10 offset-s1 l8 offset-l2">Your Online Recipe Manager</h1>
+        <p class="col s10 offset-s1 l8 offset-l2">Create your own cookbook and fill it with your favourite recipes.</p>
+        <button class="col s6 offset-s1 m3 offset-m1 l2 offset-l2">Sign up here</button>
+        <div class="parallax">
+            <img src="{{ url_for('static', filename='images/landing-banner-desktop.jpg') }}" alt="Cookable - Landing page banner">
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<h3 class="center-align margin-top-fifty"><span>Ready to get started?</span></h3>
+
+
+{% endblock %}

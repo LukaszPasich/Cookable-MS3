@@ -19,7 +19,7 @@
         <!-- Desktop Top Navbar -->
         <nav class="nav-extended">
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">
+                <a href="{{ url_for('landing') }}" class="brand-logo">
                     <img src="{{ url_for('static', filename='images/cookablelogo-(colour reversed).png') }}" class="logo" alt="Cookable logo">
                 </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
@@ -45,6 +45,11 @@
             <li><a href="{{ url_for('signup') }}">Sign up</a></li>
             <li><a href="#">Log in</a></li>
         </ul>
+
+        <!-- Parallax banner -->
+        {% block parallax %}
+        {% endblock %}
+
     </header>
 
     <section>

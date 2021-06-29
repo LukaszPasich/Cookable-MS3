@@ -33,3 +33,9 @@ $(document).ready( function() {
 });
 
 // ----- END OF CODE CREDIT -----
+
+
+// Landing page - banner - parallax effect
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });

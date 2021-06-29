@@ -17,14 +17,21 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# ---------- LANGING PAGE ----------
 @app.route("/")
+@app.route("/landing")
+def landing():
+    return render_template("landing.html")
+
+
+# ---------- ALL RECIPES PAGE ----------
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
-# ---------- SIGN UP ----------
+# ---------- SIGN UP PAGE ----------
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
