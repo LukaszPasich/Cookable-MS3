@@ -3,7 +3,7 @@
 
 /* Utility Classes */
 
-.margin-top-twentfive {
+.margin-top-twentyfive {
     margin-top: 25px;
 }
 
@@ -112,7 +112,81 @@ button {
     color: #fff
 }
 
-/* Sign up*/
+
+/* Flash messages */
+
+.flash-messages {
+    background-color: #d0ccb4;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    padding: 15px 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.logo-footer {
+    height: 50px;
+}
+
+h4 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    color: #fff;
+    border-bottom: 1px solid #aaa;
+    font-size: 1.75rem;
+    line-height: 0.2rem;
+}
+
+h4 span { 
+    background:#333; 
+    padding: 0 10px; 
+}
+
+.footer-par {
+    padding: 10px 20px;
+    font-weight: 300;
+}
+
+.footer-par a {
+    color: #84cfd6;
+    font-weight: 500;
+}
+
+.footer-par a:hover {
+    color: #fff;
+}
+
+.social {
+    border: 1px solid #aaa;
+    padding: 8px;
+    border-radius: 50%;
+    margin: 25px 9px;
+    font-size: 1.625rem;
+    text-align: center;
+    width: 42px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.developed-by {
+    border-top: 1px solid #aaa;
+    font-size: .75rem;
+    padding: 10px 0px 0px;
+    font-weight: 300;
+}
+
+
+/* Sign up */
 
 .input-space {
     background-color: #fff;
@@ -129,7 +203,7 @@ button {
 }
 
 .input-title span {
-    font-weight: 100;
+    font-weight: 300;
     font-size: 1rem;
 }
 
@@ -155,19 +229,6 @@ button {
 .click-here:hover {
     font-weight: 600;
     color: #244846;
-}
-
-/* Flash messages */
-
-.flash-messages {
-    background-color: #d0ccb4;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    padding: 15px 0px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-align: center;
 }
 
 
