@@ -204,6 +204,7 @@ h4 span {
     font-weight: 300;
 }
 
+
 /* Landing page */
 
 .landing-banner-desktop {
@@ -232,6 +233,18 @@ h4 span {
     -moz-transition: background-color 0.3s ease-in;
     -o-transition: background-color 0.3s ease-in;
     transition: background-color 0.3s ease-in;
+}
+
+.par-landing-ready {
+    line-height: 2rem;
+}
+
+.ad-full-desktop {
+    display: block;
+}
+
+.ad-full-mobile {
+    display: none;
 }
 
 
@@ -281,10 +294,57 @@ h4 span {
 }
 
 
+/* Override Materialize */
+
+.parallax-container~.parallax-container {
+    height: 375px;
+}
+
+.parallax-container~.parallax-container~.parallax-container {
+    height: 600px;
+}
+
 /* Media queries */
 
 @media screen and (max-width: 1200px) {
     nav {
     width: 100%;
+    }
+    nav {
+        margin-top: 0px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .logo {
+        padding-left: 0px;
+    }
+
+    .ad-full-desktop {
+        display: none;
+    }
+
+    .ad-full-mobile {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    h3 {
+        border-bottom: none;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
+        text-align: center;
+        margin-top: -50px;
+    }
+
+    h3 span {
+        padding: 0px 10px;
+    }
+
+    .par-landing-ready {
+        margin-top: -25px;
     }
 }
