@@ -50,7 +50,6 @@ body {
 .landing-banner-desktop {
     position: relative;
     top: -80px;
-    z-index: -1;
 }
 
 h1 {
@@ -64,6 +63,7 @@ h1 {
 
 h1 + p {
     font-size: 1.125rem;
+    font-weight: 500;
 }
 
 h3 {
@@ -80,6 +80,13 @@ h3 span {
     padding: 0 25px; 
 }
 
+button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    line-height: 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
 
 /* Navbar */
 
@@ -96,14 +103,6 @@ nav {
     padding-left: 35px;
     padding-bottom: 2px;
     vertical-align: middle;
-}
-
-button {
-    padding: 0.5rem 1.5rem;
-    border-radius: 10px;
-    line-height: 3rem;
-    font-size: 1.125rem;
-    font-weight: 500;
 }
 
 .button-signup{
@@ -208,8 +207,33 @@ h4 span {
     font-weight: 300;
 }
 
+/* Landing page */
 
-/* Sign up */
+.button-banner-signup {
+    border: 2px solid #244846;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,0.25);
+    color: #244846;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 3rem;
+    font-size: 1.125rem;
+}
+
+.button-banner-signup:active,
+.button-banner-signup:hover {
+    border: 2px solid #244846;
+    background-color: #244846;
+    color: #fff;
+    -webkit-transition: background-color 0.3s ease-in;
+    -moz-transition: background-color 0.3s ease-in;
+    -o-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+}
+
+
+/* Sign up page */
 
 .input-space {
     background-color: #fff;
