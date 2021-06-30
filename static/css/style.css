@@ -247,6 +247,13 @@ h4 span {
     display: none;
 }
 
+.white-panel {
+    background-color: #fff;
+    height: 100px;
+    box-shadow: 0px -10px 7px rgba(99, 99, 99, .25);
+    margin-top: -20px;
+}
+
 
 /* Sign up page */
 
@@ -304,6 +311,7 @@ h4 span {
     height: 600px;
 }
 
+
 /* Media queries */
 
 @media screen and (max-width: 1200px) {
@@ -347,4 +355,10 @@ h4 span {
     .par-landing-ready {
         margin-top: -25px;
     }
+}
+
+.testclass {
+    background-color: red;
+    height: 100px;
+    margin: 0px 10px;
 }
