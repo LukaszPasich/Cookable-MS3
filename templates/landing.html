@@ -11,7 +11,7 @@
     </div>
     <div class="section white">
         <div class="row container">
-            <h3 class="center-align margin-bottom-fifty"><span>Ready to get started?</span></h3>
+            <h3 class="center-align margin-bottom-fifty margin-top-minusfifty"><span>Ready to get started?</span></h3>
             <p class="col s12 m10 offset-m1 margin-bottom-fifty par-landing-ready">Cookable is your very own personal recipe organiser.
                 Save your favourite recipes from websites, magazines, recipe books or simply those from your head,
                 all in one place, accessible on all of your devices, anytime.
@@ -31,18 +31,35 @@
     </div>
 {% endblock %}
 
-{% block content %}
-    <div class="row container center-align">
-        <h3 class="margin-top-hundred margin-bottom-fifty"><span>Latest recipes</span></h3>
-
-        <div class="col s10 m5 l3 offset-l1 testclass">
-        </div>
-        <div class="col s10 offset-s1 m5 offset-m1 l3 testclass">
-        </div>
-        <div class="col s10 offset-s1 m5 offset-m1 l3 testclass">
-        </div>
-
-        <div class="col s12 white-panel">
-        </div>
+{% block overfooter %}
+    <div class="row container center-align margin-bottom-fifty">
+        <h3 class="margin-top-hundred"><span>Latest recipes</span></h3>
     </div>
+
+    <div class="container center-align">
+        
+        <div style="display: inline-block">
+            <a class="overlay-container" href="#">
+                <img class="overlayed-image" src="{{ url_for('static', filename='images/roast-chicken-latest.jpg') }}" alt="Latest recipes">
+                <div class="overlay"></div>
+            </a>
+        </div>
+
+        <div class="display-inline-block">
+            <a class="overlay-container" href="#">
+                <img class="overlayed-image" src="{{ url_for('static', filename='images/pasta-carbonara-latest.jpg') }}" alt="Latest recipes">
+                <div class="overlay"></div>
+            </a>
+        </div>
+
+        <div class="display-inline-block">
+            <a class="overlay-container" href="#">
+                <img class="overlayed-image" src="{{ url_for('static', filename='images/pumpkin-soup-latest.jpg') }}" alt="Latest recipes">
+                <div class="overlay"></div>
+            </a>
+        </div>
+        
+    </div>
+    
+    <div class="col s12 white-panel"></div>
 {% endblock %}
