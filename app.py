@@ -68,9 +68,9 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}!".format(request.form.get("username")))
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}!".format(request.form.get("username")))
             else:
                 # invalid password match
                 flash("Incorrect username and/or password")
@@ -83,6 +83,12 @@ def login():
 
     return render_template("login.html")
 
+
+# ---------- MY RECIPES PAGE ----------
+@app.route("/my_recipes")
+def my_recipes():
+    return render_template("myrecipes.html")
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align margin-top-fifty"><span>My Recipes</span></h3>
+
+<div class="row margin-top-fifty">
+    <div class="input-field col s10 offset-s1 col m8 offset-m2 input-space">
+        <input id="search" name="password" type="password" minlength="5" maxlength="15"
+            pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+        <label for="search">Find recipe by keyword...</label>
+    </div>
+</div>
+
+<div class="row margin-top-fifty">
+    <a href="{{ url_for('signup') }}" class="col s8 offset-s2 m4 offset-m4 button-banner-signup">Add new recipe</a>
+</div>
+
+<p class="center-align margin-top-hundred">To browse all recipes <a href="{{ url_for('get_recipes') }}" class="click-here">click here.</a></p>
+
+{% endblock %}
