@@ -356,6 +356,12 @@ h4 span {
 
 /* Media queries */
 
+@media screen and (max-width: 1430px) {
+    .image-latest-three {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     nav {
     width: 100%;
@@ -380,6 +386,11 @@ h4 span {
     }
 }
 
+@media screen and (max-width: 781px) {
+    .image-latest-two {
+        display: none;
+    }
+}
 
 @media screen and (max-width: 450px) {
     h3 {

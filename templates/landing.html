@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block parallax %}
+    <!-- Parallax effect images -->
     <div class="row parallax-container landing-banner-desktop">
         <h1 class="col s10 offset-s1 m7 offset-m1 l5 offset-l2">Your Online Recipe Manager</h1>
         <p class="col s10 offset-s1 l8 offset-l2">Create your own cookbook and fill it with your favourite recipes.</p>
@@ -32,34 +33,32 @@
 {% endblock %}
 
 {% block overfooter %}
+    <!-- Latest recipes -->
     <div class="row container center-align margin-bottom-fifty">
         <h3 class="margin-top-hundred"><span>Latest recipes</span></h3>
     </div>
 
-    <div class="container center-align">
-        
+    <div class="container center-align"> 
         <div style="display: inline-block">
-            <a class="overlay-container" href="#">
+            <a class="overlay-container" href="{{ url_for('get_recipes') }}">
                 <img class="overlayed-image" src="{{ url_for('static', filename='images/roast-chicken-latest.jpg') }}" alt="Latest recipes">
                 <div class="overlay"></div>
             </a>
         </div>
 
-        <div class="display-inline-block">
-            <a class="overlay-container" href="#">
+        <div class="display-inline-block image-latest-two">
+            <a class="overlay-container" href="{{ url_for('get_recipes') }}">
                 <img class="overlayed-image" src="{{ url_for('static', filename='images/pasta-carbonara-latest.jpg') }}" alt="Latest recipes">
                 <div class="overlay"></div>
             </a>
         </div>
 
-        <div class="display-inline-block">
-            <a class="overlay-container" href="#">
+        <div class="display-inline-block image-latest-three">
+            <a class="overlay-container" href="{{ url_for('get_recipes') }}">
                 <img class="overlayed-image" src="{{ url_for('static', filename='images/pumpkin-soup-latest.jpg') }}" alt="Latest recipes">
                 <div class="overlay"></div>
             </a>
-        </div>
-        
+        </div> 
     </div>
-    
     <div class="col s12 white-panel"></div>
 {% endblock %}

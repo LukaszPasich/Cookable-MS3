@@ -17,7 +17,7 @@ app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# ---------- LANGING PAGE ----------
+# ---------- LANDING PAGE ----------
 @app.route("/")
 @app.route("/landing")
 def landing():
