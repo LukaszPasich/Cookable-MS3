@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align margin-top-fifty"><span>Log in</span></h3>
+
+<div class="row background-grey-ddd margin-top-fifty padding-top-twentyfive padding-bottom-twentyfive">
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
+        <!-- Username -->
+        <div class="row">
+            <p class="input-title col s10 offset-s1">Username</p>
+            <div class="input-field col s10 offset-s1 input-space">
+                <input id="username" name="username" type="text" minlength="5"
+                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                <label for="username">Enter username...</label>
+            </div>
+        </div>
+        <!-- Password -->
+        <div class="row">
+            <p class="input-title col s10 offset-s1">Password</p>
+            <div class="input-field col s10 offset-s1 input-space">
+                <input id="password" name="password" type="password" minlength="5"
+                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                <label for="password">Enter password...</label>
+            </div>
+        </div>
+        <!-- Sign Up Button -->
+        <div class="row margin-top-fifty">
+            <button type="submit" class="col s6 offset-s3 green-button-full">Log in</button>
+        </div>
+    </form>
+  </div>
+  <p class="center-align">Don't have an account? <a href="{{ url_for('signup') }}" class="click-here">Sign up here.</a></p>
+
+{% endblock %}
