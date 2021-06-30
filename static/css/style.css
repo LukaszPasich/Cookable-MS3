@@ -346,11 +346,11 @@ h4 span {
 /* Override Materialize */
 
 .parallax-container~.parallax-container {
-    height: 375px;
+    height: 450px;
 }
 
 .parallax-container~.parallax-container~.parallax-container {
-    height: 600px;
+    height: 725px;
 }
 
 
