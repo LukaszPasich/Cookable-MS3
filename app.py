@@ -24,14 +24,14 @@ def landing():
     return render_template("landing.html")
 
 
-# ---------- ALL RECIPES PAGE ----------
+# ---------- ALL RECIPES ----------
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
-# ---------- SIGN UP PAGE ----------
+# ---------- SIGN UP ----------
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     if request.method == "POST":
@@ -58,7 +58,7 @@ def signup():
     return render_template("signup.html")
 
 
-# ---------- LOG IN PAGE ----------
+# ---------- LOG IN ----------
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -87,13 +87,26 @@ def login():
     return render_template("login.html")
 
 
-# ---------- MY RECIPES PAGE ----------
+# ---------- MY RECIPES ----------
 @app.route("/my_recipes/<username>", methods=["GET", "POST"])
 def my_recipes(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-    return render_template("myrecipes.html", username=username)
+
+    if session["user"]:
+        return render_template("myrecipes.html", username=username)
+    
+    return redirect(url_for("login"))
+
+
+# ---------- LOGOUT ----------
+@app.route("/logout")
+def logout():
+    # remove user from session cookies
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
