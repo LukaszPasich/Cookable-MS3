@@ -297,6 +297,84 @@ h4 span {
 /* ----- END OF CODE CREDIT ----- */
 
 
+/* Recipes page */
+
+.flex-container {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.flex-container > div {
+    margin: 0px 3px;
+    position: relative;
+  }
+
+.flex-image {
+    width: 310px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.recipes-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 310px;
+    height: 350px;
+    transition: .5s ease;
+    opacity:0;
+}
+
+.recipes-overlay-container:hover .recipes-overlay {
+    opacity: 1;
+}
+
+.recipes-title {
+    position: absolute; 
+    bottom: 5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    width: 310px;
+    height: 60px;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 300;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+/* .recipes-overlay-container {
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+}
+
+.recipes-overlayed-image {
+    width: 350;
+    height: 100%;
+    object-fit: fill;
+    margin: auto;
+    padding: 0px;
+}
+
+.recipes-overlay {
+    position: absolute; 
+    top: 0; 
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    transition: .5s ease;
+    opacity:0;
+} */
+
+
 /* Sign up page */
 
 .input-space {
