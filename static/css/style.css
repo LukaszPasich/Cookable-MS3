@@ -11,6 +11,10 @@
     margin-top: 50px;
 }
 
+.margin-top-seventyfive {
+    margin-top: 75px;
+}
+
 .margin-top-hundred {
     margin-top: 100px;
 }
@@ -349,30 +353,13 @@ h4 span {
     text-overflow:ellipsis;
 }
 
-/* .recipes-overlay-container {
-    position: relative;
-    display: inline-block;
-    margin: 0px;
-    padding: 0px;
-}
+/* Add recipe page */
 
-.recipes-overlayed-image {
-    width: 350;
-    height: 100%;
-    object-fit: fill;
-    margin: auto;
-    padding: 0px;
+.add-recipe-label {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #000;
 }
-
-.recipes-overlay {
-    position: absolute; 
-    top: 0; 
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
-    opacity:0;
-} */
 
 
 /* Sign up page */
