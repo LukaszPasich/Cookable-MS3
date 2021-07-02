@@ -1,4 +1,4 @@
-// Mobile navbar
+// Materialize mobile navbar
 $(document).ready(function () {
     $('.sidenav').sidenav({edge: "right"});
 });
@@ -35,7 +35,13 @@ $(document).ready( function() {
 // ----- END OF CODE CREDIT -----
 
 
-// Landing page - banner - parallax effect
+// Landing page - banner - Materialize parallax effect
 $(document).ready(function(){
     $('.parallax').parallax();
+  });
+
+
+// Materialize select field
+  $(document).ready(function(){
+    $('select').formSelect();
   });
