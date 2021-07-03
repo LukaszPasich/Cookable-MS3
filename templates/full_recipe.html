@@ -1,20 +1,37 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>Base Template extension</h2>
-
     {% for fullrecipe in fullrecipes %}
-        {{ fullrecipe.category_name }}<br>
-        {{ fullrecipe.recipe_name }}<br>
-        {{ fullrecipe.recipe_description }}<br>
-        {{ fullrecipe.serves }}<br>
-        {{ fullrecipe.cooks_in }}<br>
-        {{ fullrecipe.ingredients }}<br>
-        {{ fullrecipe.method }}<br>
-        {{ fullrecipe.vegetarian }}<br>
-        {{ fullrecipe.vegan }}<br>
-        {{ fullrecipe.gluten_free }}<br>
-        {{ fullrecipe.image }}<br>
+
+        <div class="card-panel">
+            <!-- Recipe name -->
+            <div class="row">
+                <h2 class="col s12 margin-bottom-minusten">{{ fullrecipe.recipe_name }}</h2>
+            </div>
+
+            <!-- Recipe descriptions -->
+            <div class="row">
+                <div class="col s12 full-recipe-descriptions">
+                    <div class="display-inline-block"><strong>Category: </strong> {{ fullrecipe.category_name }}</div>
+                    <div class="display-inline-block"><strong>Cooking Time: </strong>{{ fullrecipe.cooks_in }} mins.</div>
+                    <div class="display-inline-block"><strong>Serves: </strong>{{ fullrecipe.serves }}</div>
+                </div>
+            </div>
+
+            <!-- Recipe image / ingredients / method -->
+            <div class="row">
+                <img class="col s12 m8" src="{{ fullrecipe.image }}" alt="Recipe">
+                <div class="col s12 m4 margin-top-twentyfive">
+                    <strong>Ingredients: </strong>
+                    <p>{{ fullrecipe.ingredients }}</p>
+                </div>
+                <div class="col s12 margin-top-twentyfive full-recipe-method">
+                    <strong class="strong-method">Method: </strong>
+                    <p>{{ fullrecipe.method }}</p>
+                </div>
+            </div>
+        </div>
+
     {% endfor %}
 
 {% endblock %}

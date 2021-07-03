@@ -27,6 +27,10 @@
     margin-top: -50px;
 }
 
+.margin-bottom-minusten {
+    margin-bottom: -10px;
+}
+
 .margin-bottom-twentyfive {
     margin-bottom: 25px;
 }
@@ -78,6 +82,13 @@ h1 {
 h1 + p {
     font-size: 1.125rem;
     font-weight: 500;
+}
+
+h2 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    color: #244846;
+    font-size: 2.375rem;
 }
 
 h3 {
@@ -360,6 +371,38 @@ h4 span {
     overflow: hidden;
     text-overflow:ellipsis;
 }
+
+
+/* Full recipe page */
+div strong {
+    font-weight: 600;
+}
+
+.full-recipe-descriptions,
+.full-recipe-method {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    line-height: 1.625rem;
+}
+
+.full-recipe-descriptions {
+    padding: 5px;
+    line-height: 2rem;
+}
+
+.full-recipe-descriptions div {
+    padding: 5px 10px;
+}
+
+.strong-method {
+    line-height: 2.5rem;
+}
+
+.full-recipe-method p {
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+}
+
 
 /* Add recipe page */
 
