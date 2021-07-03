@@ -95,6 +95,8 @@ def my_recipes(username):
             {"username": session["user"]})["username"]
     myrecipes = mongo.db.recipes.find({"created_by": session["user"]})
 
+    # myrecipeslist = list(myrecipes)  TO TEST ADD myrecipeslist=myrecipeslist
+
     if session["user"]:
         return render_template(
                 "myrecipes.html", username=username, myrecipes=myrecipes)
@@ -134,6 +136,15 @@ def add_recipe():
         return redirect(url_for("my_recipes", username=username))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
+
+
+# ---------- FULL RECIPE ----------
+@app.route("/full_recipe/<recipe_id>")
+def full_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
+    return render_template("full_recipe.html",
+                           recipe=recipe, fullrecipes=fullrecipes)
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@
 <div class="flex-container margin-top-fifty">
 {% for recipe in recipes %}
     <div>
-        <a class="recipes-overlay-container" href="{{ url_for('get_recipes') }}">
+        <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
             <img class="flex-image" src="{{ recipe.image }}" alt="Recipe">
             <!-- <img class="flex-image" src="{{ url_for('static', filename='images/roast-chicken.jpg') }}" alt="Recipe"> -->
             <div class="recipes-overlay"></div>

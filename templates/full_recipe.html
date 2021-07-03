@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>Base Template extension</h2>
+
+    {% for fullrecipe in fullrecipes %}
+        {{ fullrecipe.category_name }}<br>
+        {{ fullrecipe.recipe_name }}<br>
+        {{ fullrecipe.recipe_description }}<br>
+        {{ fullrecipe.serves }}<br>
+        {{ fullrecipe.cooks_in }}<br>
+        {{ fullrecipe.ingredients }}<br>
+        {{ fullrecipe.method }}<br>
+        {{ fullrecipe.vegetarian }}<br>
+        {{ fullrecipe.vegan }}<br>
+        {{ fullrecipe.gluten_free }}<br>
+        {{ fullrecipe.image }}<br>
+    {% endfor %}
+
+{% endblock %}
