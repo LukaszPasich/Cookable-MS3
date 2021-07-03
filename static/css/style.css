@@ -425,6 +425,20 @@ h4 span {
     background-color: #4f807e;
 }
 
+.grey-button-full {
+    background-color: #888;
+    color: #fff;
+    border: none;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+}
+
+.grey-button-full:hover {
+    background-color: #aaa;
+}
+
 .click-here {
     font-weight: 600;
     color: #4f807e;
