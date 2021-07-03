@@ -1,16 +1,46 @@
-// Materialize mobile navbar
+// Materialize initialization
+
 $(document).ready(function () {
+
+    // Materialize mobile navbar
     $('.sidenav').sidenav({edge: "right"});
+
+    // Materialize parallax effect
+    $('.parallax').parallax();
+
+    // Materialize select field
+    $('select').formSelect();
+
+    // Validate Materialize select
+    validateMaterializeSelect();
+    function validateMaterializeSelect() {
+        let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
+        let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+        if ($("select.validate").prop("required")) {
+            $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
+        }
+        $(".select-wrapper input.select-dropdown").on("focusin", function () {
+            $(this).parent(".select-wrapper").on("change", function () {
+                if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
+                    $(this).children("input").css(classValid);
+                }
+            });
+        }).on("click", function () {
+            if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
+                $(this).parent(".select-wrapper").children("input").css(classValid);
+            } else {
+                $(".select-wrapper input.select-dropdown").on("focusout", function () {
+                    if ($(this).parent(".select-wrapper").children("select").prop("required")) {
+                        if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
+                            $(this).parent(".select-wrapper").children("input").css(classInvalid);
+                        }
+                    }
+                });
+            }
+        });
+    }
+
 });
-
-
-// // Close Flash messages
-// $("#close-message").on("click", closeFlash);
-
-// function closeFlash(){
-//     $("#flash-message").css("display", "none");
-//     return false;
-// }
 
 
 // ----- CODE CREDIT -----
@@ -21,27 +51,8 @@ $(document).ready( function() {
         $("#flash-message")
             .animate({
                 'opacity': 0
-            }, 750); //you can set a speed just like fadeOut() or fadeIn()
+            }, 750);
     },5000);
-
-    // $("#div").hover(function(){
-    //     $("#div").css("opacity","1");
-    // },function(){
-    //     $("#div").css("opacity","0");
-    // });
-
 });
 
 // ----- END OF CODE CREDIT -----
-
-
-// Landing page - banner - Materialize parallax effect
-$(document).ready(function(){
-    $('.parallax').parallax();
-  });
-
-
-// Materialize select field
-  $(document).ready(function(){
-    $('select').formSelect();
-  });
