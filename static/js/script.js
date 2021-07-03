@@ -11,6 +11,9 @@ $(document).ready(function () {
     // Materialize select field
     $('select').formSelect();
 
+    // ----- CODE CREDIT -----
+    // Code Institute Tutorial (Backend Development | Mini Project | Adding a task - Writing to the Database | Materialize Form Validation)
+
     // Validate Materialize select
     validateMaterializeSelect();
     function validateMaterializeSelect() {
