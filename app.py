@@ -24,7 +24,7 @@ def landing():
     return render_template("landing.html")
 
 
-# ---------- ALL RECIPES ----------
+# ---------- ALL RECIPES C(R)UD ----------
 @app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
@@ -155,11 +155,11 @@ def full_recipe(recipe_id):
     fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
 
     # ingredients = mongo.db.users.find_one(
-    #     {request.form.get("ingredients").splitlines()})
+    #     {request.form.get("ingredients").split("\r\n")})
 
     return render_template("full_recipe.html",
                            recipe=recipe, fullrecipes=fullrecipes)
-                           
+
     # ingredients=ingredients)
 
 

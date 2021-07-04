@@ -3,21 +3,22 @@
 
 <h3 class="center-align margin-top-fifty"><span>Edit Recipe</span></h3>
 
-<!-- CODE CREDIT - Materialize Input Fields (but significantly customised) -->
-<!-- https://materializecss.com/text-inputs.html -->
-
 <!-- Form -->
-<div class="row margin-top-seventyfive">
-    <form class="col s12 m10 offset-m1 l8 offset-l2" method="POST" action="{{ url_for('add_recipe') }}">
+<div class="row margin-top-fifty card-panel">
+    <form class="col s12 m10 offset-m1 l8 offset-l2 margin-top-fifty" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
 
          <!-- Recipe category -->
          <div class="row">
             <label class="add-recipe-label" for="category_name"><i class="fas fa-folder-open add-recipe-icon"></i> Recipe Category:</label>
             <div class="input-field col s12">
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected></i> Choose Category</option>
+                    <option value="" disabled></i> Choose Category</option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                 </select>
             </div>
@@ -27,8 +28,8 @@
         <div class="row">
             <label class="add-recipe-label" for="recipe_name">Recipe Name:</label>
             <div class="input-field col s12">
-                <input placeholder="(max 40 characters)" id="recipe_name" name="recipe_name"type="text"
-                    maxlength="40" class="validate" required>
+                <input placeholder="(max 40 characters)" id="recipe_name" name="recipe_name" type="text"
+                    maxlength="40" class="validate" value="{{ recipe.recipe_name }}" required>
             </div>
         </div>
 
@@ -38,14 +39,14 @@
                 <label class="add-recipe-label" for="serves">Serves:</label><br>
                 <div class="input-field col s12">
                     <input placeholder="(number of servings)" id="serves" name="serves" type="text"
-                        pattern="[0-9]{1,2}$" class="validate" required>
+                        pattern="[0-9]{1,2}$" class="validate" value="{{ recipe.serves }}" required>
                 </div>
             </div>
             <div class="col s6">
                 <label class="add-recipe-label" for="cooks_in">Cooking Time:</label><br>
                 <div class="input-field col s12">
                     <input placeholder="(minutes)" id="cooks_in" name="cooks_in" type="text"
-                        pattern="[0-9]{1,4}$" class="validate" required>
+                        pattern="[0-9]{1,4}$" class="validate" value="{{ recipe.cooks_in }}" required>
                 </div>
             </div>
         </div>
@@ -54,8 +55,9 @@
         <div class="row">
             <label class="add-recipe-label" for="ingredients">Ingredients:</label>
             <div class="input-field col s12">
-                <input placeholder="(add each ingredient on a new line)" id="ingredients" name="ingredients"
-                    type="text" class="validate" required>
+                <textarea placeholder="(add each ingredient on a new line)" id="ingredients" name="ingredients" class="materialize-textarea validate" required>
+                    {{- recipe.ingredients -}}
+                </textarea>
             </div>
         </div>
 
@@ -63,8 +65,9 @@
         <div class="row">
             <label class="add-recipe-label" for="method">Method:</label>
             <div class="input-field col s12">
-                <input placeholder="(add each step on a new line)" id="method" name="method"
-                    type="text" class="validate" required>
+                <textarea placeholder="(add each step on a new line)" id="ingredients" name="ingredients" class="materialize-textarea validate" required>
+                    {{- recipe.method -}}
+                </textarea>
             </div>
         </div>
 
@@ -72,7 +75,7 @@
         <div class="row">
             <label class="add-recipe-label" for="image">Image:</label>
             <div class="input-field col s12">
-                <input placeholder="(image URL)" id="image" name="image" type="text" class="validate" required>
+                <input placeholder="(image URL)" id="image" name="image" type="text" class="validate" value="{{ recipe.image }}" required>
             </div>
             <div class="div col s12">
                 <p>You can find licence free images on any of these websites:</p>
@@ -91,9 +94,9 @@
         </div>
 
         <!-- Submit button -->
-        <div class="row margin-top-seventyfive center-align">
+        <div class="row margin-top-fifty margin-top-fifty center-align">
             <button type="submit" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 green-button-full">Save</button>
-            <button type="submit" class="col s5 m4 l3 grey-button-full">Cancel</button>
+            <a href="{{ url_for('get_recipes') }}" class="col s5 m4 l3 grey-button-full">Cancel</a>
         </div>
 
     </form>

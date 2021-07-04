@@ -17,7 +17,7 @@
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected></i> Choose Category</option>
                         {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                 </select>
             </div>
@@ -62,8 +62,7 @@
         <div class="row">
             <label class="add-recipe-label" for="method">Method:</label>
             <div class="input-field col s12">
-                <input placeholder="(add each step on a new line)" id="method" name="method"
-                    type="text" class="validate" required>
+                <textarea placeholder="(add each step on a new line)" id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
             </div>
         </div>
 
@@ -90,7 +89,7 @@
         </div>
 
         <!-- Submit button -->
-        <div class="row margin-top-seventyfive center-align">
+        <div class="row margin-top-fifty margin-bottom-fifty center-align">
             <button type="submit" class="col s6 offset-s3 m4 offset-m4 green-button-full">Add Recipe</button>
         </div>
 
