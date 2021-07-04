@@ -95,6 +95,7 @@ def my_recipes(username):
             {"username": session["user"]})["username"]
     myrecipes = mongo.db.recipes.find({"created_by": session["user"]})
 
+
     # myrecipeslist = list(myrecipes)  TO TEST ADD myrecipeslist=myrecipeslist
 
     if session["user"]:
