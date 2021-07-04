@@ -111,6 +111,7 @@ button {
     line-height: 3rem;
     font-size: 1.125rem;
     font-weight: 500;
+    margin: 0px 12px;
 }
 
 /* Navbar */
@@ -401,6 +402,39 @@ div strong {
 .full-recipe-method p {
     margin-block-start: 0em;
     margin-block-end: 1em;
+}
+
+.button-edit,
+.button-delete {
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    line-height: 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+    text-decoration: none;
+    margin:0px 12px;
+}
+
+.button-edit {
+    background-color: #244846;
+}
+
+.button-delete {
+    background-color: #782026;
+}
+
+.button-edit:hover {
+    background-color: #4f807e;
+}
+
+.button-delete:hover {
+    background-color: #94454a;
 }
 
 
