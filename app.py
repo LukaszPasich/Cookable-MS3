@@ -95,7 +95,6 @@ def my_recipes(username):
             {"username": session["user"]})["username"]
     myrecipes = mongo.db.recipes.find({"created_by": session["user"]})
 
-
     # myrecipeslist = list(myrecipes)  TO TEST ADD myrecipeslist=myrecipeslist
 
     if session["user"]:
@@ -152,9 +151,16 @@ def edit_recipe(recipe_id):
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+
     fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
+
+    # ingredients = mongo.db.users.find_one(
+    #     {request.form.get("ingredients").splitlines()})
+
     return render_template("full_recipe.html",
                            recipe=recipe, fullrecipes=fullrecipes)
+                           
+    # ingredients=ingredients)
 
 
 if __name__ == "__main__":

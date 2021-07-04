@@ -7,8 +7,8 @@
 <!-- https://materializecss.com/text-inputs.html -->
 
 <!-- Form -->
-<div class="row margin-top-seventyfive">
-    <form class="col s12 m10 offset-m1 l8 offset-l2" method="POST" action="{{ url_for('add_recipe') }}">
+<div class="row margin-top-fifty card-panel">
+    <form class="col s12 m10 offset-m1 l8 offset-l2 margin-top-twentyfive" method="POST" action="{{ url_for('add_recipe') }}">
 
          <!-- Recipe category -->
          <div class="row">
@@ -54,8 +54,7 @@
         <div class="row">
             <label class="add-recipe-label" for="ingredients">Ingredients:</label>
             <div class="input-field col s12">
-                <input placeholder="(add each ingredient on a new line)" id="ingredients" name="ingredients"
-                    type="text" class="validate" required>
+                <textarea placeholder="(add each ingredient on a new line)" id="ingredients" name="ingredients" class="materialize-textarea validate" required></textarea>
             </div>
         </div>
 
@@ -92,8 +91,7 @@
 
         <!-- Submit button -->
         <div class="row margin-top-seventyfive center-align">
-            <button type="submit" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 green-button-full">Save</button>
-            <button type="submit" class="col s5 m4 l3 grey-button-full">Cancel</button>
+            <button type="submit" class="col s6 offset-s3 m4 offset-m4 green-button-full">Add Recipe</button>
         </div>
 
     </form>
