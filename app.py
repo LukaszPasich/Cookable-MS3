@@ -113,7 +113,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-# ---------- ADD RECIPE - C(RUD) ----------
+# ---------- ADD RECIPE - (C)RUD ----------
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     # grab the session user's username from db
@@ -136,6 +136,15 @@ def add_recipe():
         return redirect(url_for("my_recipes", username=username))
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_recipe.html", categories=categories)
+
+
+# ---------- EDIT RECIPE - CR(U)D ----------
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe,
+                           categories=categories)
 
 
 # ---------- FULL RECIPE ----------

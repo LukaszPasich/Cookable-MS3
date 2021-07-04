@@ -33,7 +33,7 @@
         </div>
         <!-- Edit / Delete buttons -->
         <div class="row margin-top-seventyfive center-align">
-            <a href="" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 button-edit">Edit</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 button-edit">Edit</a>
             <a href="" class="col s5 m4 l3 button-delete">Delete</a>
         </div>
 

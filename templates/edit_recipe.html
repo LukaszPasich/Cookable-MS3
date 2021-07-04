@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align margin-top-fifty"><span>Edit Recipe</span></h3>
+
+<!-- CODE CREDIT - Materialize Input Fields (but significantly customised) -->
+<!-- https://materializecss.com/text-inputs.html -->
+
+<!-- Form -->
+<div class="row margin-top-seventyfive">
+    <form class="col s12 m10 offset-m1 l8 offset-l2" method="POST" action="{{ url_for('add_recipe') }}">
+
+         <!-- Recipe category -->
+         <div class="row">
+            <label class="add-recipe-label" for="category_name"><i class="fas fa-folder-open add-recipe-icon"></i> Recipe Category:</label>
+            <div class="input-field col s12">
+                <select id="category_name" name="category_name" class="validate" required>
+                    <option value="" disabled selected></i> Choose Category</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                </select>
+            </div>
+        </div>
+
+        <!-- Recipe name -->
+        <div class="row">
+            <label class="add-recipe-label" for="recipe_name">Recipe Name:</label>
+            <div class="input-field col s12">
+                <input placeholder="(max 40 characters)" id="recipe_name" name="recipe_name"type="text"
+                    maxlength="40" class="validate" required>
+            </div>
+        </div>
+
+        <!-- Serves / Cooks in -->
+        <div class="row">
+            <div class="col s6">
+                <label class="add-recipe-label" for="serves">Serves:</label><br>
+                <div class="input-field col s12">
+                    <input placeholder="(number of servings)" id="serves" name="serves" type="text"
+                        pattern="[0-9]{1,2}$" class="validate" required>
+                </div>
+            </div>
+            <div class="col s6">
+                <label class="add-recipe-label" for="cooks_in">Cooking Time:</label><br>
+                <div class="input-field col s12">
+                    <input placeholder="(minutes)" id="cooks_in" name="cooks_in" type="text"
+                        pattern="[0-9]{1,4}$" class="validate" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="row">
+            <label class="add-recipe-label" for="ingredients">Ingredients:</label>
+            <div class="input-field col s12">
+                <input placeholder="(add each ingredient on a new line)" id="ingredients" name="ingredients"
+                    type="text" class="validate" required>
+            </div>
+        </div>
+
+        <!-- Method -->
+        <div class="row">
+            <label class="add-recipe-label" for="method">Method:</label>
+            <div class="input-field col s12">
+                <input placeholder="(add each step on a new line)" id="method" name="method"
+                    type="text" class="validate" required>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="row">
+            <label class="add-recipe-label" for="image">Image:</label>
+            <div class="input-field col s12">
+                <input placeholder="(image URL)" id="image" name="image" type="text" class="validate" required>
+            </div>
+            <div class="div col s12">
+                <p>You can find licence free images on any of these websites:</p>
+                <div class="margin-top-twentyfive margin-bottom-twentyfive">
+                    <a href="https://unsplash.com" class="stock-images" target="_blank">Unsplash</a>
+                    <a href="https://imgur.com" class="stock-images" target="_blank">Imgur</a>
+                    <a href="https://pixabay.com" class="stock-images" target="_blank">Pixabay</a>
+                    <a href="https://www.pexels.com" class="stock-images" target="_blank">Pexels</a>
+                </div>
+                <p>
+                    Simply select image that feels perfect for your recipe,
+                    right click on it and select <em>“Copy image address”</em>,
+                    then paste the URL into the above field.
+                </p>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row margin-top-seventyfive center-align">
+            <button type="submit" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 green-button-full">Save</button>
+            <button type="submit" class="col s5 m4 l3 grey-button-full">Cancel</button>
+        </div>
+
+    </form>
+  </div>
+
+<!-- END OF CODE CREDIT -->
+
+{% endblock %}
