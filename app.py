@@ -167,6 +167,17 @@ def edit_recipe(recipe_id):
                            categories=categories)
 
 
+ # ---------- DELETE RECIPE - CRU(D) ----------
+@app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
+def delete_recipe(recipe_id):
+    # grab the session user's username from db
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe Successfully Deleted")
+    return redirect(url_for("my_recipes", username=username))
+
 # ---------- FULL RECIPE ----------
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
