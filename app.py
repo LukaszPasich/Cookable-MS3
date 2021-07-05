@@ -194,6 +194,13 @@ def full_recipe(recipe_id):
     # ingredients=ingredients)
 
 
+# ---------- CATEGORIES ----------
+@app.route("/get_categories")
+def get_categories():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("categories.html", categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

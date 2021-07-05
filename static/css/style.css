@@ -39,6 +39,10 @@
     margin-bottom: 50px;
 }
 
+.margin-bottom-seventyfive {
+    margin-bottom: 75px;
+}
+
 .padding-top-twentyfive {
     padding-top: 25px;
 }
@@ -519,6 +523,12 @@ div strong {
 }
 
 .green-button-full {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    line-height: 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0px 12px;
     background-color: #244846;
     color: #fff;
     border: none;
@@ -526,6 +536,7 @@ div strong {
     -moz-transition: background-color 0.3s ease-out;
     -o-transition: background-color 0.3s ease-out;
     transition: background-color 0.3s ease-out;
+    text-align: center;
 }
 
 .green-button-full:hover {
@@ -547,6 +558,7 @@ div strong {
     -o-transition: background-color 0.3s ease-out;
     transition: background-color 0.3s ease-out;
     display: inline-block;
+    text-align: center;
 }
 
 .grey-button-full:hover {
@@ -563,6 +575,40 @@ div strong {
     color: #244846;
 }
 
+/* Categories page */
+
+.category-field {
+    margin: 2px 10px 0px;
+    font-size: 1.125rem;
+    line-height: 2.75rem;
+    border-radius: 10px;
+}
+
+.red-button-full {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    line-height: 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0px 12px;
+    background-color: #782026;
+    color: #fff;
+    border: none;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+    display: inline-block;
+    text-align: center;
+}
+
+.red-button-full:hover {
+    background-color: #94454a;
+}
+
+.cat-button-mobile {
+    display: none;
+}
 
 /* Override Materialize */
 
@@ -628,5 +674,13 @@ div strong {
 
     .par-landing-ready {
         margin-top: -25px;
+    }
+
+    .cat-button-desktop {
+        display: none;
+    }
+
+    .cat-button-mobile {
+        display: inline-block;
     }
 }

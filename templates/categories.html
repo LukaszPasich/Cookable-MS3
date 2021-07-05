@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align margin-top-fifty margin-bottom-seventyfive"><span>Manage Categories</span></h3>
+
+    {% for category in categories %}
+        <div class="row">
+            <p class="col s6 m6 offset-m1 l4 offset-l2 card-panel category-field">{{ category.category_name }}</p>
+            <a href="#" class="col s2 m2 l2 green-button-full cat-button-desktop">Edit</a>
+            <a href="#" class="col s2 m2 l2 red-button-full cat-button-desktop">Delete</a>
+            <a href="#" class="col s2 m2 l2 green-button-full cat-button-mobile"><i class="fas fa-pen"></i></a>
+            <a href="#" class="col s2 m2 l2 red-button-full cat-button-mobile"><i class="fas fa-trash-alt"></i></a>
+        </div>
+    {% endfor %}
+
+{% endblock %}
