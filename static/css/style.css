@@ -206,6 +206,11 @@ h4 span {
     padding: 0 10px; 
 }
 
+h5 {
+    font-weight: 400;
+    font-size: 1.375rem;
+}
+
 .footer-par {
     padding: 10px 20px;
     font-weight: 300;
@@ -441,6 +446,27 @@ div strong {
     background-color: #94454a;
 }
 
+.modal {
+    border-radius: 10px;
+}
+
+.modal
+.modal-footer {
+    text-align: center;
+}
+
+.modal-footer {
+    margin-top: -25px;
+}
+
+.modal-option {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.modal-option:hover {
+    color: #4f807e;
+}
 
 /* Add recipe page */
 
