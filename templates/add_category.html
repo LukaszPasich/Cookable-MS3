@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align margin-top-fifty"><span>Add Category</span></h3>
+
+<!-- Form -->
+<div class="row margin-top-fifty card-panel">
+    <form class="col s12 m10 offset-m1 l8 offset-l2 margin-top-twentyfive" method="POST" action="{{ url_for('add_category') }}">
+        <!-- New Category -->
+        <div class="row">
+            <label class="add-recipe-label" for="category_name"><i class="fas fa-folder-open add-recipe-icon"></i>New Category Name:</label>
+            <div class="input-field col s12">
+                <input placeholder="(max 20 characters)" id="category_name" name="category_name" type="text"
+                    maxlength="20" class="validate" required>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row margin-top-fifty margin-bottom-twentyfive center-align">
+            <button type="submit" class="col s8 offset-s2 m6 offset-m3 l4 offset-l4 green-button-full">Add Category</button>
+        </div>
+    </form>
+  </div>
+
+{% endblock %}
