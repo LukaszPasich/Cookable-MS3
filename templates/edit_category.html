@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align margin-top-fifty"><span>Edit Category</span></h3>
+
+<!-- Form -->
+<div class="row margin-top-fifty card-panel">
+    <form class="col s12 m10 offset-m1 l8 offset-l2 margin-top-twentyfive" method="POST" action="{{ url_for('edit_category', category_id=category._id) }}">
+        <!-- New Category -->
+        <div class="row">
+            <label class="add-recipe-label" for="category_name"><i class="fas fa-folder-open add-recipe-icon"></i>Category Name:</label>
+            <div class="input-field col s12">
+                <input id="category_name" name="category_name" type="text" value="{{ category.category_name }}""
+                    placeholder="(max 20 characters)" maxlength="20" class="validate" required>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="row margin-top-fifty margin-bottom-twentyfive center-align">
+            <button type="submit" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 green-button-full">Save</button>
+            <a href="{{ url_for('get_categories') }}" class="col s5 m4 l3 grey-button-full">Cancel</a>
+        </div>
+    </form>
+  </div>
+
+{% endblock %}
