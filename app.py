@@ -100,7 +100,7 @@ def my_recipes(username):
     if session["user"]:
         return render_template(
                 "myrecipes.html", username=username, myrecipes=myrecipes)
-    
+
     return redirect(url_for("login"))
 
 
@@ -119,7 +119,7 @@ def add_recipe():
     # grab the session user's username from db
     username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-            
+
     if request.method == "POST":
         recipe = {
             "category_name": request.form.get("category_name"),
@@ -229,6 +229,14 @@ def edit_category(category_id):
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
+
+
+# ---------- DELETE CATEGORY ----------
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Category Successfully Deleted")
+    return redirect(url_for("get_categories"))
 
 
 if __name__ == "__main__":
