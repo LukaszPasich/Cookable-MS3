@@ -6,7 +6,7 @@
 <!-- Search Field -->
 <div class="row margin-top-fifty">
     <div class="col s12">
-        <form class="row search-form" action="POST">
+        <form class="row search-form" action="{{ url_for('search') }}" method="POST">
             <div class="input-field col s8 m6 offset-m2 input-space">
                 <input id="search" name="search" type="text" maxlength="30">
                 <label for="search">Find recipe by keyword...</label>
@@ -14,7 +14,7 @@
             <div class="col s4 m2">
                 <div class="row">
                     <button class="col s5 offset-s1 search-button"><i class="fas fa-search"></i></button>
-                    <a class="col s5 clear-button" href="#!"><i class="fas fa-times"></i></a>
+                    <a class="col s5 clear-button" href="{{ url_for('get_recipes') }}"><i class="fas fa-times"></i></a>
                 </div>
             </div>
         </form>
