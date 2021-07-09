@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align margin-top-fifty"><span>Recipes</span></h3>
+<h3 id="top" class="center-align margin-top-fifty"><span>Recipes</span></h3>
 
 <!-- Search Field -->
 <div class="row margin-top-fifty">
@@ -56,6 +56,6 @@
     </div>
 {% endif %}
 
-<p class="center-align margin-top-hundred">To browse all recipes <a href="{{ url_for('get_recipes') }}" class="click-here">click here.</a></p>
+<p class="center-align margin-top-hundred">Back to top <a href="#top" class="click-here">click here.</a></p>
 
 {% endblock %}
