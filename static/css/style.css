@@ -175,6 +175,12 @@ nav {
     color: #fff
 }
 
+.user-in-nav {
+    padding-right: 20px;
+    padding-left: 5px;
+    color: #84cfd6;
+    font-weight: 500;
+}
 
 /* Flash messages */
 

@@ -21,14 +21,19 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/landing")
 def landing():
-    return render_template("landing.html")
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
+    return render_template("landing.html", username=username)
 
 
 # ---------- ALL RECIPES C(R)UD ----------
 @app.route("/get_recipes")
 def get_recipes():
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("recipes.html", recipes=recipes, username=username)
 
 
 # ---------- SEARCH ----------
@@ -146,7 +151,8 @@ def add_recipe():
         return redirect(url_for("my_recipes", username=username))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("add_recipe.html", categories=categories)
+    return render_template("add_recipe.html", categories=categories,
+                           username=username)
 
 
 # ---------- EDIT RECIPE - CR(U)D ----------
@@ -174,7 +180,7 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_recipe.html", recipe=recipe,
-                           categories=categories)
+                           categories=categories, username=username)
 
 
 # ---------- DELETE RECIPE - CRU(D) ----------
@@ -192,6 +198,9 @@ def delete_recipe(recipe_id):
 # ---------- FULL RECIPE ----------
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
     fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
@@ -200,7 +209,8 @@ def full_recipe(recipe_id):
     #     {request.form.get("ingredients").split("\r\n")})
 
     return render_template("full_recipe.html",
-                           recipe=recipe, fullrecipes=fullrecipes)
+                           recipe=recipe, fullrecipes=fullrecipes,
+                           username=username)
 
     # ingredients=ingredients)
 
@@ -208,13 +218,19 @@ def full_recipe(recipe_id):
 # ---------- CATEGORIES ----------
 @app.route("/get_categories")
 def get_categories():
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
     categories = list(mongo.db.categories.find().sort("category_name", 1))
-    return render_template("categories.html", categories=categories)
+    return render_template("categories.html", categories=categories,
+                           username=username)
 
 
 # ---------- ADD CATEGORY ----------
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
     if request.method == "POST":
         category = {
             "category_name": request.form.get("category_name")
@@ -223,12 +239,15 @@ def add_category():
         flash("New Category Added")
         return redirect(url_for("get_categories"))
 
-    return render_template("add_category.html")
+    return render_template("add_category.html", username=username)
 
 
 # ---------- EDIT CATEGORY ----------
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name")
@@ -238,7 +257,8 @@ def edit_category(category_id):
         return redirect(url_for("get_categories"))
 
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
-    return render_template("edit_category.html", category=category)
+    return render_template("edit_category.html", category=category,
+                           username=username)
 
 
 # ---------- DELETE CATEGORY ----------

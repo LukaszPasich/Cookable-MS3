@@ -32,7 +32,7 @@
                             <li><a href="{{ url_for('get_categories') }}">Categories</a></li>
                         {% endif %}
                         <li><a href="{{ url_for('logout') }}">Log out</a></li>
-                        <li>Hi, {{ username }}</li>
+                        <li class="user-in-nav">Hi, {{ username }}</li>
                     {% else %}
                         <li><a class="button-signup" href="{{ url_for('signup') }}">Sign up</a></li>
                         <li><a class="button-login" href="{{ url_for('login') }}">Log in</a></li>
