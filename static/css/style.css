@@ -110,6 +110,14 @@ h3 span {
     padding: 0 25px; 
 }
 
+h6 {
+    font-family: 'Zilla Slab', serif;
+    font-weight: 600;
+    color: #888;
+    font-size: 2.25rem;
+    text-align: center;
+}
+
 button {
     padding: 0.5rem 1.5rem;
     border-radius: 10px;

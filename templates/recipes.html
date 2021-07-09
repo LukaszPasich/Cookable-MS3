@@ -21,6 +21,7 @@
     </div>
 </div>
 
+{% if recipes|length > 0 %}
 <!-- Recipe Card -->
 <div class="flex-container margin-top-fifty">
 {% for recipe in recipes %}
@@ -34,5 +35,9 @@
     </div>
 {% endfor %}
 </div>
+{% else %}
+<h6 class="center-align margin-top-fifty margin-bottom-fifty">No results found</h3>
+<p class="center-align margin-top-hundred">To browse all recipes <a href="{{ url_for('get_recipes') }}" class="click-here">click here.</a></p>
+{% endif %}
 
 {% endblock %}
