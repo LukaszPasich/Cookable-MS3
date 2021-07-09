@@ -36,7 +36,9 @@ def get_recipes():
 def search():
     search = request.form.get("search")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
-    return render_template("recipes.html", recipes=recipes)
+    recipesearched = list(mongo.db.recipes.find())
+    return render_template("recipes.html", recipes=recipes,
+                           recipesearched=recipesearched)
 
 
 # ---------- SIGN UP ----------
