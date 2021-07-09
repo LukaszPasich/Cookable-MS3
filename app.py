@@ -36,11 +36,13 @@ def get_recipes():
 # ---------- SEARCH ----------
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
     search = request.form.get("search")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": search}}))
     recipesearched = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes,
-                           recipesearched=recipesearched)
+                           recipesearched=recipesearched, username=username)
 
 
 # ---------- SIGN UP ----------
