@@ -21,10 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/landing")
 def landing():
-    username = mongo.db.users.find_one(
-            {"username": session["user"]})["username"]
-
-    return render_template("landing.html", username=username)
+    return render_template("landing.html")
 
 
 # ---------- ALL RECIPES C(R)UD ----------

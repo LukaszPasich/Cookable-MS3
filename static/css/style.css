@@ -781,3 +781,19 @@ div strong {
         display: inline-block;
     }
 }
+
+@media screen and (max-width: 374px) {
+
+    .overlay-container {
+        max-width: 290px;
+        margin: 0px;
+    }
+
+    .overlayed-image {
+        width: 290px;
+    }
+
+    .overlay {
+        width: 290px;
+    }
+}
