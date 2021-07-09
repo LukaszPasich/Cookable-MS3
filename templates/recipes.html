@@ -22,7 +22,9 @@
 </div>
 
 {% if recipes|length > 0 %}
+
 <!-- Recipe Card -->
+<!-- ...also, this is what's shown after successful search is performed -->
 <div class="flex-container margin-top-fifty">
 {% for recipe in recipes %}
     <div>
@@ -36,6 +38,8 @@
 {% endfor %}
 </div>
 {% else %}
+
+<!-- ...and this is shown if search returns no results-->
 <h6 class="center-align margin-top-fifty margin-bottom-twentyfive">No results found</h3>
 <p class="center-align">But we found other recipes that may interest you.</p>
 

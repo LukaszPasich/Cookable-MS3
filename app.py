@@ -103,7 +103,7 @@ def my_recipes(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-    myrecipes = mongo.db.recipes.find({"created_by": session["user"]})
+    myrecipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
 
     # myrecipeslist = list(myrecipes)  TO TEST ADD myrecipeslist=myrecipeslist
 

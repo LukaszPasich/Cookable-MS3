@@ -4,12 +4,12 @@
 <h3 class="center-align margin-top-fifty"><span>My Recipes</span></h3>
 
 <!-- Search Field -->
-<div class="row margin-top-fifty">
+<!-- <div class="row margin-top-fifty">
     <div class="input-field col s10 offset-s1 col m8 offset-m2 input-space">
         <input id="search" name="search" type="text" maxlength="30">
         <label for="search">Find recipe by keyword...</label>
     </div>
-</div>
+</div> -->
 
 <!-- Add New Recipe button -->
 <div class="row margin-top-fifty">
@@ -19,21 +19,23 @@
 <!-- Recipe Card -->
 <div class="flex-container margin-top-fifty">
     
+    {% if myrecipes|length == 0 %}
 
-    <!-- {% if myrecipeslist|length == 0 %}
-    <p>You have no uploaded recipes yet</p>
-    {% endif %} -->
-
-    {% for myrecipe in myrecipes %}
-        <div>
-            <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=myrecipe._id) }}">
-                <img class="flex-image" src="{{ myrecipe.image }}" alt="Recipe">
-                <div class="recipes-overlay"></div>
-                <div class="recipes-title">{{ myrecipe.recipe_name }}</div>
-            </a>
-        </div>
-    {% endfor %}
+    <!-- ...this is what's shown if user has not uploaded recipes yet -->
+    <h6 class="center-align margin-top-fifty margin-bottom-twentyfive">No recipes uploaded</h3>
     
+    {% else %}
+        <!-- ...this is shown if user has uploaded recipes -->
+        {% for myrecipe in myrecipes %}
+            <div>
+                <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=myrecipe._id) }}">
+                    <img class="flex-image" src="{{ myrecipe.image }}" alt="Recipe">
+                    <div class="recipes-overlay"></div>
+                    <div class="recipes-title">{{ myrecipe.recipe_name }}</div>
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
  </div>
 
  <p class="center-align margin-top-hundred">To browse all recipes <a href="{{ url_for('get_recipes') }}" class="click-here">click here.</a></p>
