@@ -28,8 +28,10 @@
             </div> -->
             
             <!-- Edit/Delete buttons (mobile) -->
-            <a href="{{ url_for('edit_category', category_id=category._id) }}" class="col s2 m2 l2 green-button-full cat-button-mobile"><i class="fas fa-pen"></i></a>
-            <a href="{{ url_for('delete_category', category_id=category._id) }}" class="col s2 m2 l2 red-button-full cat-button-mobile"><i class="fas fa-trash-alt"></i></a>
+            <a href="{{ url_for('edit_category', category_id=category._id) }}" aria-label="Edit category"
+                class="col s2 m2 l2 green-button-full cat-button-mobile"><i class="fas fa-pen"></i></a>
+            <a href="{{ url_for('delete_category', category_id=category._id) }}" aria-label="Delete category"
+                class="col s2 m2 l2 red-button-full cat-button-mobile"><i class="fas fa-trash-alt"></i></a>
             
             <!-- <a href="{{ '#' + category.category_name }}" class="col s2 m2 l2 red-button-full cat-button-mobile"><i class="fas fa-trash-alt"></i></a> -->
 
@@ -51,7 +53,8 @@
     <div class="row">
         <p class="col s6 m6 offset-m1 l4 offset-l2 card-panel category-field"> ... </p>
         <a href="{{ url_for('add_category') }}" class="col s4 m4 l3 green-border-button cat-button-desktop">Add Category</a>
-        <a href="{{ url_for('add_category') }}" class="col s4 m4 l3 green-border-button cat-button-mobile"><i class="fas fa-plus"></i></a>
+        <a href="{{ url_for('add_category') }}" aria-label="Add category"
+        class="col s4 m4 l3 green-border-button cat-button-mobile"><i class="fas fa-plus"></i></a>
     </div>
 
 {% endblock %}

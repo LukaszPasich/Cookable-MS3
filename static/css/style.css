@@ -235,7 +235,7 @@ h5 {
 }
 
 .social {
-    border: 1px solid #aaa;
+    border: 1px solid #bbb;
     padding: 8px;
     border-radius: 50%;
     margin: 25px 9px;
@@ -243,7 +243,20 @@ h5 {
     text-align: center;
     width: 42px;
     text-decoration: none;
+    color: inherit;
+}
+
+.social-icons {
+    -webkit-transition: background-color 0.3s ease-in;
+    -moz-transition: background-color 0.3s ease-in;
+    -o-transition: background-color 0.3s ease-in;
+    transition: background-color 0.3s ease-in;
+    color: #bbb;
+}
+
+.social-icons:hover {
     color: #fff;
+    border-color: #fff;
 }
 
 .developed-by {

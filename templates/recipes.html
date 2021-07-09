@@ -13,8 +13,8 @@
             </div>
             <div class="col s4 m2">
                 <div class="row">
-                    <button class="col s5 offset-s1 search-button"><i class="fas fa-search"></i></button>
-                    <a class="col s5 clear-button" href="{{ url_for('get_recipes') }}"><i class="fas fa-times"></i></a>
+                    <button class="col s5 offset-s1 search-button" aria-label="Search recipes for the keyword in the input field"><i class="fas fa-search"></i></button>
+                    <a class="col s5 clear-button" href="{{ url_for('get_recipes') }}" aria-label="Clear the search input field"><i class="fas fa-times"></i></a>
                 </div>
             </div>
         </form>
