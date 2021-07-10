@@ -131,10 +131,6 @@ button {
     cursor: pointer;
 }
 
-.background-red {
-    background-color: red;
-}
-
 /* Navbar */
 
 nav {
@@ -780,6 +776,11 @@ div strong {
 
     h3 span {
         padding: 0px 10px;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 2.25rem; 
     }
 
     .par-landing-ready {

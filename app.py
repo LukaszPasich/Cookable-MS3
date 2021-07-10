@@ -195,8 +195,6 @@ def delete_recipe(recipe_id):
 # ---------- FULL RECIPE ----------
 @app.route("/full_recipe/<recipe_id>")
 def full_recipe(recipe_id):
-    username = mongo.db.users.find_one(
-            {"username": session["user"]})["username"]
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
 
@@ -206,8 +204,7 @@ def full_recipe(recipe_id):
     #     {request.form.get("ingredients").split("\r\n")})
 
     return render_template("full_recipe.html",
-                           recipe=recipe, fullrecipes=fullrecipes,
-                           username=username)
+                           recipe=recipe, fullrecipes=fullrecipes)
 
     # ingredients=ingredients)
 
