@@ -27,10 +27,8 @@ def landing():
 # ---------- ALL RECIPES C(R)UD ----------
 @app.route("/get_recipes")
 def get_recipes():
-    username = mongo.db.users.find_one(
-            {"username": session["user"]})["username"]
     recipes = list(mongo.db.recipes.find())
-    return render_template("recipes.html", recipes=recipes, username=username)
+    return render_template("recipes.html", recipes=recipes)
 
 
 # ---------- SEARCH ----------
