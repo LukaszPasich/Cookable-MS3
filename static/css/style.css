@@ -131,6 +131,10 @@ button {
     cursor: pointer;
 }
 
+.background-red {
+    background-color: red;
+}
+
 /* Navbar */
 
 nav {

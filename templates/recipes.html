@@ -29,7 +29,17 @@
 {% for recipe in recipes %}
     <div>
         <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
-            <img class="flex-image" src="{{ recipe.image }}" alt="Recipe">
+            
+            <!-- <img class="flex-image" src="{{ recipe.image }}" alt="Recipe"> -->
+
+            <!----- CODE CREDIT - Handle broken image link ----->
+            <!-- https://themeisle.com/blog/missing-images-on-website/ -->
+
+            <img class="flex-image" src="{{ recipe.image }}" alt="Recipe" 
+            onError="this.onerror=null; this.src='https://i.imgur.com/pKDfecc.jpg';">
+
+            <!----- END OF CODE CREDIT ----->
+
             <!-- <img class="flex-image" src="{{ url_for('static', filename='images/roast-chicken.jpg') }}" alt="Recipe"> -->
             <div class="recipes-overlay"></div>
             <div class="recipes-title">{{ recipe.recipe_name }}</div>

@@ -78,3 +78,8 @@ $('#password, #confirm_password').on('keyup', function () {
 }});
 
   // ----- END OF CODE CREDIT -----
+
+
+//   $('img').on("error", function() {
+//     $(this).attr('src', 'static/images/roast-chicken.jpg');
+//   });
