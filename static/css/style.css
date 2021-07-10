@@ -127,6 +127,10 @@ button {
     margin: 0px 12px;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 /* Navbar */
 
 nav {
@@ -644,6 +648,11 @@ div strong {
     font-weight: 600;
     color: #244846;
 }
+
+#signup-button {
+    display: none;
+}
+
 
 /* Categories page */
 

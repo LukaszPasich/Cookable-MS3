@@ -25,7 +25,9 @@
         </div>
         <!-- Confirm Password -->
         <div class="row">
-            <p class="input-title col s10 offset-s1">Confirm Password</p>
+            <p class="input-title col s10 offset-s1">Confirm Password
+                <br><span id='password-match-message'></span>
+            </p>
             <div class="input-field col s10 offset-s1 input-space">
                 <input id="confirm_password" name="confirm_password" type="password" minlength="5"
                     maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
@@ -33,8 +35,8 @@
             </div>
         </div>
         <!-- Sign Up Button -->
-        <div class="row margin-top-fifty">
-            <button type="submit" class="col s6 offset-s3 green-button-full">Sign up</button>
+        <div id="signup-button" class="row margin-top-fifty">
+            <button type="submit" class="col s6 offset-s3 green-button-full cursor-pointer">Sign up</button>
         </div>
     </form>
   </div>

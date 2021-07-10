@@ -49,7 +49,7 @@ $(document).ready(function () {
 });
 
 
-// ----- CODE CREDIT -----
+// ----- CODE CREDIT - Animated flash message -----
 // https://stackoverflow.com/questions/20437938/jquery-disappear-div-with-delay-then-appear-disappear-on-hover
 
 $(document).ready( function() {
@@ -62,3 +62,19 @@ $(document).ready( function() {
 });
 
 // ----- END OF CODE CREDIT -----
+
+
+// ----- CODE CREDIT - Confirm password matching validation -----
+// https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518
+
+$('#password, #confirm_password').on('keyup', function () {
+    // I've added check for password length so that empty passwords at the beginining don't result in match
+    if ($('#password').val() == $('#confirm_password').val() && $('#password').val().length > 0) {
+      $('#password-match-message').html("Passwords match").css('color', 'green');
+      $('#signup-button').css('display', 'block');
+    } else {
+      $('#password-match-message').html("Passwords don't match").css('color', 'red');
+      $('#signup-button').css('display', 'none');
+}});
+
+  // ----- END OF CODE CREDIT -----
