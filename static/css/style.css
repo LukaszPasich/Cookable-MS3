@@ -60,6 +60,10 @@
     background-color: #ddd;
 }
 
+.background-green {
+    background-color: #244846;
+}
+
 .display-inline-block {
     display: inline-block;
 }
@@ -751,6 +755,28 @@ div strong {
     z-index: 1;
     display: none;
 }
+
+.lgreen-button-full {
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    line-height: 3rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0px 10px;
+    background-color: #4f807e;
+    color: #fff;
+    border: none;
+    -webkit-transition: background-color 0.3s ease-out;
+    -moz-transition: background-color 0.3s ease-out;
+    -o-transition: background-color 0.3s ease-out;
+    transition: background-color 0.3s ease-out;
+    text-align: center;
+}
+
+.lgreen-button-full:hover {
+    background-color: #7b9e9e;
+}
+
 
 /* Override Materialize */
 

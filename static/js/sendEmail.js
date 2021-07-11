@@ -18,6 +18,6 @@ function sendMail(contactForm) {
             flashEmail.innerHTML = "Message not sent!";
         }
     );
-    setTimeout(function(){window.location.reload();},3500);
+    setTimeout(function(){window.location.reload();},4000);
     return false;
 }
