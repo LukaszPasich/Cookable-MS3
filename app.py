@@ -199,18 +199,20 @@ def full_recipe(recipe_id):
     fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
 
     # gets all records with the keyword
-    
-    adsearch = list(mongo.db.recipes.find({"$text": {"$search": "dog"}}))
-    
+    adsearch = list(mongo.db.recipes.find({"$text": {"$search": "mix pasta"}}))
+
+    # ----- CODE CREDIT -----
     # gets the list of only _id: value pairs of those records
     # https://stackoverflow.com/questions/13254241/removing-key-values-pairs-from-a-list-of-dictionaries
     idvalues = [{k: v for k, v in d.items() if k == '_id'} for d in adsearch]
-    
+
     # turns the list of dicts into the list of "_id" values
     # https://stackoverflow.com/questions/20891141/convert-list-of-dicts-to-list
     adverts = []
     for idvalue in idvalues:
         adverts.append(idvalue["_id"])
+
+    # ----- END OF CODE CREDIT -----
 
     # ingredients = mongo.db.users.find_one(
     #     {request.form.get("ingredients").split("\r\n")})

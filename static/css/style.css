@@ -545,6 +545,20 @@ div strong {
     color: #4f807e;
 }
 
+.advert {
+    width: 100%;
+    height: auto;
+}
+
+.advert-desktop {
+    display: block;
+}
+
+.advert-mobile {
+    display: none;
+}
+
+
 /* Add recipe page */
 
 .add-recipe-label {
@@ -762,6 +776,14 @@ div strong {
 @media screen and (max-width: 781px) {
     .image-latest-two {
         display: none;
+    }
+
+    .advert-desktop {
+        display: none;
+    }
+    
+    .advert-mobile {
+        display: block;
     }
 }
 

@@ -42,15 +42,6 @@
                     <p><strong>Uploaded by: </strong>{{ fullrecipe.created_by }}</p>
                 </div>
             </div>
-        </div>
-
-        {% for advert in adverts %}     
-            {% if recipe._id == advert %}
-                <p>ad</p>
-                <p>{{ adverts }}</p>
-            {% endif %}
-
-        {% endfor %}
 
         <!-- Edit / Delete buttons -->
         {% if session.user|lower == fullrecipe.created_by|lower %}
@@ -74,6 +65,26 @@
 
             </div>
         {% endif %}
+        </div>
+
+        <!-- Advertise Schmikser Mixer if word 'Mix' or 'mixer' appears in the recipe -->
+        {% for advert in adverts %}     
+            {% if recipe._id == advert %}
+
+                <div class="row advert-desktop">
+                    <div class="col s12 center-align margin-top-twentyfive">
+                        <img class="advert" src="{{ url_for('static', filename='images/schmickser-advert-2000px.jpg') }}" alt="Scmickser mixer add">
+                    </div>
+                </div>
+
+                <div class="row advert-mobile margin-top-twentyfive">
+                    <div class="col s12 m10 offset-m1 center-align">
+                        <img class="advert" src="{{ url_for('static', filename='images/schmickser-advert-1000px.jpg') }}" alt="Scmickser mixer add">
+                    </div>
+                </div>
+
+            {% endif %}
+        {% endfor %}
 
     {% endfor %}
 
