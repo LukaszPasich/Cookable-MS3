@@ -198,8 +198,8 @@ def full_recipe(recipe_id):
 
     fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
 
-    # gets all records with the keyword
-    adsearch = list(mongo.db.recipes.find({"$text": {"$search": "mix pasta"}}))
+    # gets all records with the keywords
+    adsearch = list(mongo.db.recipes.find({"$text": {"$search": "mix mixer"}}))
 
     # ----- CODE CREDIT -----
     # gets the list of only _id: value pairs of those records
@@ -276,6 +276,12 @@ def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category Successfully Deleted")
     return redirect(url_for("get_categories"))
+
+
+# ---------- CONTACT PAGE ----------
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
