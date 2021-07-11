@@ -32,16 +32,19 @@
 
                 <div class="col s12 m4 margin-top-twentyfive">
                     <strong>Ingredients: </strong>
-                    <!-- <p>{{ ingredients }}</p> -->
 
                     {% for ingredient in ingredients.split('\n') %}
-                    <p>{{ ingredient }}</p>
+                        <p class="par-ingredients">&bull; {{ ingredient }} </p>
                     {% endfor %}
 
                 </div>
                 <div class="col s12 margin-top-twentyfive full-recipe-method">
                     <strong class="strong-method">Method: </strong>
-                    <p>{{ fullrecipe.method }}</p>
+                    
+                    {% for method in methods.split('\n') %}
+                        <p class="par-methods">{{ method }} </p>
+                    {% endfor %}
+
                 </div>
                 <div class="col s12">
                     <p><strong>Uploaded by: </strong>{{ fullrecipe.created_by }}</p>

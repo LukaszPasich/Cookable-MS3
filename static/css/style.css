@@ -562,6 +562,11 @@ div strong {
     display: none;
 }
 
+.par-ingredients {
+    line-height: 0.75rem;
+}
+
+.par-ingredients
 
 /* Add recipe page */
 

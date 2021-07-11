@@ -217,11 +217,13 @@ def full_recipe(recipe_id):
     allingredients_list = recipe.get("ingredients")
     ingredients = ''.join(allingredients_list)
 
-    # ingredients = allingredients_string.split(",")
+    allmethods_list = recipe.get("method")
+    methods = ''.join(allmethods_list)
 
     return render_template("full_recipe.html",
                            recipe=recipe, fullrecipes=fullrecipes,
-                           adverts=adverts, ingredients=ingredients)
+                           adverts=adverts, ingredients=ingredients,
+                           methods=methods)
 
 
 # ---------- CATEGORIES ----------
