@@ -1,6 +1,18 @@
 {% extends "base.html" %}
-{% block content %}
 
+<!-- Extra scripts for EmailJS -->
+{% block styles %}
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("user_HkNSXwtzpi7DbBHRTmoyO");
+    })();
+    </script>
+{% endblock %}
+
+{% block content %}
 <h3 class="center-align margin-top-fifty"><span>Contact us</span></h3>
 
 <p class="margin-top-fifty center-align">
@@ -14,31 +26,35 @@
 </p>
 
 <div class="row background-grey-ddd margin-top-fifty padding-top-twentyfive padding-bottom-twentyfive">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-        <!-- Username -->
+    <form onsubmit="return sendMail(this);" class="col s12 m8 offset-m2">
+        <!-- Name -->
         <div class="row">
-            <p class="input-title col s10 offset-s1">Username</p>
+            <p class="input-title col s10 offset-s1">Your name</p>
             <div class="input-field col s10 offset-s1 input-space">
-                <input id="username" name="username" type="text" minlength="5"
-                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                <label for="username">Enter username...</label>
+                <input id="name" name="name" type="text" required>
+                <label for="name">Enter your name...</label>
             </div>
         </div>
-        <!-- Password -->
+        <!-- Email -->
         <div class="row">
-            <p class="input-title col s10 offset-s1">Password</p>
+            <p class="input-title col s10 offset-s1">Your email</p>
             <div class="input-field col s10 offset-s1 input-space">
-                <input id="password" name="password" type="password" minlength="5"
-                    maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                <label for="password">Enter password...</label>
+                <input id="email" name="email" type="email" class="validate" required>
+                <label for="password">Enter your email...</label>
             </div>
         </div>
+        <!-- Message -->
+
+
         <!-- Sign Up Button -->
         <div class="row margin-top-fifty">
             <button type="submit" class="col s6 offset-s3 green-button-full cursor-pointer">Log in</button>
         </div>
     </form>
   </div>
-  <p class="center-align">Don't have an account? <a href="{{ url_for('signup') }}" class="click-here">Sign up here.</a></p>
+{% endblock %}
 
+<!-- Extra scripts for EmailJS -->
+{% block scripts %}
+    <script src="{{ url_for('static', filename='js/sendEmail.js') }}"></script>
 {% endblock %}
