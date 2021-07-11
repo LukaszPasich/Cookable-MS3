@@ -18,9 +18,8 @@
                 </div>
             </div>
 
-            <!-- Recipe image / ingredients / method -->
+            <!-- Recipe image / ingredients / method / uploaded by -->
             <div class="row">
-                <!-- <img class="col s12 m8" src="{{ fullrecipe.image }}" alt="Recipe"> -->
 
                 <!----- CODE CREDIT - Handle broken image link ----->
                 <!-- https://themeisle.com/blog/missing-images-on-website/ -->
@@ -40,11 +39,11 @@
                 </div>
                 <div class="col s12 margin-top-twentyfive full-recipe-method">
                     <strong class="strong-method">Method: </strong>
-                    
+                    <ol class="method-list">
                     {% for method in methods.split('\n') %}
-                        <p class="par-methods">{{ method }} </p>
+                        <li class="par-methods">{{ method }} </li>
                     {% endfor %}
-
+                    </ol>
                 </div>
                 <div class="col s12">
                     <p><strong>Uploaded by: </strong>{{ fullrecipe.created_by }}</p>
@@ -54,7 +53,7 @@
         <!-- Edit / Delete buttons -->
         {% if session.user|lower == fullrecipe.created_by|lower %}
             <div class="row margin-top-seventyfive center-align">
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="col s5 offset-s1 m4 offset-m2 l3 offset-l3 button-edit">Edit</a>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="col s5 m4 offset-m2 l3 offset-l3 button-edit">Edit</a>
                 <!-- <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="col s5 m4 l3 button-delete">Delete</a> -->
 
                 <!-- Modal Trigger -->

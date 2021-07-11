@@ -562,11 +562,15 @@ div strong {
     display: none;
 }
 
-.par-ingredients {
-    line-height: 0.75rem;
+.method-list {
+    margin: 0px;
+    padding-left: 10px;
 }
 
-.par-ingredients
+.par-methods {
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+}
 
 /* Add recipe page */
 
@@ -594,6 +598,20 @@ div strong {
 .add-recipe-icon {
     font-size: 1.5rem;
     padding-right: 5px;
+}
+
+.make-sure {
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    background-color: #4f807e;
+    padding: 10px;
+}
+
+.fa-arrow-circle-right {
+    font-size: 1.5rem;
 }
 
 
