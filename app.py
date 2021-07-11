@@ -214,14 +214,14 @@ def full_recipe(recipe_id):
 
     # ----- END OF CODE CREDIT -----
 
-    # ingredients = mongo.db.users.find_one(
-    #     {request.form.get("ingredients").split("\r\n")})
+    allingredients_list = recipe.get("ingredients")
+    ingredients = ''.join(allingredients_list)
+
+    # ingredients = allingredients_string.split(",")
 
     return render_template("full_recipe.html",
                            recipe=recipe, fullrecipes=fullrecipes,
-                           adverts=adverts)
-
-    # ingredients=ingredients)
+                           adverts=adverts, ingredients=ingredients)
 
 
 # ---------- CATEGORIES ----------
