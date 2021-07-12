@@ -5,6 +5,7 @@
 
 <div class="row background-grey-ddd margin-top-fifty padding-top-twentyfive padding-bottom-twentyfive">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('signup') }}">
+        
         <!-- Username -->
         <div class="row">
             <p class="input-title col s10 offset-s1">Username<span> (a-z, A-Z, 0-9 and max 15 characters)</span></p>
@@ -14,6 +15,7 @@
                 <label for="username">Enter username...</label>
             </div>
         </div>
+        
         <!-- Password -->
         <div class="row">
             <p class="input-title col s10 offset-s1">Password<span> (a-z, A-Z, 0-9 and max 15 characters)</span></p>
@@ -23,6 +25,7 @@
                 <label for="password">Enter password...</label>
             </div>
         </div>
+        
         <!-- Confirm Password -->
         <div class="row">
             <p class="input-title col s10 offset-s1">Confirm Password
@@ -34,12 +37,14 @@
                 <label for="confirm_password">Confirm Password...</label>
             </div>
         </div>
+        
         <!-- Sign Up Button -->
         <div id="signup-button" class="row margin-top-fifty">
             <button type="submit" class="col s6 offset-s3 green-button-full cursor-pointer">Sign up</button>
         </div>
     </form>
   </div>
+  
   <p class="center-align">Already have an account? <a href="{{ url_for('login') }}" class="click-here">Click here.</a></p>
 
 {% endblock %}

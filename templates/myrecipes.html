@@ -3,14 +3,6 @@
 
 <h3 class="center-align margin-top-fifty"><span>My Recipes</span></h3>
 
-<!-- Search Field -->
-<!-- <div class="row margin-top-fifty">
-    <div class="input-field col s10 offset-s1 col m8 offset-m2 input-space">
-        <input id="search" name="search" type="text" maxlength="30">
-        <label for="search">Find recipe by keyword...</label>
-    </div>
-</div> -->
-
 <!-- Add New Recipe button -->
 <div class="row margin-top-fifty">
     <a href="{{ url_for('add_recipe') }}" class="col s8 offset-s2 m4 offset-m4 button-banner-signup">Add new recipe</a>
@@ -29,7 +21,6 @@
         {% for myrecipe in myrecipes %}
             <div>
                 <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=myrecipe._id) }}">
-                    <!-- <img class="flex-image" src="{{ myrecipe.image }}" alt="Recipe"> -->
 
                     <!----- CODE CREDIT - Handle broken image link ----->
                     <!-- https://themeisle.com/blog/missing-images-on-website/ -->

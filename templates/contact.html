@@ -12,6 +12,7 @@
     </script>
 {% endblock %}
 
+<!-- Contact form initial paragraph -->
 {% block content %}
 <h3 class="center-align margin-top-fifty"><span>Contact us</span></h3>
 
@@ -25,8 +26,10 @@
     We value your privacy and will never share your information with anyone.
 </p>
 
+<!-- Form successfully sent flash message -->
 <p id="flash-messages-email" class="flash-messages-email"></p> 
 
+<!-- Contact form -->
 <div class="row background-green margin-top-fifty padding-top-twentyfive padding-bottom-twentyfive">
     <form onsubmit="return sendMail(this);" class="col s12 m8 offset-m2">
         <!-- Name -->

@@ -18,8 +18,8 @@
                 </div>
             </div>
 
-            <!-- Recipe image / ingredients / method / uploaded by -->
             <div class="row">
+                <!-- Recipe image -->
 
                 <!----- CODE CREDIT - Handle broken image link ----->
                 <!-- https://themeisle.com/blog/missing-images-on-website/ -->
@@ -29,6 +29,7 @@
 
                 <!----- END OF CODE CREDIT ----->
 
+                <!-- Ingredients -->
                 <div class="col s12 m4 margin-top-twentyfive">
                     <strong>Ingredients: </strong>
 
@@ -37,6 +38,8 @@
                     {% endfor %}
 
                 </div>
+
+                <!-- Method -->
                 <div class="col s12 margin-top-twentyfive full-recipe-method">
                     <strong class="strong-method">Method: </strong>
                     <ol class="method-list">
@@ -45,6 +48,8 @@
                     {% endfor %}
                     </ol>
                 </div>
+
+                <!-- Uploaded by -->
                 <div class="col s12">
                     <p><strong>Uploaded by: </strong>{{ fullrecipe.created_by }}</p>
                 </div>
@@ -54,12 +59,11 @@
         {% if session.user|lower == fullrecipe.created_by|lower %}
             <div class="row margin-top-seventyfive center-align">
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="col s5 m4 offset-m2 l3 offset-l3 button-edit">Edit</a>
-                <!-- <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="col s5 m4 l3 button-delete">Delete</a> -->
 
-                <!-- Modal Trigger -->
+                <!-- Materialize Modal Trigger -->
                 <a class="col s5 m4 l3 button-delete modal-trigger" href="#modal-a">Delete</a>
 
-                <!-- Modal Structure -->
+                <!-- Materialize Modal Structure -->
                 <div id="modal-a" class="modal">
                     <div class="modal-content">
                         <h5>Delete this recipe?</h5>
@@ -72,9 +76,10 @@
 
             </div>
         {% endif %}
+
         </div>
 
-        <!-- Advertise Schmikser Mixer if word 'Mix' or 'mixer' appears in the recipe -->
+        <!-- Advertise Schmickser Mixer if word 'mix' or 'mixer' appears in the recipe -->
         {% for advert in adverts %}     
             {% if recipe._id == advert %}
 

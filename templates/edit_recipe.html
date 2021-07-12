@@ -33,8 +33,9 @@
             </div>
         </div>
 
-        <!-- Serves / Cooks in -->
         <div class="row">
+
+            <!-- Serves -->
             <div class="col s6">
                 <label class="add-recipe-label" for="serves">Serves:</label><br>
                 <div class="input-field col s12">
@@ -42,6 +43,8 @@
                         pattern="[0-9]{1,2}$" class="validate" value="{{ recipe.serves }}" required>
                 </div>
             </div>
+
+            <!-- Cooks in -->
             <div class="col s6">
                 <label class="add-recipe-label" for="cooks_in">Cooking Time:</label><br>
                 <div class="input-field col s12">
@@ -102,7 +105,5 @@
 
     </form>
   </div>
-
-<!-- END OF CODE CREDIT -->
 
 {% endblock %}
