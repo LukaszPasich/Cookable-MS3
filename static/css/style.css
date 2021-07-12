@@ -36,6 +36,10 @@
     margin-bottom: 50px;
 }
 
+.margin-bottom-hundred {
+    margin-bottom: 100px;
+}
+
 .margin-bottom-seventyfive {
     margin-bottom: 75px;
 }
@@ -798,6 +802,21 @@ div strong {
 
 .lgreen-button-full:hover {
     background-color: #7b9e9e;
+}
+
+/* Page not found */
+
+.four-oh-four {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0px;
+}
+
+.par-four-oh-four {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #555;
 }
 
 
