@@ -286,6 +286,17 @@ def contact():
     return render_template("contact.html")
 
 
+# ---------- CODE CREDIT ----------
+# https://www.geeksforgeeks.org/python-404-error-handling-in-flask/
+
+# ---------- 404 PAGE ----------
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
+
+# ---------- END OF CODE CREDIT ----------
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
