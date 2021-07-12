@@ -14,6 +14,7 @@ $(document).ready(function () {
     // Materialize delete recipe modal
     $('.modal').modal();
 
+
     // ----- CODE CREDIT -----
     // Code Institute Tutorial (Backend Development | Mini Project | Adding a task - Writing to the Database | Materialize Form Validation)
 
@@ -45,7 +46,7 @@ $(document).ready(function () {
             }
         });
     }
-
+    // ----- END OF CODE CREDIT -----
 });
 
 
@@ -77,9 +78,4 @@ $('#password, #confirm_password').on('keyup', function () {
       $('#signup-button').css('display', 'none');
 }});
 
-  // ----- END OF CODE CREDIT -----
-
-
-//   $('img').on("error", function() {
-//     $(this).attr('src', 'static/images/roast-chicken.jpg');
-//   });
+// ----- END OF CODE CREDIT -----

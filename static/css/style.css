@@ -1,4 +1,24 @@
-/* Utility Classes */
+/* Table of contents:
+
+1. Utility classes
+2. General styles
+3. Navbar
+4. Flash messages
+5. Footer
+6. Landing page
+7. Recipes page
+8. Full recipe page
+9. Add recipe page
+10. Sign up page
+11. Categories page
+12. Add categories page
+13. Contact page
+14. Page not found
+15. Override Materialize
+16. Media queries */
+
+
+/* 1. Utility Classes */
 
 .margin-top-ten {
     margin-top: 10px;
@@ -76,7 +96,8 @@
     display: inline;
 }
 
-/* General */
+
+/* 2. General styles*/
 
 body {
     font-family: Montserrat, sans-serif;
@@ -139,7 +160,8 @@ button {
     cursor: pointer;
 }
 
-/* Navbar */
+
+/* 3. Navbar */
 
 nav {
     box-shadow: none;
@@ -194,7 +216,8 @@ nav {
     font-weight: 500;
 }
 
-/* Flash messages */
+
+/* 4. Flash messages */
 
 .flash-messages {
     background-color: #d0ccb4;
@@ -208,7 +231,7 @@ nav {
 }
 
 
-/* Footer */
+/* 5. Footer */
 
 footer {
     background-color: #333;
@@ -285,7 +308,7 @@ h5 {
 }
 
 
-/* Landing page */
+/* 6. Landing page */
 
 .landing-banner-desktop {
     position: relative;
@@ -370,7 +393,7 @@ h5 {
 /* ----- END OF CODE CREDIT ----- */
 
 
-/* Recipes page */
+/* 7. Recipes page */
 
 .flex-container {
     display: flex;
@@ -468,7 +491,8 @@ h5 {
 }
 
 
-/* Full recipe page */
+/* 8. Full recipe page */
+
 div strong {
     font-weight: 600;
 }
@@ -576,7 +600,8 @@ div strong {
     margin-bottom: 15px;
 }
 
-/* Add recipe page */
+
+/* 9. Add recipe page */
 
 .add-recipe-label {
     font-size: 1.125rem;
@@ -619,7 +644,7 @@ div strong {
 }
 
 
-/* Sign up page */
+/* 10. Sign up page */
 
 .input-space {
     background-color: #fff;
@@ -699,7 +724,7 @@ div strong {
 }
 
 
-/* Categories page */
+/* 11. Categories page */
 
 .category-field {
     margin: 2px 10px 0px;
@@ -730,7 +755,8 @@ div strong {
     background-color: #94454a;
 }
 
-/* Add categories page */
+
+/* 12. Add categories page */
 
 .green-border-button {
     padding: 0.5rem 1.5rem;
@@ -760,7 +786,8 @@ div strong {
     display: none;
 }
 
-/* Contact page */
+
+/* 13. Contact page */
 
 .textarea-space {
     height: 12rem;
@@ -804,7 +831,8 @@ div strong {
     background-color: #7b9e9e;
 }
 
-/* Page not found */
+
+/* 14. Page not found */
 
 .four-oh-four {
     font-size: 5rem;
@@ -820,7 +848,7 @@ div strong {
 }
 
 
-/* Override Materialize */
+/* 15. Override Materialize */
 
 .parallax-container~.parallax-container {
     height: 450px;
@@ -831,7 +859,7 @@ div strong {
 }
 
 
-/* Media queries */
+/* 16. Media queries */
 
 @media screen and (max-width: 1430px) {
     .image-latest-three {
