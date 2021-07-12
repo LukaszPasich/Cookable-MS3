@@ -24,7 +24,7 @@ def landing():
     return render_template("landing.html")
 
 
-# ---------- ALL RECIPES C(R)UD ----------
+# ---------- ALL RECIPES ----------
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -105,8 +105,6 @@ def my_recipes(username):
             {"username": session["user"]})["username"]
     myrecipes = list(mongo.db.recipes.find({"created_by": session["user"]}))
 
-    # myrecipeslist = list(myrecipes)  TO TEST ADD myrecipeslist=myrecipeslist
-
     if session["user"]:
         return render_template(
                 "myrecipes.html", username=username, myrecipes=myrecipes)
@@ -123,7 +121,7 @@ def logout():
     return redirect(url_for("login"))
 
 
-# ---------- ADD RECIPE - (C)RUD ----------
+# ---------- ADD RECIPE ----------
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     # grab the session user's username from db
@@ -150,7 +148,7 @@ def add_recipe():
                            username=username)
 
 
-# ---------- EDIT RECIPE - CR(U)D ----------
+# ---------- EDIT RECIPE ----------
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     # grab the session user's username from db
@@ -178,7 +176,7 @@ def edit_recipe(recipe_id):
                            categories=categories, username=username)
 
 
-# ---------- DELETE RECIPE - CRU(D) ----------
+# ---------- DELETE RECIPE ----------
 @app.route("/delete_recipe/<recipe_id>", methods=["GET", "POST"])
 def delete_recipe(recipe_id):
     # grab the session user's username from db
@@ -198,15 +196,16 @@ def full_recipe(recipe_id):
 
     fullrecipes = mongo.db.recipes.find({"_id": ObjectId(recipe_id)})
 
-    # gets all records with the keywords
+    # Search for keywords functionality
+    # - gets all records with the keywords
     adsearch = list(mongo.db.recipes.find({"$text": {"$search": "mix mixer"}}))
 
     # ----- CODE CREDIT -----
-    # gets the list of only _id: value pairs of those records
+    # - gets the list of only _id: value pairs of those records
     # https://stackoverflow.com/questions/13254241/removing-key-values-pairs-from-a-list-of-dictionaries
     idvalues = [{k: v for k, v in d.items() if k == '_id'} for d in adsearch]
 
-    # turns the list of dicts into the list of "_id" values
+    # - turns the list of dicts into the list of "_id" values
     # https://stackoverflow.com/questions/20891141/convert-list-of-dicts-to-list
     adverts = []
     for idvalue in idvalues:
@@ -214,6 +213,7 @@ def full_recipe(recipe_id):
 
     # ----- END OF CODE CREDIT -----
 
+    # - joins lists into strings
     allingredients_list = recipe.get("ingredients")
     ingredients = ''.join(allingredients_list)
 
