@@ -97,35 +97,33 @@ Features within the scope:
 
 8. Delete Recipe
 
-9. All Recipes
+9. Categories (Create, Read, Update, Delete)
 
-10. Categories (Create, Read, Update, Delete)
+10. Non-registered user access
 
-11. Non-registered user access
+11. Registered user access
 
-12. Registered user access
+12. Admin access
 
-13. Admin access
+13. Login (with validation)
 
-14. Login (with validation)
+14. Signup (with validation)
 
-15. Signup (with validation)
+15. Signup (password confirmation)
 
-16. Signup (password confirmation)
+16. Logout
 
-17. Logout
+17. Website interaction feedback
 
-18. Website interaction feedback
+18. Email
 
-19. Email
+19. 'Schmickser' Advertising
 
-20. 'Schmickser' Advertising
+20. Forms validation
 
-21. Forms validation
+21. Broken image link handling
 
-22. Broken image link handling
-
-23. Broken URL handling
+22. Broken URL handling
 
 Features outside the scope:
 
@@ -135,16 +133,18 @@ Features outside the scope:
 Home page for the website, features a brief overview of the Cookable website, a main banner with a call to action to sign up and an advert for "Schmickser" mixer.
 
 <img src="static/images_readme/ms3-readme-overview.png" alt="Cookable - website landing page">
+&nbsp;
 
 2. All Recipes <br>
 This page features all recipes uploaded by all registered users. The page is available to view by any visitor to the website. Each recipe is represented by a card with the recipe image and the name.
 
-<img src="static/images_readme/ms3-readme-allrecipes.png" alt="Cookable - website landing page">
+<img src="static/images_readme/ms3-readme-allrecipes.png" alt="Cookable - website recipes page">
 
 3. My Recipes <br>
 This page features all recipes uploaded by the user who is currently in session and is available only to that user. It looks similar to the page featuring all recipes. If the current user has not uploaded any recipe yet the appropriate message is displayed.
 
-<img src="static/images_readme/ms3-readme-myrecipes.png" alt="Cookable - website landing page">
+<img src="static/images_readme/ms3-readme-myrecipes.png" alt="Cookable - website my recipes page">
+&nbsp;
 
 4. Full Recipe page <br>
 This page displays the full recipe and includes:
@@ -161,45 +161,65 @@ If the full recipe page is being viewed by the user that uploaded the recipe, th
 
 Also, if the recipe has 'mix' or 'mixer' keywords in it, the advertisement for 'Schmickser' mixer will appear underneath the recipe.
 
-<img src="static/images_readme/ms3-readme-fullrecipe.png" alt="Cookable - website landing page">
+<img src="static/images_readme/ms3-readme-fullrecipe.png" alt="Cookable - website full recipe page">
+&nbsp;
 
-5. Add Recipe
+5. Add Recipe <br>
+This page presents the user with the form to fill out all the spaces with relevant information to create the recipe.
 
-6. Search Recipes
+<img src="static/images_readme/ms3-readme-addrecipe.png" alt="Cookable - website add recipe page">
+&nbsp;
 
-7. Edit Recipe
+6. Search Recipes <br>
+The search bar appears on the page with all recipes. It has the search button (it's equivalent to hitting enter/return on the keyboard) and search reset that simply reloads the page. If the keyword given doesn't appear in any recipe, the message 'No results found' is displayed and all recipes are reloaded underneath.
 
-8. Delete Recipe
+<img src="static/images_readme/ms3-readme-search.png" alt="Cookable - website search field">
+&nbsp;
 
-9. All Recipes
+7. Edit Recipe <br>
+Comes up after hitting the 'Edit' button on the full recipe that belongs to the user and gives the user similar form as Add Recipe function does, but this time the information is already populated.
 
-10. Categories (Create, Read, Update, Delete)
+<img src="static/images_readme/ms3-readme-editrecipe.png" alt="Cookable - website search field">
+&nbsp;
 
-11. Non-registered user access
+8. Delete Recipe <br>
+Deleting recipe is possible after hitting the 'Delete' button on the full recipe that belongs to the user. There is defense mechanism in the form of the modal popping up, which prevents accidental deleting of the recipe by just hitting the 'Delete' button. The modal asks for additional Yes/No confirmation whether the recipe should be deleted.
 
-12. Registered user access
+<img src="static/images_readme/ms3-readme-deleterecipe.png" alt="Cookable - website search field">
+&nbsp;
 
-13. Admin access
+9. Categories (Create, Read, Update, Delete) <br>
+This series of pages is available only to the admin user. They allow admin to view all the recipe categories, add new categories, and edit and delete the old categories. Categories help to bundle up groups of recipes of similar kind under one common keyword (ex. a bunch of icecream recipes could have different ingredients, but they would all come up together in the search under 'dessert' keyword - provided the user used the correct category name).  
 
-14. Login (with validation)
+<img src="static/images_readme/ms3-readme-categories.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-editcategories.png" alt="Cookable - website search field">
+&nbsp;
 
-15. Signup (with validation)
+10. Non-registered user access
 
-16. Signup (password confirmation)
+11. Registered user access
 
-17. Logout
+12. Admin access
 
-18. Website interaction feedback
+13. Login (with validation)
 
-19. Email
+14. Signup (with validation)
 
-20. 'Schmickser' Advertising
+15. Signup (password confirmation)
 
-21. Forms validation
+16. Logout
 
-22. Broken image link handling
+17. Website interaction feedback
 
-23. Broken URL handling
+18. Email
+
+19. 'Schmickser' Advertising
+
+20. Forms validation
+
+21. Broken image link handling
+
+22. Broken URL handling
 
 
 ### Information Architecture - Website Flow Chart
