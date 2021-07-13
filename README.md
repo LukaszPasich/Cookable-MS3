@@ -1,10 +1,10 @@
 # __Cookable__ - Your Online Recipe Manager
 
-_Cookable_ ...
+_Cookable_ is your very own personal recipe organiser. Save your favourite recipes from websites, magazines, recipe books or simply those from your head, all in one place, accessible on all of your devices, anytime. Quickly search for recipes uploaded by other users to discover new culinary frontiers.
 
-<img src="assets/images_readme/ms3-readme-overview.png" alt="Cookable - website overview">
+<img src="static/images_readme/ms3-readme-overview.png" alt="Cookable - website overview">
 
-# Link to live project - [CLICK HERE](https://lukaszpasich.github.io/Cookable-MS3/index.html)
+# Link to live project - [CLICK HERE](http://cookable.herokuapp.com/landing)
 
 #### Contents
 1. [UX](#ux)
@@ -51,15 +51,33 @@ _Cookable_ ...
 ## UX
 
 ### User Goals.
-- content ...
+- Upload, store and easily access own cooking recipes on the _Cookable_ recipe manager.
+- Browse and find recipes uploaded by other users.
 
 ### Stakeholder Goals
-- content ...
+- Promote the 'Schmickser' brand of kitchen mixers.
+- Creating a crowd-populated resource for cooking recipes.
 
 ### User Stories
 
-1. As a first time user I want the website to ...
-2. ...
+1. As a first time user, I want the website to be simple and easy to navigate, I want all links to be available in the navbar.
+2. As a website user that accesses internet primarily via mobile, I want the website to be fully responsive, with clean and simple layout and also easy to navigate.
+3. As a user who looks only for cooking inspiration, I would like to be able to browse and find other people's recipes. It would be ideal if I could do it without having to create an account myself. 
+4. As a person who likes to cook from recipes I find online, I expect the recipes to have at the minimum all the basic information needed for the meals to be actually possible to cook. Any nutritional information would be a nice bonus.
+5. As a user who is looking for specific recipes, I expect the website to have some form of search feature, so I can find recipes by a particular ingredient or any other keyword.
+6. As a visitor who is looking to become a registered user, I would like to see an easy way to register my account. I also make typos easily..., I would like to see some defensive mechanism preventing me confusing the password at the registration, or alternatively, I would like to see password recovery feature.
+7. As a registered user, I expect an easy way to upload and view my recipes. I would like to share my recipes with other users, both regisered and unregisered.
+8. As a registered user, I would like an easy way to update and delete my recipes. However, I would like to make sure that other users could not modify or delete my recipes. 
+9. As a registered user, I would like to receive a feedback from the website at any point that my account has been affected in any way (uploading/ updating/ deleting recipe confirmation etc.)
+10. As a registered user, I would like to have some way of categorising recipes, so that it is easier to search for a group of similar recipes (or similar ingredients, etc.)
+11. As a user, I would like to be able to get in touch with the website owner, to ask a question, perhaps to suggest a new recipe category or leave any other feedback.
+12. As the website owner, I want to add an advert for the 'Schmickser' brand of mixers to any recipe that contains the keywords 'mix' or 'mixer'.
+13. As the website owner, I want some form of validation of any entry by the users, so that the website layout or database content doesn't break or doesn't get corrupted.
+14. As the website owner, I want some form of validation of usernames and passwords entries at the sign up level, so that the database doesn't get populated by possibly corrupting entries. Also I don't want users to get frustrated and leave the website when they forget passwords, therefore some form of prevention from using overly complicated entries must be in place.
+15. As the website owner, I want the features that are available to registered users to be concealed from non-registered users.
+16. As the website owner I expect to be able to add new recipe categories, and edit or delete existing categories.
+17. As the website owner I want the '404 - page not found' error to be handled in the way that makes visitors stay on Cookable website, so that accidental mispellings in the web address bar or any other issues don't take them elsewhere.
+
 
 ### Project Scope
 content ...
