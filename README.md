@@ -80,10 +80,127 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 
 
 ### Project Scope
-content ...
+Features within the scope:
+1. Landing (Home) page <br>
 
-Features:
-- content ...
+2. All Recipes
+
+3. My Recipes
+
+4. Full Recipe page
+
+5. Add Recipe
+
+6. Search Recipes
+
+7. Edit Recipe
+
+8. Delete Recipe
+
+9. All Recipes
+
+10. Categories (Create, Read, Update, Delete)
+
+11. Non-registered user access
+
+12. Registered user access
+
+13. Admin access
+
+14. Login (with validation)
+
+15. Signup (with validation)
+
+16. Signup (password confirmation)
+
+17. Logout
+
+18. Website interaction feedback
+
+19. Email
+
+20. 'Schmickser' Advertising
+
+21. Forms validation
+
+22. Broken image link handling
+
+23. Broken URL handling
+
+Features outside the scope:
+
+
+### Features:
+1. Landing (Home) page <br>
+Home page for the website, features a brief overview of the Cookable website, a main banner with a call to action to sign up and an advert for "Schmickser" mixer.
+
+<img src="static/images_readme/ms3-readme-overview.png" alt="Cookable - website landing page">
+
+2. All Recipes <br>
+This page features all recipes uploaded by all registered users. The page is available to view by any visitor to the website. Each recipe is represented by a card with the recipe image and the name.
+
+<img src="static/images_readme/ms3-readme-allrecipes.png" alt="Cookable - website landing page">
+
+3. My Recipes <br>
+This page features all recipes uploaded by the user who is currently in session and is available only to that user. It looks similar to the page featuring all recipes. If the current user has not uploaded any recipe yet the appropriate message is displayed.
+
+<img src="static/images_readme/ms3-readme-myrecipes.png" alt="Cookable - website landing page">
+
+4. Full Recipe page <br>
+This page displays the full recipe and includes:
+	- recipe name
+	- recipe category
+	- number of servings
+	- cooking time
+	- image
+	- ingredients
+	- preparation method
+	- user owner of the recipe
+
+If the full recipe page is being viewed by the user that uploaded the recipe, the aditional options for editing and deleting the recipe are displayed.
+
+Also, if the recipe has 'mix' or 'mixer' keywords in it, the advertisement for 'Schmickser' mixer will appear underneath the recipe.
+
+<img src="static/images_readme/ms3-readme-fullrecipe.png" alt="Cookable - website landing page">
+
+5. Add Recipe
+
+6. Search Recipes
+
+7. Edit Recipe
+
+8. Delete Recipe
+
+9. All Recipes
+
+10. Categories (Create, Read, Update, Delete)
+
+11. Non-registered user access
+
+12. Registered user access
+
+13. Admin access
+
+14. Login (with validation)
+
+15. Signup (with validation)
+
+16. Signup (password confirmation)
+
+17. Logout
+
+18. Website interaction feedback
+
+19. Email
+
+20. 'Schmickser' Advertising
+
+21. Forms validation
+
+22. Broken image link handling
+
+23. Broken URL handling
+
 
 ### Information Architecture - Website Flow Chart
 
