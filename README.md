@@ -12,7 +12,7 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 	- [Stakeholder Goals (Strategy)](#stakeholder-goals)
 	- [User Stories (Strategy)](#user-stories)
 	- [Project Scope (Scope)](#project-scope)
-	- [Information Architecture - Game Flow Chart (Structure)](#information-architecture---game-flow-chart)
+	- [Information Architecture - Website Flow Chart (Structure)](#information-architecture---website-flow-chart)
 	- [Wireframes (low fidelity wireframes) (Skeleton)](#wireframes-(low-fidelity))
 	- [Prototype (high fidelity wireframes) (Skeleton)](#prototype-(high-fidelity))
 	- [Design (Surface)](#design)
@@ -95,49 +95,25 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 
 ### Project Scope
 Features within the scope:
-1. Landing page <br>
+1. Website responsive - importance: 3, feasibility: 3, __TOTAL: 6__
+2. Recipes basic details: 3, feasibility: 3, __TOTAL: 6__
+3. Recipes (CRUD) - importance: 3, feasibility: 3, __TOTAL: 6__
+4. Recipe categories (CRUD)	- importance: 2, feasibility: 3, __TOTAL: 5__
+5. Non-registered user access - importance: 3, feasibility: 3, __TOTAL: 6__
+6. Registered user access - importance: 3, feasibility: 2, __TOTAL: 5__
+7. Admin access - importance: 2, feasibility: 2, __TOTAL: 4__
+8. All forms validation - importance: 3, feasibility: 2, __TOTAL: 5__
+9. Website interaction feedback - importance: 3, feasibility: 2, __TOTAL: 5__
+10. Email - importance: 2, feasibility: 2, __TOTAL: 4__
+11. 'Schmickser' advertising - importance: 2, feasibility: 2, __TOTAL: 4__
+12. Broken image link handling - importance: 2, feasibility: 2, __TOTAL: 4__
+13. Broken URL handling - importance: 1, feasibility: 2, __TOTAL: 3__
 
-2. All Recipes
-
-3. My Recipes
-
-4. Full Recipe page
-
-5. Add Recipe
-
-6. Search Recipes
-
-7. Edit Recipe
-
-8. Delete Recipe
-
-9. Categories (Create, Read, Update, Delete)
-
-10. Non-registered user access
-
-11. Registered user access
-
-12. Admin access
-
-13. Log in (with validation)
-
-14. Sign up (with validation and password confirmation)
-
-15. Log out
-
-16. Website interaction feedback
-
-17. Email
-
-18. 'Schmickser' advertising
-
-19. Broken image link handling
-
-20. Broken URL handling
-
-Features outside the scope:
-
-
+Features outside of the scope:
+1. Recipe advanced details - importance: 2, feasibility: 1, __TOTAL: 3__
+2. Admin dashboard for various recipe statistics - importance: 2, feasibility: 1, __TOTAL: 3__
+3. Recipes rating - importance: 1, feasibility: 1, __TOTAL: 2__
+4. Saving other users recipes - importance: 1, feasibility: 1, __TOTAL: 2__
 
 
 ### Information Architecture - Website Flow Chart
@@ -145,11 +121,13 @@ Features outside the scope:
 <img src="assets/images_readme/ms3-readme-ux-flowchart.jpg" alt="Cookable - website user flow">
 
 ### Wireframes (low fidelity)
-- [Wireframes for the website AVAILABLE HERE](https://indd.adobe.com/view/...)
+Through these low-fidelity wireframes I have created the basic structure of my website and I've explored responsive behaviour of the website.
+- [Wireframes for the website AVAILABLE HERE](https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:d9c1842d-6455-47cd-9d43-5ec8fa26a981)
 
 ### Prototype (high fidelity)
-- [Prototype - desktop version of the website AVAILABLE HERE](https://xd.adobe.com/view/...)
-- [Prototype - mobile version of the website AVAILABLE HERE](https://xd.adobe.com/view/...)
+Through the hi-fidelity prototype I have explored more the interconnectivity of all pages and I've answered most of the questions regarding the visual aspect of my website.
+- [Prototype - desktop version of the website AVAILABLE HERE](https://xd.adobe.com/view/75bb1733-15a2-4748-a139-57bad492aab1-20e8/)
+- [Prototype - mobile version of the website AVAILABLE HERE](https://xd.adobe.com/view/5eaa5182-9fe0-496e-bd45-1b6818eebac4-0bf9/)
 
 ### Design
 
