@@ -17,13 +17,27 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 	- [Prototype (high fidelity wireframes) (Skeleton)](#prototype-(high-fidelity))
 	- [Design (Surface)](#design)
 2. [Features](#features)
-	- [Landing Page](#landing-page)
-    - [How to Play Page](#how-to-play-page)
-    - [The Game](#the-game)
-    - [Score track](#score-track)
-    - [Eliminated Cards Track](#eliminated-cards-track)
-    - [End of the Game Message](#end-of-the-game-message)
-	- [Features to Implement in the Future](#features-to-implement-in-the-future)
+	- [Landing page](#landing-page)
+    - [All Recipes](#all-recipes)
+	- [My Recipes](#my-recipes)
+	- [Full Recipe page](#full-recipe-page)
+	- [Add Recipe](#add-recipe)
+	- [Search Recipes](#search-recipes)
+	- [Edit Recipe](#edit-recipe)
+	- [Delete Recipe](#delete-recipe)
+	- [Categories](#categories)
+	- [Non registered user access](#non-registered-user-access)
+	- [Registered user access](#registered-user-access)
+	- [Admin access](#admin-access)
+	- [Log in](#log-in)
+	- [Sign up](#sign-up)
+	- [Log out](#log-out)
+	- [Website interaction feedback](#website-interaction-feedback)
+	- [Email](#email)
+	- [Advertising](#advertising)
+	- [Broken image link handling](#broken-image-link-handling)
+	- [Broken URL handling](#broken-url-handling)
+	- [Features to Implement in the future](#features-to-implement-in-the-future)
 3. [Technologies](#technologies)
 	- [Tools](#tools)
 	- [Libraries](#libraries)
@@ -81,7 +95,7 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 
 ### Project Scope
 Features within the scope:
-1. Landing (Home) page <br>
+1. Landing page <br>
 
 2. All Recipes
 
@@ -115,13 +129,11 @@ Features within the scope:
 
 17. Email
 
-18. 'Schmickser' Advertising
+18. 'Schmickser' advertising
 
-19. Forms validation
+19. Broken image link handling
 
-20. Broken image link handling
-
-21. Broken URL handling
+20. Broken URL handling
 
 Features outside the scope:
 
@@ -163,24 +175,24 @@ content ...
 ---
 
 ## Features
-### Landing (Home) page <br>
+### Landing page
 Home page for the website, features a brief overview of the Cookable website, a main banner with a call to action to sign up and an advert for "Schmickser" mixer.
 
 <img src="static/images_readme/ms3-readme-overview.png" alt="Cookable - website landing page">
 &nbsp;
 
-### All Recipes <br>
+### All Recipes
 This page features all recipes uploaded by all registered users. The page is available to view by any visitor to the website. Each recipe is represented by a card with the recipe image and the name.
 
 <img src="static/images_readme/ms3-readme-allrecipes.png" alt="Cookable - website recipes page">
 
-### My Recipes <br>
+### My Recipes
 This page features all recipes uploaded by the user who is currently in session and is available only to that user. It looks similar to the page featuring all recipes. If the current user has not uploaded any recipe yet the appropriate message is displayed.
 
 <img src="static/images_readme/ms3-readme-myrecipes.png" alt="Cookable - website my recipes page">
 &nbsp;
 
-### Full Recipe page <br>
+### Full Recipe page
 This page displays the full recipe and includes:
 	- recipe name
 	- recipe category
@@ -198,74 +210,80 @@ Also, if the recipe has 'mix' or 'mixer' keywords in it, the advertisement for '
 <img src="static/images_readme/ms3-readme-fullrecipe.png" alt="Cookable - website full recipe page">
 &nbsp;
 
-### Add Recipe <br>
+### Add Recipe
 This page presents the user with the form to fill out all the spaces with relevant information to create the recipe.
 
 <img src="static/images_readme/ms3-readme-addrecipe.png" alt="Cookable - website add recipe page">
 &nbsp;
 
-### Search Recipes <br>
+### Search Recipes
 The search bar appears on the page with all recipes. It has the search button (it's equivalent to hitting enter/return on the keyboard) and search reset that simply reloads the page. If the keyword given doesn't appear in any recipe, the message 'No results found' is displayed and all recipes are reloaded underneath.
 
 <img src="static/images_readme/ms3-readme-search.png" alt="Cookable - website search field">
 &nbsp;
 
-### Edit Recipe <br>
+### Edit Recipe
 Comes up after hitting the 'Edit' button on the full recipe that belongs to the user and gives the user similar form as Add Recipe function does, but this time the information is already populated.
 
 <img src="static/images_readme/ms3-readme-editrecipe.png" alt="Cookable - website edit recipe feature">
 &nbsp;
 
-### Delete Recipe <br>
+### Delete Recipe
 Deleting recipe is possible after hitting the 'Delete' button on the full recipe that belongs to the user. There is defense mechanism in the form of the modal popping up, which prevents accidental deleting of the recipe by just hitting the 'Delete' button. The modal asks for additional Yes/No confirmation whether the recipe should be deleted.
 
 <img src="static/images_readme/ms3-readme-deleterecipe.png" alt="Cookable - website delete recipe feature">
 &nbsp;
 
-### Categories (Create, Read, Update, Delete) <br>
+### Categories
+(Create, Read, Update and Delete Categories)
+
 This series of pages is available only to the admin user. They allow admin to view all the recipe categories, add new categories, and edit and delete the old categories. Categories help to bundle up groups of recipes of similar kind under one common keyword (ex. a bunch of icecream recipes could have different ingredients, but they would all come up together in the search under 'dessert' keyword - provided the user used the correct category name).  
 
 <img src="static/images_readme/ms3-readme-categories.png" alt="Cookable - website recipe categories page">
 <img src="static/images_readme/ms3-readme-editcategories.png" alt="Cookable - website edit category page">
 &nbsp;
 
-### Non-registered user access <br>
+### Non registered user access
 The navigation bar and available links throughout the page let the visitor access all recipes, log in and sign up pages only.
 
 <img src="static/images_readme/ms3-readme-user.png" alt="Cookable - website navigation bar with links available to not regisered visitors">
 &nbsp;
 
 
-### Registered user access <br>
+### Registered user access
 The navigation bar and available links throughout the page let the registered user access all recipes, my recipes and add recipe pages. Log in is not available and sign up page is accesible from the home page. The registered user also has also additional privilages of being able to add, edit and delete his/her own recipes.
 
 <img src="static/images_readme/ms3-readme-reguser.png" alt="Cookable - website navigation bar with registered user access links">
 &nbsp;
 
-### Admin access <br>
+### Admin access
 Admin can access all the same features as the registered user plus can view, add, edit and delete recipe categories. 
 
 <img src="static/images_readme/ms3-readme-adminuser.png" alt="Cookable - website navigation bar with admin access links">
 &nbsp;
 
-### Log in (with validation) <br>
+### Log in
+(With validation)
+
 Log in page allows users to log in to their accounts and access registered users' expanded priviliges. The log in form validates the minimum and maximum characters lengths and makes sure that characters entered are within alpha-numeric values only (lowercase and uppercase for letters). If the user doesn't exist or password for user doesn't match database value, then the 'Incorrect username and/or password' message is displayed.
 
 <img src="static/images_readme/ms3-readme-login.png" alt="Cookable - website log in page">
 &nbsp;
 
-### Signup (with validation and password confirmation) <br>
+### Sign up
+(With validation and password confirmation)
+
 Sign up page allows visitor to create an account on the website and become a registered user. The sign up form validates the minimum and maximum characters lengths and makes sure that characters entered are within alpha-numeric values only (both lowercase and uppercase for letters).
 The password confirmation checks if the 'password' and 'confirm password' fields are the same (at least one character needs to be entered to make sure that the visitor didn't just click through the fields, making 2 empty fields match at equality test) and only then the 'Sig up' button becomes available.
 
 <img src="static/images_readme/ms3-readme-signup.png" alt="Cookable - website sign up page">
 &nbsp;
 
-### Log out <br>
+### Log out
 Log out link brings the user back to the basic website without all expanded features available to registered users and admin.
 &nbsp;
 
-### Website interaction feedback <br>
+### Website interaction feedback
 Cookable website gives the users feedback when certain actions are taken, especially when these actions are affecting the back-end of the website and the MongoDB database itself, and would not be very apparent at first otherwise. The feedback is manifested as a pop up 'flash' message (lasting 5 seconds). These messages happen when:
 - users log in to their accounts, the message: "Welcome, {{user_name}}!"
 - users sign up to the website, the message: "You have signed up successfully!"
@@ -283,22 +301,37 @@ Cookable website gives the users feedback when certain actions are taken, especi
 <img src="static/images_readme/ms3-readme-flash.png" alt="Cookable - website flash messages">
 &nbsp;
 
-17. Email <br>
-Email 
+### Email
+Through the contact form on the Contact us page users can send emails to the website owner's mailbox. The feature is supported by EmailJS service.
 
 <img src="static/images_readme/ms3-readme-email.png" alt="Cookable - website contact page">
 &nbsp;
 
-18. 'Schmickser' Advertising
+### Advertising
+The home page features an ad for the 'Schmickser' brand of kitchen mixers. This ad gets also inserted on the bottom of each recipe (thinking now.. perhaps positioning of the ad should be better) that contains, anywhere in the text, keywords 'mix' or 'mixer'.
 
-19. Forms validation
+<img src="static/images_readme/ms3-readme-mixer.png" alt="Cookable - website 'Schmickser' ads">
+&nbsp;
 
-20. Broken image link handling
+### Broken image link handling
+Because MongoDB supports only textual content, users can add the images to their recipes only by providing URL link to the image hosted on a 3rd party website. In the event of user entering an incorrect link, or in case of the image not being available anymore, a special placeholder image gets inserted instead of the default 'broken image link' icon. The placeholder image is hosted on [www.imgur.com](https://imgur.com/). This image responds to the css styling better than the default 'broken link' icon, blends in better with other images and doesn't break the nice grid layout of the recipe pages.
 
-21. Broken URL handling
+<img src="static/images_readme/ms3-readme-brokenlink.png" alt="Cookable - recipe image broken link">
+&nbsp;
 
-### Features to Implement in the Future
-- content ...
+### Broken URL handling
+If the user manually enters incorrect web address, or if 'error 404' happens for any other reason, the website redirects user to the 'Sorry.. Page not found' page. The good thing is that the user is still on the _Cookable_ website.
+
+<img src="static/images_readme/ms3-readme-404.png" alt="Cookable - website page not found">
+&nbsp;
+
+### Features to Implement in the future
+- Nutritional information for each recipe (ex. calorie count, vegan, vegetarian, gluten-free labels).
+- Recipe rating feature - for users to rate other users recipes.
+- Saving other users recipes.
+- Admin dashboard for various recipe statistics.
+- Timer (perhaps?)
+- Meal planner (perhaps?)
 
 
 [Back to top](#contents)
@@ -401,6 +434,8 @@ I was able to fix all of the problems that I was aware of.
 
 [Back to top](#contents)
 
+### Username on the navbar
+This is clumsily implemented at the moment as the username appears only on pages rendered by functions that take _username_ argument anyway. All pages that 
 
 ---
 
