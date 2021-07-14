@@ -105,11 +105,11 @@ Features within the scope:
 
 12. Admin access
 
-13. Login (with validation)
+13. Log in (with validation)
 
-14. Signup (with validation and password confirmation)
+14. Sign up (with validation and password confirmation)
 
-15. Logout
+15. Log out
 
 16. Website interaction feedback
 
@@ -125,8 +125,6 @@ Features within the scope:
 
 Features outside the scope:
 
-
-### Features:
 
 
 
@@ -215,54 +213,81 @@ The search bar appears on the page with all recipes. It has the search button (i
 ### Edit Recipe <br>
 Comes up after hitting the 'Edit' button on the full recipe that belongs to the user and gives the user similar form as Add Recipe function does, but this time the information is already populated.
 
-<img src="static/images_readme/ms3-readme-editrecipe.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-editrecipe.png" alt="Cookable - website edit recipe feature">
 &nbsp;
 
 ### Delete Recipe <br>
 Deleting recipe is possible after hitting the 'Delete' button on the full recipe that belongs to the user. There is defense mechanism in the form of the modal popping up, which prevents accidental deleting of the recipe by just hitting the 'Delete' button. The modal asks for additional Yes/No confirmation whether the recipe should be deleted.
 
-<img src="static/images_readme/ms3-readme-deleterecipe.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-deleterecipe.png" alt="Cookable - website delete recipe feature">
 &nbsp;
 
 ### Categories (Create, Read, Update, Delete) <br>
 This series of pages is available only to the admin user. They allow admin to view all the recipe categories, add new categories, and edit and delete the old categories. Categories help to bundle up groups of recipes of similar kind under one common keyword (ex. a bunch of icecream recipes could have different ingredients, but they would all come up together in the search under 'dessert' keyword - provided the user used the correct category name).  
 
-<img src="static/images_readme/ms3-readme-categories.png" alt="Cookable - website search field">
-<img src="static/images_readme/ms3-readme-editcategories.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-categories.png" alt="Cookable - website recipe categories page">
+<img src="static/images_readme/ms3-readme-editcategories.png" alt="Cookable - website edit category page">
 &nbsp;
 
 ### Non-registered user access <br>
 The navigation bar and available links throughout the page let the visitor access all recipes, log in and sign up pages only.
 
-<img src="static/images_readme/ms3-readme-user.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-user.png" alt="Cookable - website navigation bar with links available to not regisered visitors">
 &nbsp;
 
 
 ### Registered user access <br>
 The navigation bar and available links throughout the page let the registered user access all recipes, my recipes and add recipe pages. Log in is not available and sign up page is accesible from the home page. The registered user also has also additional privilages of being able to add, edit and delete his/her own recipes.
 
-<img src="static/images_readme/ms3-readme-reguser.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-reguser.png" alt="Cookable - website navigation bar with registered user access links">
 &nbsp;
 
 ### Admin access <br>
 Admin can access all the same features as the registered user plus can view, add, edit and delete recipe categories. 
 
-<img src="static/images_readme/ms3-readme-adminuser.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-adminuser.png" alt="Cookable - website navigation bar with admin access links">
 &nbsp;
 
-### Login (with validation) <br>
-Login page allows users to log in to their accounts and access registered users' expanded priviliges. The login form validates the minimum and maximum characters lengths and makes sure that characters entered are within alpha-numeric values only (lowercase and uppercase for letters). If the user doesn't exist or password for user doesn't match database value, then the 'Incorrect username and/or password' message is displayed.
+### Log in (with validation) <br>
+Log in page allows users to log in to their accounts and access registered users' expanded priviliges. The log in form validates the minimum and maximum characters lengths and makes sure that characters entered are within alpha-numeric values only (lowercase and uppercase for letters). If the user doesn't exist or password for user doesn't match database value, then the 'Incorrect username and/or password' message is displayed.
 
-<img src="static/images_readme/ms3-readme-login.png" alt="Cookable - website search field">
+<img src="static/images_readme/ms3-readme-login.png" alt="Cookable - website log in page">
 &nbsp;
 
-14. Signup (with validation and password confirmation)
+### Signup (with validation and password confirmation) <br>
+Sign up page allows visitor to create an account on the website and become a registered user. The sign up form validates the minimum and maximum characters lengths and makes sure that characters entered are within alpha-numeric values only (both lowercase and uppercase for letters).
+The password confirmation checks if the 'password' and 'confirm password' fields are the same (at least one character needs to be entered to make sure that the visitor didn't just click through the fields, making 2 empty fields match at equality test) and only then the 'Sig up' button becomes available.
 
-15. Logout
+<img src="static/images_readme/ms3-readme-signup.png" alt="Cookable - website sign up page">
+&nbsp;
 
-16. Website interaction feedback
+### Log out <br>
+Log out link brings the user back to the basic website without all expanded features available to registered users and admin.
+&nbsp;
 
-17. Email
+### Website interaction feedback <br>
+Cookable website gives the users feedback when certain actions are taken, especially when these actions are affecting the back-end of the website and the MongoDB database itself, and would not be very apparent at first otherwise. The feedback is manifested as a pop up 'flash' message (lasting 5 seconds). These messages happen when:
+- users log in to their accounts, the message: "Welcome, {{user_name}}!"
+- users sign up to the website, the message: "You have signed up successfully!"
+- users, try to sign up using existing username, the message: "Username already exists"
+- users try to log in with incorrect username or password, the message: "Incorrect username and/or password"
+- users log out, the message: "You have been logged out"
+- users add new recipe, the message: "Recipe Successfully Added"
+- users edit the recipe, the message: "Recipe Successfully Updated"
+- users, delete the recipe, the message: "Recipe Successfully Deleted"
+- admin user adds a new recipe category, the message: "New Category Added"
+- admin user edits a recipe category, the message: "Category Successfully Updated"
+- admin user deletes a category, the message: "Category Successfully Deleted"
+- users send email from the contact page, the message: "Messsage sent successfully". This is the only message not done through Python, but rather with JavaScript.
+
+<img src="static/images_readme/ms3-readme-flash.png" alt="Cookable - website flash messages">
+&nbsp;
+
+17. Email <br>
+Email 
+
+<img src="static/images_readme/ms3-readme-email.png" alt="Cookable - website contact page">
+&nbsp;
 
 18. 'Schmickser' Advertising
 
