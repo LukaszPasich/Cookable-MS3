@@ -140,13 +140,18 @@ I settled on the idea of the casual script font pretty early. I've seen few exam
 <img src="static/images_readme/ms3-readme-logo.png" alt="Cookable logo">
 
 #### Colours
-content ...
+I was exploring colours around more 'mature greens' to evoke feelings of healthy and good quality food in users.
 
-<img src="assets/images_readme/ms3-readme-ux-colours.jpg" alt="Cookable website colours">
+<img src="static/images_readme/ms3-readme-colours.png" alt="Cookable logo">
 
 #### Typography
-content ...
+- _Zilla Slab_ font was used  for all headlines.
 
+	Zilla Slab is contemporary slab serif, constructed with smooth curves and true italics, which gives text an unexpectedly sophisticated industrial look and a friendly approachability in all weights.
+
+- _Montserrat_ font was used for all body text.
+
+	Montserrat is very versatile and can be used in multiple domains such as websites, the publishing world, branding, editorial, logos, print, posters, etc. It is a typeface that can be used basically anywhere because of the geometric and elegant simplicity with nice large x-height.
 
 [Back to top](#contents)
 
