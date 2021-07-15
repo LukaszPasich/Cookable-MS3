@@ -132,12 +132,12 @@ Through the hi-fidelity prototype I have explored more the interconnectivity of 
 ### Design
 
 #### The Name
-content ...
+The name came after brainstorming around the word 'Cookbook', however I didn't want to be as obvious as that, plus I found an actual app for managing recipes called 'Cookbook', so the name was off the table. I was looking at a lot of chess matches on youtube and somehow through ads I came across the website of one of the chess grand masters Magnus Carlsen - it was called Chessable. That instant I decided on the name _Cookable_. It had the sounding of the 'Cookbook', felt like it was full of things possible to cook (all cookable things), and also felt inviting, like anyone was able to cook them (you're able to cook).
 
 #### Logo
-content ...
+I settled on the idea of the casual script font pretty early. I've seen few examples of that type of font working well with the cooking theme. The logotype was supposed to be it, but the moment I saw the double 'o' together in that font, I realised it was asking for a smile underneath (amazon logo style) to make it a friendly happy looking logo - perfect for the purpose.
 
-<img src="assets/images_readme/ms3-readme-ux-logo.png" alt="Cookable logo">
+<img src="static/images_readme/ms3-readme-logo.png" alt="Cookable logo">
 
 #### Colours
 content ...
