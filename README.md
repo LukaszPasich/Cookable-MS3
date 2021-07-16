@@ -40,8 +40,9 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 	- [Features to Implement in the future](#features-to-implement-in-the-future)
 3. [Technologies](#technologies)
 	- [Tools](#tools)
-	- [Libraries](#libraries)
+	- [Libraries and frameworks](#libraries-and-frameworks)
 	- [Languages](#languages)
+	- [Database platform](#database-platform)
 4. [Testing](#testing)
 	- [Automated Testing](#automated-testing)
 	- [UX Testing](#ux-testing)
@@ -343,21 +344,30 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 ### Tools
 - [GitHub](https://github.com) was an IDE used for the project.
 - [GitPod](https://gitpod.io/workspaces/) was used for version control.
+- [Heroku](https://heroku.com) was used for website deployment.
 - [Balsamiq](https://balsamiq.com) was used to create low fidelity wireframes.
 - [Adobe XD](https://www.adobe.com/ie/products/xd.html) was used to build the high fidelity prototypes.
-- [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to ...
+- [Adobe Illustrator](https://www.adobe.com/ie/products/illustrator.html) was used to create logo.
 - [Adobe Photoshop](https://www.adobe.com/ie/products/photoshop.html) was used to edit, crop and save images.
+- [Adobe InDesign](https://www.adobe.com/ie/products/indesign.html) was used to creadit some of the graphics for the website (ex. 'Schmickser' ad).
 - [Am I Responsive](http://ami.responsivedesign.is) was used to create the images of each page displayed on different screen sizes in this _Readme_ file.
 
-### Libraries
-- [Bootstrap](https://getbootstrap.com/) grids were used in particular to create and maintain the design layout across different screen/viewport sizes and make the website responsive easily.
-- [Google Fonts](https://fonts.google.com) was used to link the "Montserrat" font.
-- [Font Awesome](https://fontawesome.com) was used for _play_ and _menu_ icons in the header of the _How to Play_ page and for all the icons of the _Eliminated cards track_.
+### Libraries and frameworks
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/) was used as a Python framework. A number of features was imported from flask - render_templates amongst one of them.
+- [jQuery](https://jquery.com/) was used as JavaScript framework. A number of components from Materialize was activated via jQuery.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) was used for hashing and unhashing back the passwords.
+- [Materialize](https://materializecss.com/) grids were used in particular to create and maintain the design layout across different screen/viewport sizes and make the website responsive easily. Some dynamic components from Materialize were also used.
+- [Google Fonts](https://fonts.google.com) was used to link the "Montserrat" and "Zilla Slab" fonts.
+- [Font Awesome](https://fontawesome.com) was used for icons.
 
 ### Languages
-- HTML
-- CSS
+- HTML5
+- CSS3
 - JavaScript
+- Python
+
+### Database platform
+- MongoDB - a NoSQL database cloud-based program - was used to store data captured from the user.
 
 [Back to top](#contents)
 
