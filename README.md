@@ -382,16 +382,16 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 	- _Full recipe page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Ffull_recipe) - Errors: 0, Warnings: 1
 	- _My recipes page_ validator result [HERE](https://validator.w3.org/nu/?doc=http%3A%2F%2Fcookable.herokuapp.com%2Fmy_recipes) - Errors: 0, Warnings: 1
 	- _Edit recipe page_ validator result [HERE](https://validator.w3.org/nu/?doc=http%3A%2F%2Fcookable.herokuapp.com%2Fedit_recipe) - Errors: 0, Warnings: 1
+
 	- _Add recipe page_ validator result [NOT RETRIEVABLE]() - Errors: 0, Warnings: 1
 	- _Categories page_ validator result [NOT RETRIEVABLE]() - Errors: 0, Warnings: 1
 	- _Edit category page_ validator result [NOT RETRIEVABLE]() - Errors: 0, Warnings: 1
 	- _Add category page_ validator result [NOT RETRIEVABLE]() - Errors: 0, Warnings: 1
+
 	- _Sign up page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Fsignup) - Errors: 0, Warnings: 1
 	- _Log in page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Flogin) - Errors: 0, Warnings: 1
-	- _Contact page_ validator result [HERE]() - Errors: 0, Warnings: 1
+	- _Contact page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Fcontact) - Errors: 0, Warnings: 3
 	- _Error 404 page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Fcontacta) - Errors: 0, Warnings: 1
-
-
 
 &nbsp;
 
