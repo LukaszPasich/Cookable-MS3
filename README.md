@@ -67,10 +67,14 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 ### User Goals.
 - Upload, store and easily access own cooking recipes on the _Cookable_ recipe manager.
 - Browse and find recipes uploaded by other users.
+<br>
+<br>
 
 ### Stakeholder Goals
 - Promote the 'Schmickser' brand of kitchen mixers.
 - Creating a crowd-populated resource for cooking recipes.
+<br>
+<br>
 
 ### User Stories
 
@@ -91,7 +95,8 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 15. As the website owner, I want the features that are available to registered users to be concealed from non-registered users.
 16. As the website owner I expect to be able to add new recipe categories, and edit or delete existing categories.
 17. As the website owner I want the '404 - page not found' error to be handled in the way that makes visitors stay on Cookable website, so that accidental mispellings in the web address bar or any other issues don't take them elsewhere.
-
+<br>
+<br>
 
 ### Project Scope
 Features within the scope:
@@ -114,20 +119,33 @@ Features outside of the scope:
 2. Admin dashboard for various recipe statistics - importance: 2, feasibility: 1, __TOTAL: 3__
 3. Recipes rating - importance: 1, feasibility: 1, __TOTAL: 2__
 4. Saving other users recipes - importance: 1, feasibility: 1, __TOTAL: 2__
+<br>
+<br>
+
+### Information Architecture
+#### Sitemap
+
+- [Sitemap showing access to the website at different levels of user registration CLICK HERE](https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:422f87e3-8884-4cff-89ce-3132d03dc50c)
 
 
-### Information Architecture - Website Flow Chart
+#### Database
 
-<img src="assets/images_readme/ms3-readme-ux-flowchart.jpg" alt="Cookable - website user flow">
+- [Database structure CLICK HERE](https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:b27eda61-45f0-40e5-a1f5-37fafdde079a)
+<br>
+<br>
 
 ### Wireframes (low fidelity)
 Through these low-fidelity wireframes I have created the basic structure of my website and I've explored responsive behaviour of the website.
 - [Wireframes for the website AVAILABLE HERE](https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:d9c1842d-6455-47cd-9d43-5ec8fa26a981)
+<br>
+<br>
 
 ### Prototype (high fidelity)
 Through the hi-fidelity prototype I have explored more the interconnectivity of all pages and I've answered most of the questions regarding the visual aspect of my website.
 - [Prototype - desktop version of the website AVAILABLE HERE](https://xd.adobe.com/view/75bb1733-15a2-4748-a139-57bad492aab1-20e8/)
 - [Prototype - mobile version of the website AVAILABLE HERE](https://xd.adobe.com/view/5eaa5182-9fe0-496e-bd45-1b6818eebac4-0bf9/)
+<br>
+<br>
 
 ### Design
 
