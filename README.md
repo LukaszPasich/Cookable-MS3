@@ -355,7 +355,7 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 ### Libraries and frameworks
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/) was used as a Python framework. A number of features was imported from flask - render_templates amongst one of them.
 - [jQuery](https://jquery.com/) was used as JavaScript framework. A number of components from Materialize was activated via jQuery.
-- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) was used for hashing and unhashing back the passwords.
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) tool was used for hashing and unhashing back the passwords.
 - [Materialize](https://materializecss.com/) grids were used in particular to create and maintain the design layout across different screen/viewport sizes and make the website responsive easily. Some dynamic components from Materialize were also used.
 - [Google Fonts](https://fonts.google.com) was used to link the "Montserrat" and "Zilla Slab" fonts.
 - [Font Awesome](https://fontawesome.com) was used for icons.
@@ -377,8 +377,14 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 
 ### Automated Testing
 - [W3C Markup Validator](https://validator.w3.org/) was used for HTML validation:
-	- _Home page_ validator result [HERE](https://validator.w3.org/...) - Errors: 0, Warnings: 0
-    
+	- _Home page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Flanding) - Errors: 0, Warnings: 1
+
+	- _Sign up page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Fsignup) - Errors: 0, Warnings: 1
+
+
+
+&nbsp;
+
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used for CSS validation:
 	- CSS validation result [HERE](https://jigsaw.w3.org/...) - Errors: 0
 

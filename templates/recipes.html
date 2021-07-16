@@ -30,13 +30,13 @@
     <div>
         <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=recipe._id) }}">
 
-            <!----- CODE CREDIT - Handle broken image link ----->
+            <!-- CODE CREDIT - Handle broken image link -->
             <!-- https://themeisle.com/blog/missing-images-on-website/ -->
 
             <img class="flex-image" src="{{ recipe.image }}" alt="Recipe" 
             onError="this.onerror=null; this.src='https://i.imgur.com/pKDfecc.jpg';">
 
-            <!----- END OF CODE CREDIT ----->
+            <!-- END OF CODE CREDIT -->
 
             <div class="recipes-overlay"></div>
             <div class="recipes-title">{{ recipe.recipe_name }}</div>
@@ -55,13 +55,13 @@
         <div>
             <a class="recipes-overlay-container" href="{{ url_for('full_recipe', recipe_id=recipesearch._id) }}">
 
-                <!----- CODE CREDIT - Handle broken image link ----->
+                <!-- CODE CREDIT - Handle broken image link -->
                 <!-- https://themeisle.com/blog/missing-images-on-website/ -->
 
                 <img class="flex-image" src="{{ recipesearch.image }}" alt="Recipe" 
                 onError="this.onerror=null; this.src='https://i.imgur.com/pKDfecc.jpg';">
 
-                <!----- END OF CODE CREDIT ----->
+                <!-- END OF CODE CREDIT -->
 
                 <div class="recipes-overlay"></div>
                 <div class="recipes-title">{{ recipesearch.recipe_name }}</div>
