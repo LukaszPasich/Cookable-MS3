@@ -73,9 +73,11 @@ $('#password, #confirm_password').on('keyup', function () {
     if ($('#password').val() == $('#confirm_password').val() && $('#password').val().length > 0) {
       $('#password-match-message').html("Passwords match").css('color', 'green');
       $('#signup-button').css('display', 'block');
+      $('#signup-button-inactive').css('display', 'none');
     } else {
       $('#password-match-message').html("Passwords don't match").css('color', 'red');
       $('#signup-button').css('display', 'none');
+      $('#signup-button-inactive').css('display', 'block');
 }});
 
 // ----- END OF CODE CREDIT -----

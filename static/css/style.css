@@ -96,6 +96,9 @@
     display: inline;
 }
 
+.opacity-fifty {
+    opacity: .5;
+}
 
 /* 2. General styles*/
 
@@ -666,6 +669,7 @@ div strong {
     font-size: 1rem;
 }
 
+.green-button-full-inactive,
 .green-button-full {
     padding: 0.5rem 1.5rem;
     border-radius: 10px;
