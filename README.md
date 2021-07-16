@@ -394,7 +394,7 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 &nbsp;
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used for CSS validation:
-	- CSS validation result [HERE](https://jigsaw.w3.org/...) - Errors: 0
+	- CSS validation result [HERE](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fcookable.herokuapp.com%2Fstatic%2Fstyle%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - Errors: 1 (error related to Materialize library)
 
 &nbsp;
 
