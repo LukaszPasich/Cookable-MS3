@@ -390,11 +390,13 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 	- _Log in page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Flogin) - Errors: 0
 	- _Contact page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Fcontact) - Errors: 0
 	- _Error 404 page_ validator result [HERE](https://validator.w3.org/nu/?doc=https%3A%2F%2Fcookable.herokuapp.com%2Fcontacta) - Errors: 0
-	
+
 &nbsp;
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used for CSS validation:
 	- CSS validation result [HERE](https://jigsaw.w3.org/...) - Errors: 0
+
+&nbsp;
 
 - [JSHint](https://jshint.com/) was used for JavaScript validation (New JavaScript features (ES6) were selected in configuration):
     - JavaScript validation - Errors: 0

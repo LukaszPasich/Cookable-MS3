@@ -233,7 +233,6 @@ nav {
     text-align: center;
 }
 
-
 /* 5. Footer */
 
 footer {
@@ -518,11 +517,6 @@ div strong {
 
 .strong-method {
     line-height: 2.5rem;
-}
-
-.full-recipe-method p {
-    margin-block-start: 0em;
-    margin-block-end: 1em;
 }
 
 .button-edit,
