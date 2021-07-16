@@ -12,7 +12,7 @@
             <label class="add-recipe-label" for="category_name"><i class="fas fa-folder-open add-recipe-icon"></i> Recipe Category:</label>
             <div class="input-field col s12">
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected></i> Choose Category</option>
+                    <option value="" disabled selected> Choose Category</option>
                         {% for category in categories %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
@@ -24,7 +24,7 @@
         <div class="row">
             <label class="add-recipe-label" for="recipe_name">Recipe Name:</label>
             <div class="input-field col s12">
-                <input placeholder="(max 40 characters)" id="recipe_name" name="recipe_name"type="text"
+                <input placeholder="(max 40 characters)" id="recipe_name" name="recipe_name" type="text"
                     maxlength="40" class="validate" required>
             </div>
         </div>
