@@ -722,7 +722,7 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 12.5 - _Cancel_ button cancels all changes and redirects user to the _Categories_ page - YES
 
 13. Sign up page:
-	- TEST 13.1 - _Sign up_ button appears faded out and is inactive when form first loaded - YES (apart from Safari web browser)
+	- TEST 13.1 - _Sign up_ button appears faded out and is inactive when form first loaded - YES (apart from Safari web browser), see [bugs not fixed](#bugs-not-fixed) section
 	- TEST 13.2 - _Username_ input space does not allow more than 15 characters - YES
 	- TEST 13.3 - _Username_ input space does not validate inputs with less than 5 characters, validation red (invalid) - YES
 	- TEST 13.4 - _Username_ input space does not validate inputs with non alphanumeric values, validation red (invalid) - YES
@@ -787,15 +787,17 @@ This has to do with the fact that env.py file contains all the sensitive data an
 Website has been tested on the following Internet Browsers:
 
 - Google Chrome - no issues detected
-- Safari - no issues detected
+- Safari - one issue with the Sign up button on _Sign up_ page, see [bugs not fixed](#bugs-not-fixed) section
 - Mozilla Firefox - no issues detected
 - Microsoft Edge - no issues detected
 	
 #### Various Devices Check
 
-Game has been checked on Desktop, Laptop, iPhone5 and iPhone6.
+Website has been checked on Desktop, Laptop, and iPhone6 and iPhone7.
 No issues specific to devices were discovered.
-	
+
+&nbsp;
+
 ### Bugs
 
 #### Bugs Fixed
