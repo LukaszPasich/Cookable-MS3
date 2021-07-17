@@ -739,6 +739,7 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 13.15 - While _Password_ and _Confirm Password_ inputs are both same, the 'Sign up' button becomes active and 'Passwords match' message is displayed  - YES
 	- TEST 13.16 - Clicking on _Sign up_ button when at least one of the input spaces is invalidated, does not create a new user in the database and the first invalid space asks for the correct input to be entered - YES
 	- TEST 13.17 - Clicking on _Sign up_ button when all of the input spaces are validated, creates a new user in the database and redirects user to _My Recipes_ page - YES
+	- TEST 13.18 - Signing up with user name that already exists in the database reloads the _Sign up_ page and generates the appropriate flash message - YES
 
 14. Log in page:
 	- TEST 14.1 - _Username_ input space does not allow more than 15 characters - YES
@@ -751,6 +752,7 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 14.8 - _Password_ input space validates inputs with alphanumeric values, and between 5 and 15 characters, validation green (valid) - YES
 	- TEST 14.9 - Clicking on _Log in_ button when at least one of the input spaces is invalidated, does not log user in, and the first invalid space asks for the correct input to be entered - YES
 	- TEST 14.10 - Clicking on _Log in_ button when all of the input spaces are validated, logs the user in, and redirects user to _My Recipes_ page - YES
+	- TEST 14.11 - Logging in with the non-existing username or password reloads the _Log in_ page and generates the appropriate flash message - YES
 
 15. Contact page:
 	- TEST 15.1 - _Email_ input space validates only appropriate email format input - YES
@@ -772,14 +774,13 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 16.12 - Flash message: "Messsage sent successfully" displayed when users send email from the contact page - YES
 
 17. Broken image link:
-	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
-
-
-
-
+	- TEST 17.1 - When the link to the recipe image is not broken, the correct image gets displayed on small card recipe preview and the full recipe page - YES
+	- TEST 17.1 - When the link to the recipe image is broken, the default image ("...oops, the link to your image seems to be broken") gets displayed on small card recipe preview and the full recipe page - YES
 
 18. 404 page:
-	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
+	- TEST 18.1 - Misspelling the address of the website in the address bar, redirects user to the "404 Sorry... Page not found" page - YES
+	- TEST 18.2 - Clicking on 'To go back to home page click here' link brings user to the _Home_ page - YES
+
 
 #### Various Internet Browsers Check
 
