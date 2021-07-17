@@ -916,7 +916,7 @@ No issues specific to devices were discovered.
 		There is currently, clumsily implemented, username appearing in the navbar. However, at the moment this username only appears on pages rendered by functions that take _username_ argument, so pages, that are exclusive access to registered users and admin. 
 
 		<img src="static/images_readme/ms3-readme-bugun5-username.png" alt="Cookable website - bugs unsolved 5">
-		
+
 		Adding _username_ to the other pages - pages that are shared by registered and non-registered users - was creating a lot of problems for non-registered users.
 
 &nbsp;
@@ -928,38 +928,23 @@ No issues specific to devices were discovered.
 
 ## Deployment
 
-### GitHub Pages Deployment
+&nbsp;
 
-The project was deployed to GitHub Pages using the following steps...
+### Forking GitHub Repository
+(A copy of the original repository on your GitHub account)
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com).
-2. At the top of the Repository, locate the _Settings_ button on the menu and click on it.
+1. Log in to GitHub and locate this [GitHub Repository](https://github.com/LukaszPasich/Cookable-MS3)
 
-<img src="assets/images_readme/ms2-readme-deployment-one.png" alt="Now We Flip website - deployment instructions">
+2. Locate the "Fork" button in the top right-hand side of the page and click on it.
+3. You now have a copy of the original repository in your GitHub account.
 
-3. Scroll down the Settings page until you locate the _GitHub Pages_ section.
+&nbsp;
 
-4. Under _Source_, click the dropdown _Branch: None_ and select _Branch: Master_.
-
-<img src="assets/images_readme/ms2-readme-deployment-two.png" alt="Now We Flip website - deployment instructions">
-
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site link in the _GitHub Pages_ section.
-
-<img src="assets/images_readme/ms2-readme-deployment-three.png" alt="Now We Flip website - deployment instructions">
-
-7. The project has been now deployed - the link can be opened in the browser.
-
-
-### Cloning
-
-1. Find this project [repository](https://github.com/LukaszPasich/Now-We-Flip-MS2-) on github.
+### Making a Local Clone
+1. Log in to GitHub and locate this [GitHub Repository](https://github.com/LukaszPasich/Cookable-MS3)
 2. Under the repository name, click on "Code" button.
 3. In the Clone/ Download unfolded tab click on HTTPS (to clone with HTTPS).
 4. Click on the 'clipboard' icon to copy the URL of your project.
-
-<img src="assets/images_readme/ms2-readme-cloning-one.png" alt="Now We Flip website - cloning instructions">
-
 5. Open your IDE, open terminal.
 6. Change the current working directory to the location where you want the cloned directory.
 7. In the terminal type <code>git clone</code>, and then paste the URL you copied earlier.
@@ -968,9 +953,44 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 8. Press _ENTER_ to create your local clone.
 
+	__Note:__ It is important that you create an env.py file to save your __environment variables__, the web app will not function without these variables:
+	
+	- ("IP", "0.0.0.0") - not recommended for production apps
+	- ("PORT", "5000")
+	- ("SECRET_KEY", "_your key for session cookie_")
+	- ("MONGO_URI", "_URI for your MongoDB Database_")
+	- ("MONGO_DBNAME", "_your database name_")
+
+&nbsp;
+
+### Heroku Deployment
+
+1. Log in to [Heroku](https://www.heroku.com).
+2. From the Dashboard, click on the _New_ button in the top-right corner and then select "Create new app".
+3. Insert your app name.
+4. Select the most appropriate region for your location.
+5. Click the "Create app" button.
+6. In the _Deploy_ tab of your new app select Github in the "Deployment Method" section.
+7. Once selected, a Connect to GitHub section will display below - find there your Github username and your repository and click "Connect".
+
+	__Note:__ This app uses configuration settings and secret keys for MongoDB and session cookies, which Heroku requires in order for the website to function as desired. Therefore you need to set the Config Vars within Heroku.
+
+8. Go to _Settings_ tab.
+9. In _Settings_ tab, find _Config Vars_ section and click on "Reveal Config Vars".
+10. Create the below Config Vars:
+	- "IP": "0.0.0.0",
+	- "PORT": "5000",
+	- "SECRET_KEY": "use [RandomKeyGen](https://randomkeygen.com) Fort Knox password",
+	- "MONGO_URI": "_URI for your MongoDB Database_", (you'll find this string in MongoDB)
+	- "MONGO_DBNAME": "_your database name_"
+
+11. Your app is deployed noe and you can view it by clicking on "Open App" in the top right corner of your Dashboard.
+12. Enable automatic deployment - go to "Deploy" tab and 
+in the _Automatic Deploys_ section select the branch you wish to use.
 
 [Back to top](#contents)
 
+&nbsp;
 
 ---
 
