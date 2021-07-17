@@ -90,7 +90,7 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 9. As a registered user, I would like to receive a feedback from the website at any point that my account has been affected in any way (uploading/ updating/ deleting recipe confirmation etc.)
 10. As a registered user, I would like to have some way of categorising recipes, so that it is easier to search for a group of similar recipes (or similar ingredients, etc.)
 11. As a user, I would like to be able to get in touch with the website owner, to ask a question, perhaps to suggest a new recipe category or leave any other feedback.
-12. As the website owner, I want to add an advert for the 'Schmickser' brand of mixers to any recipe that contains the keywords 'mix' or 'mixer'.
+12. As the website owner, I would like to advertise the 'Schmickser' brand of mixers in some way.
 13. As the website owner, I want some form of validation of any entry by the users, so that the website layout or database content doesn't break or doesn't get corrupted.
 14. As the website owner, I want some form of validation of usernames and passwords entries at the sign up level, so that the database doesn't get populated by possibly corrupting entries. Also I don't want users to get frustrated and leave the website when they forget passwords, therefore some form of prevention from using overly complicated entries must be in place.
 15. As the website owner, I want the features that are available to registered users to be concealed from non-registered users.
@@ -512,19 +512,76 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	This is useful when users want their recipe to come up under certain keyword, but the keyword doesn't exist anywhere in the name, ingredients or method (ex., user would like a prawn cocktail recipe to come up whenever search for 'fish' is performed).
 
 11. As a user, I would like to be able to get in touch with the website owner, to ask a question, perhaps to suggest a new recipe category or leave any other feedback.
-12. As the website owner, I want to add an advert for the 'Schmickser' brand of mixers to any recipe that contains the keywords 'mix' or 'mixer'.
+
+	There is a link to the Contact page in the footer ('Get in touch'), which brings users to the contact form that sends emails directly to the owner of the website. Visitors can get more information and give further feedback on the social media. Links to various social media pages also available in the footer. 
+
+12. As the website owner, I would like to advertise the 'Schmickser' brand of mixers in some way.
+
+	Any recipe that contains the keywords 'mix' or 'mixer' gets an advert for the 'Schmickser' brand of mixers inserted at the bottom of the full recipe page. In addition, there is also an advert for 'Schmickser' mixers on the home page.
+
 13. As the website owner, I want some form of validation of any entry by the users, so that the website layout or database content doesn't break or doesn't get corrupted.
+
+	All insert fields have appropriate validation mechanisms present:
+	- Sign up form:
+		- username, password and confirm password fields - require alphanumeric entries and min/max amount of characters,
+		- form - checks if username already exists in the database and resets the form if it does, plus flash message is displayed
+		- form - verifies that password and confirm password entries are equal and makes 'Sign in' button available only if they are,
+		- form - all fields filled out required to send the form
+	- Log in form:
+		- username, and password fields - require alphanumeric entries and min/max amount of characters,
+		- form - checks if password entered and the username entered match any database record, and if it doesn't, the form is reset and apropriate flash message is displayed
+		- form - all fields filled out required to send the form
+	- Contact form:
+		- email field - requires correct email format input,
+		- form - all fields filled out required to send the form
+	- Add/Edit recipe:
+		- recipe category - is required,
+		- recipe name - max 40 characters allowed
+		- serves - max 2 digit number using any digits allowed
+		- cooks in - max 4 digit number using any digits allowed
+		- form - all fields filled out required to send the form
+	- Add/Edit category:
+		- category - min 2, max 20 characters, entry required
+
 14. As the website owner, I want some form of validation of usernames and passwords entries at the sign up level, so that the database doesn't get populated by possibly corrupting entries. Also I don't want users to get frustrated and leave the website when they forget passwords, therefore some form of prevention from using overly complicated entries must be in place.
+
+	Sign up form has validation mechanism present (see point 13 of User Stories Testing, above).
+
 15. As the website owner, I want the features that are available to registered users to be concealed from non-registered users.
+
+	There are 3 levels of access to the website, at every level there is a different set of features that can be accessed by the user:
+
+	| Non-registered user | Registered user   | Admin user          |
+	|---------------------|-------------------|---------------------|
+	|Home                 |Home                |Home                |
+	|Recipes              |Recipes             |Recipes             |
+	|Search               |Search              |Search              |
+	|-                    |My Recipes          |My Recipes          |
+	|-                    |Add/Edit Recipes    |Add/Edit Recipes    |
+	|-                    |-                   |Add/Edit Categories |
+	|Log in               |-                   |-                   |
+	|Sign up              |Sign up             |Sign up             |
+	|-                    |Log out             |Log out             |
+	|Get in touch (email) |Get in touch (email)|Get in touch (email)|
+
+
 16. As the website owner I expect to be able to add new recipe categories, and edit or delete existing categories.
+
+	All CRUD operations for recipe categories are possible for the admin user.
+
 17. As the website owner I want the '404 - page not found' error to be handled in the way that makes visitors stay on Cookable website, so that accidental mispellings in the web address bar or any other issues don't take them elsewhere.
 
+	There is a template included for handling error 404, so that in case of web address misspellings or long periods of inactivity the website is redirected to error 404 page, but the user is still within the Cookable website.
+
+&nbsp;
 
 ### Manual Testing
 #### Features Working Correctly (in various screen sizes) Check
 - Home Page:
     - _Home_ link-button in the header links to _Home_ page - YES
     - ...
+
+
 
 #### Various Internet Browsers Check
 
