@@ -577,10 +577,80 @@ This has to do with the fact that env.py file contains all the sensitive data an
 
 ### Manual Testing
 #### Features Working Correctly (in various screen sizes) Check
-- Home Page:
-    - _Home_ link-button in the header links to _Home_ page - YES
-    - ...
+1. Navbar (Desktop):
+	- TEST 1.1 - _Cookable_ logo links to the _Home_ page - YES
+	- TEST 1.2 - _Recipes_ link goes to _Recipes_ page - YES
+	- TEST 1.3 - _My Recipes_ link goes to _My Recipes_ page - YES
+	- TEST 1.4 - _Add Recipe_ link goes to _Add Recipe_ page - YES
+	- TEST 1.5 - _Categories_ link goes to _Categories_ page - YES
+	- TEST 1.6 - _Sign up_ link goes to _Sign up_ page - YES
+	- TEST 1.7 - _Log in_ link goes to _Log in_ page - YES
+	- TEST 1.8 - _Log out_ logs user in session out of the session - YES
+	- TEST 1.9 - Non-registered user can see only: _Recipe_, _Sign_up_ and _Log in_ navbar links - YES
+	- TEST 1.10 - Registered user can see: _Recipe_, _My Recipes_, _Add Recipe_ and _Log out_ navbar links - YES
+	- TEST 1.11 - Admin user can see: _Recipe_, _My Recipes_, _Add Recipe_, _Categories_ and _Log out_ navbar links - YES
 
+&nbsp;
+
+2. Navbar (Mobile):
+	- TEST 2.1 - _Recipes_ link goes to _Recipes_ page - YES
+	- TEST 2.2 - _My Recipes_ link goes to _My Recipes_ page - YES
+	- TEST 2.3 - _Add Recipe_ link goes to _Add Recipe_ page - YES
+	- TEST 2.4 - _Categories_ link goes to _Categories_ page - YES
+	- TEST 2.5 - _Sign up_ link goes to _Sign up_ page - YES
+	- TEST 2.6 - _Log in_ link goes to _Log in_ page - YES
+	- TEST 2.7 - _Log out_ logs user in session out of the session - YES
+	- TEST 2.8 - Non-registered user can see only: _Recipe_, _Sign_up_ and _Log in_ navbar links - YES
+	- TEST 2.9 - Registered user can see: _Recipe_, _My Recipes_, _Add Recipe_ and _Log out_ navbar links - YES
+	- TEST 2.10 - Admin user can see: _Recipe_, _My Recipes_, _Add Recipe_, _Categories_ and _Log out_ navbar links - YES
+
+&nbsp;
+
+3. Footer:
+	- TEST 3.1 - _Get in touch_ link goes to _Contact us_ page - YES
+	- TEST 3.2 - _Facebook_ link opens Facebook page in a new browser window - YES
+	- TEST 3.3 - _Twitter_ link opens Twitter page in a new browser window - YES
+	- TEST 3.4 - _Pinterest_ link opens Pinterest page in a new browser window - YES
+
+&nbsp;
+
+4. Home page:
+	- TEST 4.1 - _Sign up_ call to action button goes to _Sign up_ page - YES
+	- TEST 4.2 - _Latest recipes_ any of the 3 images links to _Recipes_ page - YES
+
+&nbsp;
+
+5. Recipes page:
+	- TEST 5.1 - _Search_ field takes keyboard input- YES
+	- TEST 5.2 - _Search_ fiels _search_ button (magnifying glass icon) performs search for the keyword entered - YES
+	- TEST 5.3 - _Search_ field _reset_ button resets the search field (reloads the page) - YES
+	- TEST 5.4 - Search using a keyword that exists in recipe(s) returns that(those) recipe(s) - YES
+	- TEST 5.5 - Search using a keyword that doesn't exist in any recipe returns 'No results found' message with suggested recipes displayed underneath - YES
+	- TEST 5.6 - Clicking on any recipe listed on the _Recipes_ page brings user to the full recipe description page of that particular recipe - YES
+	- TEST 5.7 - Clicking on _'Back to top click here'_ link underneath the recipes scrolls the page back to the top - search bar level - YES
+	
+&nbsp;
+
+6. Full Recipe page:
+	- TEST 6.1 - All information displayed properly as per designed format - YES
+	- TEST 6.2 - If recipe contains word 'mix' or 'mixer', the add for "Schmickser' mixer is displayed on the bottom - YES
+	- TEST 6.3 - If the user in session is the owner of the recipe additional buttons: _Edit_ and _Delete_ are displayed at the end of the recipe - YES
+	- TEST 6.4 - If the user in session is the owner of the recipe clicking on _Edit_ button takes user to the _Edit Recipe_ page - YES
+	- TEST 6.5 - If the user in session is the owner of the recipe clicking on _Delete_ brings up the _Delete this recipe_ modal - YES
+	- TEST 6.6 - _Delete this recipe_ modal: clicking on 'yes' deletes the recipe and brings user to _My Recipes_ page - YES
+	- TEST 6.7 - _Delete this recipe_ modal: clicking on 'no' cancels the modal and leaves user on the full current recipe page - YES
+
+&nbsp;
+
+7. My Recipes page:
+	- TEST 7.1 - _Add new recipe_ button on top of the page brings user to the _Add Recipe_ page - YES
+	- TEST 7.2 - _'To browse all recipes click here'_ link on the bottom of the page brings user to the _Recipes_ page - YES
+	- TEST 7.3 - Clicking on any recipe listed on _My Recipes_ page brings user to the full recipe description page of that particular recipe - YES 
+
+&nbsp;
+
+8. Add Recipe page:
+	- TEST 8.1 - _Add new recipe_ button on top of the page brings user to the _Add Recipe_ page - YES
 
 
 #### Various Internet Browsers Check
