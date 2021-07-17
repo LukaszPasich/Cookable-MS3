@@ -650,7 +650,33 @@ This has to do with the fact that env.py file contains all the sensitive data an
 &nbsp;
 
 8. Add Recipe page:
-	- TEST 8.1 - _Add new recipe_ button on top of the page brings user to the _Add Recipe_ page - YES
+	- TEST 8.1 - Choosing _Recipe Category_ selects chosen category, input validation green (valid) - YES
+	- TEST 8.2 - Clicking on _Recipe Category_ and leaving "Choose Category" in (nit selecting any category) makes input validation red (invalid) - YES
+	- TEST 8.3 - _Recipe Name_ input space doesn't take more than 40 characters - YES
+	- TEST 8.4 - _Recipe Name_ input space takes less or equal to 40 characters, validation green (valid) - YES
+	- TEST 8.5 - _Recipe Name_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 8.6 - _Serves_ input space takes 1 or 2 digits as input, validation green (valid) - YES
+	- TEST 8.7 - _Serves_ input space doesn't take non-digit values as input, validation red (invalid) - YES
+	- TEST 8.8 - _Serves_ input space doesn't take more than 2 digits as input, validation red (invalid) - YES
+	- TEST 8.9 - _Cooking time_ input space takes 1-4 digits as input, validation green (valid) - YES
+	- TEST 8.10 - _Cooking time_ input space doesn't take non-digit values as input, validation red (invalid) - YES
+	- TEST 8.11 - _Cooking time_ input space doesn't take more than 4 digits as input, validation red (invalid) - YES
+	- TEST 8.12 - _Ingredients_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 8.13 - _Method_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 8.14 - _Image_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 8.15 - _Add Recipe_ button doesn't add recipe to the database if at least one input space is invalid, and scrolls to the first invalid space - YES
+	- TEST 8.16 - _Add Recipe_ button adds recipe to database if all input fields are valid, and redirects user to _My Recipes_ page (with new recipe displayed there as well) - YES
+	- TEST 8.17 - _Unsplash_ link opens Unsplash page in a new browser window - YES
+	- TEST 8.18 - _Imgur_ link opens Imgur page in a new browser window - YES
+	- TEST 8.19 - _Pixabay_ link opens Pixabay page in a new browser window - YES
+	- TEST 8.20 - _Pexels_ link opens Pexels page in a new browser window - YES
+
+	&nbsp;
+
+9. Edit Recipe page:
+	- TEST 7.1 - _Add new recipe_ button on top of the page brings user to the _Add Recipe_ page - YES
+
+
 
 
 #### Various Internet Browsers Check
