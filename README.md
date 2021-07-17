@@ -803,22 +803,79 @@ No issues specific to devices were discovered.
 #### Bugs Fixed
 1.	- PROBLEM:
 
-        content ...
+        Broken links showing default 'broken links' image and destroying the layout of the website by making the recipe cards not the full, designed width of the card.
         
-        <img src="assets/images_readme/ms3-readme-testing-bugfix1.png" alt="Cookable website - bugs fixed 1">
+        <img src="static/images_readme/ms3-readme-bug1-brokenlink.png" alt="Cookable website - bugs fixed 1, problem">
 
 	- SOLUTION:
-    
-        content ...
-    
-        ```
-        JS
 
-        code block
-        ```
+        I have added this piece of code to handle the missing link.
+
+		```
+		<img src="{{ fullrecipe.image }}" alt="Recipe" onError="this.onerror=null; this.src='https://i.imgur.com/pKDfecc.jpg';">
+		```
+        
+		It allows to replace the missing image with an alternative one. I had to upload my chosen alternative image to imgur website as I had problems with connecting the image from the static folder.
+
+        <img src="static/images_readme/ms3-readme-brokenlink.png" alt="Cookable website - bugs fixed 1, solution">
     
+&nbsp;
+
+2.	- PROBLEM:
+
+        I wanted to add an advert to any recipe that featured keywords 'mix' or 'mixer', but I couldn't figure out how to connect the 'search' for specific keyword function with adding to that very recipe the advert. 
+
+	- SOLUTION:
+
+        Through trials and errors and a lot of Stack Overflow search I've split the task into components:
+		- find all records of recipes with keywords 'mix' or 'mixer',
+		- create a list with only _id: keys for each record extracted,
+		- on the full recipe page compare current recipe _id with each individual _id from the extracted list, if at any point the values are equal - insert the ad.
+
+        <img src="static/images_readme/ms3-readme-bug2-ad.png" alt="Cookable website - bugs fixed 2, solution">
+
+&nbsp;
+
+3.	- PROBLEM:
+
+        I needed to add _Password confirmation_ to the _Sign up_ form. I found a perfect piece of code on Stack Overflow to solve my problem, however 2 issues remained:
+		1. The _password_ and _confirm password_ were considered as matching, when both fields were left blank;
+		2. Even if the passwords were not matching, the original form validation was done through Materialize and not connected to password match validation, so the form was being sent through even if _password_ and _confirm password_ were different.
+
+	- SOLUTION:
+
+        I had to modify the password confirmation code to include the code not matching condition when string length was 0. I also had to obscure and deactivate the 'Sign up' button through CSS while the condition for matching passwords was not met. 
+
+        <img src="static/images_readme/ms3-readme-bug3-confpass.png" alt="Cookable website - bugs fixed 1, solution">
+    
+&nbsp;
+
+4.	- PROBLEM:
+
+        After connecting EmailJS and using the code provided in the documentation, the email was being sent without issues, but the form was just being reset and hanging there awkwardly. There was no way for user to tell whether the message has been sent or not.
+
+	- SOLUTION:
+
+		I've modified the EmailJS code to include the flash message (this one was actually done via JavaScript) confirming that the message has been sent. I have also added page reload after 4 seconds from sending the message.
+    
+&nbsp;
+
+5.	- PROBLEM:
+
+        Splitting ingredients and preparation steps into separate lines. This one was a painfull one. I've encountered this problem early in the development and left for absolutely the end of the project. There is still also a separate, unresolved issue attached to this problem (see [bugs not fixed](#bugs-not-fixed)).
+
+	- SOLUTION:
+
+		Through a really long trial and error period, with many Stack Overflow ideas tried, I've manipulated my ingredients and preparation steps into strings separated by the 'new line' (\n). Below is the code I used in the recipe HTML template to achieve my ingredients and methods split into new lines.
+
+		```
+		{% for ingredient in ingredients.split('\n') %}
+		``` 
+&nbsp;
+
 #### Bugs not Fixed
-I was able to fix all of the problems that I was aware of.
+
+
 
 [Back to top](#contents)
 
