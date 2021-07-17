@@ -85,7 +85,7 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 4. As a person who likes to cook from recipes I find online, I expect the recipes to have at the minimum all the basic information needed for the meals to be actually possible to cook. Any nutritional information would be a nice bonus.
 5. As a user who is looking for specific recipes, I expect the website to have some form of search feature, so I can find recipes by a particular ingredient or any other keyword.
 6. As a visitor who is looking to become a registered user, I would like to see an easy way to register my account. I also make typos easily..., I would like to see some defensive mechanism preventing me confusing the password at the registration, or alternatively, I would like to see password recovery feature.
-7. As a registered user, I expect an easy way to upload and view my recipes. I would like to share my recipes with other users, both regisered and unregisered.
+7. As a registered user, I expect an easy way to upload and view my recipes. I would like to share my recipes with other users, both registered and unregistered.
 8. As a registered user, I would like an easy way to update and delete my recipes. However, I would like to make sure that other users could not modify or delete my recipes. 
 9. As a registered user, I would like to receive a feedback from the website at any point that my account has been affected in any way (uploading/ updating/ deleting recipe confirmation etc.)
 10. As a registered user, I would like to have some way of categorising recipes, so that it is easier to search for a group of similar recipes (or similar ingredients, etc.)
@@ -450,8 +450,74 @@ This has to do with the fact that env.py file contains all the sensitive data an
 ### UX Testing
 #### User Stories Testing
 
-1. As a first time user I want the website to ...
-    - content ...
+1. _As a first time user, I want the website to be simple and easy to navigate, I want all links to be available in the navbar._
+
+	The website is quite clear and easy to follow through the minimalistic layout and consistent use of simple colours and limited amount of legible fonts. The navbar has all links necessary to navigate the website and access all necessary features.
+
+2. _As a website user that accesses internet primarily via mobile, I want the website to be fully responsive, with clean and simple layout and also easy to navigate._
+
+	The website is responsive using Materialize grids. The responsive layout is also supported by buttons' text turning into intuitive icons and navbar collapsing into a hamburger menu and turning into 'slide from the side' navigation. The whole design of the website is done with mobile user first approach.
+
+3. _As a user who looks only for cooking inspiration, I would like to be able to browse and find other people's recipes. It would be ideal if I could do it without having to create an account myself._
+
+	All recipes created by all registered users are available under 'Recipes' link in the navbar. A visitor can get inspired by other cooking recipes without signing up to the service.
+
+4. As a person who likes to cook from recipes I find online, I expect the recipes to have at the minimum all the basic information needed for the meals to be actually possible to cook. Any nutritional information would be a nice bonus.
+
+	Every recipe features:
+	- recipe name,
+	- picture of the dish that the recipe is for,
+	- recipe category (under which it is easier to classify and bundle together similar recipes),
+	- amount of serving portions,
+	- cooking time,
+	- list of ingredients,
+	- method of preparation
+
+	These are all the basic details needed to prepare a dish from the recipe. Unfortunatelly, the nutritional information didn't get into the scope of this project.
+
+5. As a user who is looking for specific recipes, I expect the website to have some form of search feature, so I can find recipes by a particular ingredient or any other keyword.
+
+	There is a search bar on the 'Recipes' page that allows user to find recipe by keyword. Any phrase will be treated as separate keywords at the moment unfortunatelly. The empty search returns alternative suggested recipes, which at the moment is all the recipes, but can be changed upon deciding what the alternatives should be.
+
+6. As a visitor who is looking to become a registered user, I would like to see an easy way to register my account. I also make typos easily..., I would like to see some defensive mechanism preventing me confusing the password at the registration, or alternatively, I would like to see password recovery feature.
+
+	Registering is easy with the 'Sign up' button in the navbar or in the header of the home page taking visitors to the 'Sign up' page which requires visitors to fill out only 3 fields:
+	- username
+	- password
+	- confirm password
+
+	The 'password' and 'confirm password' entry fields are obscured, so that the visitor can't see the entry, but there is a feature that compares both entries and checks for equality, which is some form of defense from creating accidentally passwords with mistakes. Only when both passwords match, the 'Sign up' button for registering gets revealed.
+	
+	There is no password recovery feature at the moment.
+
+7. As a registered user, I expect an easy way to upload and view my recipes. I would like to share my recipes with other users, both registered and unregistered.
+
+	Uploading recipe as a registered user is very easy through 'Add Recipe' page that is available from the nav bar or clicking the link on 'My Recipes' page. Every added recipe gets automatically added to 'My Recipes' page of the user who has added it.
+
+	Every uploaded recipe gets also into the 'Recipes' page that is available to all users, both registered and unregistered.
+
+8. As a registered user, I would like an easy way to update and delete my recipes. However, I would like to make sure that other users could not modify or delete my recipes.
+
+	Every registered and ONLY regisered users can access 'update' or 'delete' recipe options ONLY on the full recipe page of ONLY their own recipes.
+
+9. As a registered user, I would like to receive a feedback from the website at any point that my account has been affected in any way (uploading/ updating/ deleting recipe confirmation etc.)
+
+	Cookable website features flash messages that appear on top of the page in distinctive colour that provide good feedback to the user of what is happening in the background of the website, when users perform actions that for ex. change the records in database or when users make mistakes at sign up/ log in process.
+
+	For full list of flash messages, refer to the [Features](#features) section and [Website interaction feedback](#website-interaction-feedback) part in particular.
+
+10. As a registered user, I would like to have some way of categorising recipes, so that it is easier to search for a group of similar recipes (or similar ingredients, etc.)
+
+	All recipes are saved under specific, user chosen category (from the list of available categories created by admin user), to make it easier to group recipes and search them later under that category keyword.
+	This is useful when users want their recipe to come up under certain keyword, but the keyword doesn't exist anywhere in the name, ingredients or method (ex., user would like a prawn cocktail recipe to come up whenever search for 'fish' is performed).
+
+11. As a user, I would like to be able to get in touch with the website owner, to ask a question, perhaps to suggest a new recipe category or leave any other feedback.
+12. As the website owner, I want to add an advert for the 'Schmickser' brand of mixers to any recipe that contains the keywords 'mix' or 'mixer'.
+13. As the website owner, I want some form of validation of any entry by the users, so that the website layout or database content doesn't break or doesn't get corrupted.
+14. As the website owner, I want some form of validation of usernames and passwords entries at the sign up level, so that the database doesn't get populated by possibly corrupting entries. Also I don't want users to get frustrated and leave the website when they forget passwords, therefore some form of prevention from using overly complicated entries must be in place.
+15. As the website owner, I want the features that are available to registered users to be concealed from non-registered users.
+16. As the website owner I expect to be able to add new recipe categories, and edit or delete existing categories.
+17. As the website owner I want the '404 - page not found' error to be handled in the way that makes visitors stay on Cookable website, so that accidental mispellings in the web address bar or any other issues don't take them elsewhere.
 
 
 ### Manual Testing
