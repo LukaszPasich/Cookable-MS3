@@ -876,11 +876,52 @@ No issues specific to devices were discovered.
 #### Bugs not Fixed
 
 
+1.	- PROBLEM:
+
+		Deactivated _Sign up_ button looks weird and washed out on Safari web browser.
+       <img src="static/images_readme/ms3-readme-bugun1-safari.png" alt="Cookable website - bugs unsolved 1">
+	   I found a post on Stack Overflow explaining that there is an issue of how CSS opacity is displayed on Safari browser.
+	   [Link to the post here](https://stackoverflow.com/questions/47674285/different-display-of-css-opacity-in-safari-browser)
+
+&nbsp;
+
+2.	- PROBLEM:
+
+		When editing recipes, all the ingredients and preparation steps get squashed up again into lists of '\r\n' separated values.
+
+       <img src="static/images_readme/ms3-readme-bugun2-editrecipe.png" alt="Cookable website - bugs unsolved 2">
+	  
+	  Even if users wanted to update just the name of the recipe or cooking time, they would have to go into ingredients and method and split those values into separate lines every time.
+
+&nbsp;
+
+3.	- PROBLEM:
+
+		Deleting categories, doesn't have any defense mechanism asking whether user was sure to delete that category or not. Once the delete button is clicked, the category is gone.
+		
+		There is a defense mechanism working currently for deleting the recipe and it utilizes the Materialize modal. This modal connects to the _delete_ button using the same _id_. The problem with categories is that there are many categories on one page as opposed to just one recipe on the page where it can be deleted. The modal connection breaks as soon as there is a bunch of same _id's_ on the page. I tried passing the name of the category as the value for _id_ when creating categories, to have unique _id's_, but it did not work.
+
+&nbsp;
+
+4.	- PROBLEM:
+
+		There is no defensive mechanism preventing creation of the same categories.
+
+		<img src="static/images_readme/ms3-readme-bugun4-catduplicate.png" alt="Cookable website - bugs unsolved 4">
+
+&nbsp;
+
+5.	- PROBLEM:
+
+		There is currently, clumsily implemented, username appearing in the navbar. However, at the moment this username only appears on pages rendered by functions that take _username_ argument, so pages, that are exclusive access to registered users and admin. 
+
+		<img src="static/images_readme/ms3-readme-bugun5-username.png" alt="Cookable website - bugs unsolved 5">
+		
+		Adding _username_ to the other pages - pages that are shared by registered and non-registered users - was creating a lot of problems for non-registered users.
+
+&nbsp;
 
 [Back to top](#contents)
-
-### Username on the navbar
-This is clumsily implemented at the moment as the username appears only on pages rendered by functions that take _username_ argument anyway. All pages that 
 
 ---
 
