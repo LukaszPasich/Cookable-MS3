@@ -398,18 +398,55 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 
 &nbsp;
 
-- [JSHint](https://jshint.com/) was used for JavaScript validation (New JavaScript features (ES6) were selected in configuration):
-    - JavaScript validation - Errors: 0
+- [JSHint](https://jshint.com/) was used for JavaScript validation (New JavaScript features (ES6) and jQuery were selected in configuration):
+    - script.js - JavaScript validation - Errors: 0
+	- sendEmail.js - JavaScript validation - Errors: 0
 
-<img src="assets/images_readme/ms3-readme-test-jshint.png" alt="Cookable - JavaScript validation result">
+&nbsp;
 
 - [Web Accessibility](https://www.webaccessibility.com) was used to validate website's accessibility:
-	- _Home page_ accessibility test result [HERE](https://www.webaccessibility.com/results/...) - Violations: 0, Compliance score: 100%
+	- _Home page_ website accessibility score: 100%
+	- _Recipes page_ website accessibility score: 100%
+	- _Full recipe page_ website accessibility score: 100%
+	- _My recipes page_ - password protected, could not be assessed
+	- _Edit recipe page_ - password protected, could not be assessed
+	- _Add recipe page_ - password protected, could not be assessed
+	- _Categories page_ - password protected, could not be assessed
+	- _Edit category page_ - password protected, could not be assessed
+	- _Add category page_ - password protected, could not be assessed
+	- _Sign up page_ website accessibility score: 100%
+	- _Log in page_ website accessibility score: 100%
+	- _Contact page_ website accessibility score: 98%
+	- _Error 404 page_ website accessibility score: 100%
+
+&nbsp;
+
     
 - [Google Mobile Friendly Test](https://search.google.com/test/mobile-friendly) was used to test responsiveness of the website:
-	- _Home page_ responsiveness test result [HERE](https://search.google.com/test/...) - Mobile friendly
-    
+	- _Home page_ - mobile friendly
+	- _Recipes page_ - mobile friendly
+	- _Full recipe page_ - mobile friendly
+	- _My recipes page_ - password protected, could not be assessed
+	- _Edit recipe page_ - password protected, could not be assessed
+	- _Add recipe page_ - password protected, could not be assessed
+	- _Categories page_ - password protected, could not be assessed
+	- _Edit category page_ - password protected, could not be assessed
+	- _Add category page_ - password protected, could not be assessed
+	- _Sign up page_ - mobile friendly
+	- _Log in page_ - mobile friendly
+	- _Contact page_ - mobile friendly
+	- _Error 404 page_ - mobile friendly
+
+&nbsp;
 	
+- Python code was verified through GitPod's linter, showing only 1 error:
+```	
+"env" imported but unused
+```
+This has to do with the fact that env.py file contains all the sensitive data and could not be pushed to GitHub repository.
+
+&nbsp;
+
 ### UX Testing
 #### User Stories Testing
 

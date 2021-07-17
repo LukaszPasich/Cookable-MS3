@@ -7,13 +7,13 @@ function sendMail(contactForm) {
     .then(
         function(response) {
             console.log("SUCCESS", response);
-            flashEmail = document.getElementById("flash-messages-email");
+            var flashEmail = document.getElementById("flash-messages-email");
             flashEmail.style.display = 'inline-block';
             flashEmail.innerHTML = "Message sent successfully";
         },
         function(error) {
             console.log("FAILED", error);
-            flashEmail = document.getElementById("flash-messages-email");
+            var flashEmail = document.getElementById("flash-messages-email");
             flashEmail.style.display = 'inline-block';
             flashEmail.innerHTML = "Message not sent!";
         }
