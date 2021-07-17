@@ -674,10 +674,85 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	&nbsp;
 
 9. Edit Recipe page:
-	- TEST 7.1 - _Add new recipe_ button on top of the page brings user to the _Add Recipe_ page - YES
+	- TEST 9.1 - _Edit Recipe_ page is always populated with the correct data - YES
+	- TEST 9.2 - _Recipe Category_ let's user choose from the selection of all categories - YES
+	- TEST 9.3 - _Recipe Name_ input space doesn't take more than 40 characters - YES
+	- TEST 9.4 - _Recipe Name_ input space takes less or equal to 40 characters, validation green (valid) - YES
+	- TEST 9.5 - _Recipe Name_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 9.6 - _Serves_ input space takes 1 or 2 digits as input, validation green (valid) - YES
+	- TEST 9.7 - _Serves_ input space doesn't take non-digit values as input, validation red (invalid) - YES
+	- TEST 9.8 - _Serves_ input space doesn't take more than 2 digits as input, validation red (invalid) - YES
+	- TEST 9.9 - _Cooking time_ input space takes 1-4 digits as input, validation green (valid) - YES
+	- TEST 9.10 - _Cooking time_ input space doesn't take non-digit values as input, validation red (invalid) - YES
+	- TEST 9.11 - _Cooking time_ input space doesn't take more than 4 digits as input, validation red (invalid) - YES
+	- TEST 9.12 - _Ingredients_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 9.13 - _Method_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 9.14 - _Image_ input doesn't validate leaving the space blank, validation red (invalid) - YES
+	- TEST 9.15 - _Save_ button doesn't update recipe in the database if at least one input space is invalid, and scrolls to the first invalid space - YES
+	- TEST 9.16 - _Save_ button updates recipe in the database if all input fields are valid, and redirects user to _My Recipes_ page (with updated recipe displayed there as with changes included) - YES
+	- TEST 9.17 - _Unsplash_ link opens Unsplash page in a new browser window - YES
+	- TEST 9.18 - _Imgur_ link opens Imgur page in a new browser window - YES
+	- TEST 9.19 - _Pixabay_ link opens Pixabay page in a new browser window - YES
+	- TEST 9.20 - _Pexels_ link opens Pexels page in a new browser window - YES
+	- TEST 9.21 - _Cancel_ button cancels all changes and redirects user to _Recipes_ page - YES
+
+	&nbsp;
+
+10. Categories page:
+	- TEST 10.1 - All categories are displayed and each category with _Edit_ and _Delete_ button beside the name - YES
+	- TEST 10.2 - Clicking on _Edit_ button takes user to the _Edit category_ page - YES
+	- TEST 10.3 - Clicking on _Delete_ button deletes the corresponding category immediately - YES
+	- TEST 10.4 - Clicking on _Add category_ button takes user to the _Add category_ page - YES
+
+	&nbsp;
+
+11. Add Category page:
+	- TEST 11.1 - _Category name_ input field takes maximum of 20 characters - YES
+	- TEST 11.2 - _Category name_ input field doesn't take less than 2 characters, validation red (invalid) - YES
+	- TEST 11.3 - _Add Category_ button doesn't add category to the database if the input space is invalid, the input space asks for the correct input instead - YES
+	- TEST 11.4 - _Add Category_ button adds category to the database if the input space is valid, the user is redirected to the _Categories_ page, where the newly added category is displayed (in it's correct alphabetical position) - YES
+
+12. Edit Category page:
+	- TEST 12.1 - _Edit Category_ page is always populated with the correct data - YES
+	- TEST 12.1 - _Category name_ input field takes maximum of 20 characters - YES
+	- TEST 12.2 - _Category name_ input field doesn't take less than 2 characters, validation red (invalid) - YES
+	- TEST 11.3 - _Save_ button doesn't update the category in the database if the input space is invalid, the input space asks for the correct input instead - YES
+	- TEST 12.4 - _Save_ button adds category to the database if the input space is valid, the user is redirected to the _Categories_ page, where the updated category is displayed (in it's correct alphabetical position) - YES
+	- TEST 12.5 - _Cancel_ button cancels all changes and redirects user to the _Categories_ page - YES
+
+13. Sign up page:
+	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
 
 
 
+
+14. Log in page:
+	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
+
+
+
+
+15. Contact page:
+	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
+
+
+
+
+16. Flash messages:
+	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
+
+
+
+
+17. Broken image link:
+	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
+
+
+
+
+
+18. 404 page:
+	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
 
 #### Various Internet Browsers Check
 
