@@ -585,7 +585,7 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 1.5 - _Categories_ link goes to _Categories_ page - YES
 	- TEST 1.6 - _Sign up_ link goes to _Sign up_ page - YES
 	- TEST 1.7 - _Log in_ link goes to _Log in_ page - YES
-	- TEST 1.8 - _Log out_ logs user in session out of the session - YES
+	- TEST 1.8 - _Log out_ logs user in session out of the session and redirects user to the _Log in_ page - YES
 	- TEST 1.9 - Non-registered user can see only: _Recipe_, _Sign_up_ and _Log in_ navbar links - YES
 	- TEST 1.10 - Registered user can see: _Recipe_, _My Recipes_, _Add Recipe_ and _Log out_ navbar links - YES
 	- TEST 1.11 - Admin user can see: _Recipe_, _My Recipes_, _Add Recipe_, _Categories_ and _Log out_ navbar links - YES
@@ -599,7 +599,7 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 2.4 - _Categories_ link goes to _Categories_ page - YES
 	- TEST 2.5 - _Sign up_ link goes to _Sign up_ page - YES
 	- TEST 2.6 - _Log in_ link goes to _Log in_ page - YES
-	- TEST 2.7 - _Log out_ logs user in session out of the session - YES
+	- TEST 2.7 - _Log out_ logs user in session out of the session and redirects user to the _Log in_ page - YES
 	- TEST 2.8 - Non-registered user can see only: _Recipe_, _Sign_up_ and _Log in_ navbar links - YES
 	- TEST 2.9 - Registered user can see: _Recipe_, _My Recipes_, _Add Recipe_ and _Log out_ navbar links - YES
 	- TEST 2.10 - Admin user can see: _Recipe_, _My Recipes_, _Add Recipe_, _Categories_ and _Log out_ navbar links - YES
@@ -645,7 +645,8 @@ This has to do with the fact that env.py file contains all the sensitive data an
 7. My Recipes page:
 	- TEST 7.1 - _Add new recipe_ button on top of the page brings user to the _Add Recipe_ page - YES
 	- TEST 7.2 - _'To browse all recipes click here'_ link on the bottom of the page brings user to the _Recipes_ page - YES
-	- TEST 7.3 - Clicking on any recipe listed on _My Recipes_ page brings user to the full recipe description page of that particular recipe - YES 
+	- TEST 7.3 - Clicking on any recipe listed on _My Recipes_ page brings user to the full recipe description page of that particular recipe - YES
+	- TEST 7.4 - If user doesn't have any recipes uploaded the 'No recipes uploaded' message is displayed on the page- YES
 
 &nbsp;
 
@@ -721,28 +722,54 @@ This has to do with the fact that env.py file contains all the sensitive data an
 	- TEST 12.5 - _Cancel_ button cancels all changes and redirects user to the _Categories_ page - YES
 
 13. Sign up page:
-	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
-
-
-
+	- TEST 13.1 - _Sign up_ button appears faded out and is inactive when form first loaded - YES (apart from Safari web browser)
+	- TEST 13.2 - _Username_ input space does not allow more than 15 characters - YES
+	- TEST 13.3 - _Username_ input space does not validate inputs with less than 5 characters, validation red (invalid) - YES
+	- TEST 13.4 - _Username_ input space does not validate inputs with non alphanumeric values, validation red (invalid) - YES
+	- TEST 13.5 - _Username_ input space validates inputs with alphanumeric values, and between 5 and 15 characters, validation green (valid) - YES
+	- TEST 13.6 - _Password_ input space does not allow more than 15 characters - YES
+	- TEST 13.7 - _Password_ input space does not validate inputs with less than 5 characters, validation red (invalid) - YES
+	- TEST 13.8 - _Password_ input space does not validate inputs with non alphanumeric values, validation red (invalid) - YES
+	- TEST 13.9 - _Password_ input space validates inputs with alphanumeric values, and between 5 and 15 characters, validation green (valid) - YES
+	- TEST 13.10 - _Confirm Password_ input space does not allow more than 15 characters - YES
+	- TEST 13.11 - _Confirm Password_ input space does not validate inputs with less than 5 characters, validation red (invalid) - YES
+	- TEST 13.12 - _Confirm Password_ input space does not validate inputs with non alphanumeric values, validation red (invalid) - YES
+	- TEST 13.13 - _Confirm Password_ input space validates inputs with alphanumeric values, and between 5 and 15 characters, validation green (valid) - YES
+	- TEST 13.14 - While _Password_ and _Confirm Password_ inputs are different or are both empty, the 'Sign up' button reamains faded out and 'Passwords don't match' message is displayed  - YES
+	- TEST 13.15 - While _Password_ and _Confirm Password_ inputs are both same, the 'Sign up' button becomes active and 'Passwords match' message is displayed  - YES
+	- TEST 13.16 - Clicking on _Sign up_ button when at least one of the input spaces is invalidated, does not create a new user in the database and the first invalid space asks for the correct input to be entered - YES
+	- TEST 13.17 - Clicking on _Sign up_ button when all of the input spaces are validated, creates a new user in the database and redirects user to _My Recipes_ page - YES
 
 14. Log in page:
-	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
-
-
-
+	- TEST 14.1 - _Username_ input space does not allow more than 15 characters - YES
+	- TEST 14.2 - _Username_ input space does not validate inputs with less than 5 characters, validation red (invalid) - YES
+	- TEST 14.3 - _Username_ input space does not validate inputs with non alphanumeric values, validation red (invalid) - YES
+	- TEST 14.4 - _Username_ input space validates inputs with alphanumeric values, and between 5 and 15 characters, validation green (valid) - YES
+	- TEST 14.5 - _Password_ input space does not allow more than 15 characters - YES
+	- TEST 14.6 - _Password_ input space does not validate inputs with less than 5 characters, validation red (invalid) - YES
+	- TEST 14.7 - _Password_ input space does not validate inputs with non alphanumeric values, validation red (invalid) - YES
+	- TEST 14.8 - _Password_ input space validates inputs with alphanumeric values, and between 5 and 15 characters, validation green (valid) - YES
+	- TEST 14.9 - Clicking on _Log in_ button when at least one of the input spaces is invalidated, does not log user in, and the first invalid space asks for the correct input to be entered - YES
+	- TEST 14.10 - Clicking on _Log in_ button when all of the input spaces are validated, logs the user in, and redirects user to _My Recipes_ page - YES
 
 15. Contact page:
-	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
-
-
-
+	- TEST 15.1 - _Email_ input space validates only appropriate email format input - YES
+	- TEST 15.2 - _Submit_ button does not send email if at least one of the input spaces is left blank - YES
+	- TEST 15.3 - _Submit_ button does sends an email if at all of the input spaces are filled out and the _email_ space has the correct email format - YES
 
 16. Flash messages:
-	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
-
-
-
+	- TEST 16.1 - Flash message: "Welcome, {{user_name}}!" displayed when users log in to their accounts - YES
+	- TEST 16.2 - Flash message: "You have signed up successfully!" displayed when users sign up and create account - YES
+	- TEST 16.3 - Flash message: "Username already exists" displayed when users try to sign up using existing username - YES
+	- TEST 16.4 - Flash message: "Incorrect username and/or password" displayed when users try to log in with incorrect username or password  - YES
+	- TEST 16.5 - Flash message: "You have been logged out" displayed when users log out - YES
+	- TEST 16.6 - Flash message: "Recipe Successfully Added" displayed when users add new recipe - YES
+	- TEST 16.7 - Flash message: "Recipe Successfully Updated" displayed when users edit the recipe - YES
+	- TEST 16.8 - Flash message: "Recipe Successfully Deleted" displayed when users delete the recipe - YES
+	- TEST 16.9 - Flash message: "New Category Added" displayed when admin user adds a new recipe category - YES
+	- TEST 16.10 - Flash message: "Category Successfully Updated" displayed when admin user edits a recipe category - YES
+	- TEST 16.11 - Flash message: "Category Successfully Deleted" displayed when admin user deletes a category - YES
+	- TEST 16.12 - Flash message: "Messsage sent successfully" displayed when users send email from the contact page - YES
 
 17. Broken image link:
 	- TEST 13.1 - _Edit Category_ page is always populated with the correct data - YES
