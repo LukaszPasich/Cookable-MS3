@@ -1008,6 +1008,13 @@ in the _Automatic Deploys_ section select the branch you wish to use.
 
 ### Media
 
+Images for the _Home_ page banner:
+- AdobeStock_294491192 - by LIGHTFIELD STUDIOS, downloaded from [www.adobestock.com](https://stock.adobe.com/ie/)
+- AdobeStock_292657049 - by LIGHTFIELD STUDIOS, downloaded from [www.adobestock.com](https://stock.adobe.com/ie/)
+
+Image for 'Schmickser' mixer ad:
+- AdobeStock_109675273 - by Dmitry_Evs, downloaded from [www.adobestock.com](https://stock.adobe.com/ie/)
+
 Images for recipes:
 - Roast chicken - by Hayley Ryczek, downloaded from [www.unsplash.com](https://unsplash.com)
 - Scalloped potatoes - by jereskok, downloaded from [www.pixabay.com](https://pixabay.com)
@@ -1024,10 +1031,28 @@ Images for recipes:
 - Mango cooler - by Alexander Mils, downloaded from [www.unsplash.com](https://unsplash.com)
 - Pizza mozzarella - by heison, downloaded from [www.pixabay.com](https://pixabay.com)
 - Double-choc brownies - by NordWood Themes, downloaded from [www.unsplash.com](https://unsplash.com)
-- ...oops the link seems to be broken - by Hayley Ryczek, downloaded from [www.unsplash.com](https://unsplash.com)
+- ...oops the link seems to be broken - original by Andre William, downloaded from [www.pexels.com](https://pexels.com), modified by me
 
 ### Code
-- Feature taken from this tutorial: [https://www.youtube.com/...](https://www.youtube.com/...), (script.js file, array declared in line 013).
+- Splitting ingredients and methods into separate lines; extracting _id: value pairs only from multiple records: [https://stackoverflow.com/questions/13254241/removing-key-values-pairs-from-a-list-of-dictionaries](https://stackoverflow.com/questions/13254241/removing-key-values-pairs-from-a-list-of-dictionaries), (app.py file, line 206).
+
+- Splitting ingredients and methods into separate lines; turning the list of dicts into the list of "_id" values: [https://stackoverflow.com/questions/20891141/convert-list-of-dicts-to-list](https://stackoverflow.com/questions/20891141/convert-list-of-dicts-to-list), (app.py file, line 210-212).
+
+- The view for Error 404 handling: [https://www.geeksforgeeks.org/python-404-error-handling-in-flask/](https://www.geeksforgeeks.org/python-404-error-handling-in-flask/), (app.py file, line 293-295).
+
+- Image overlay style code found here: [https://www.w3schools.com/howto/howto_css_image_overlay_title.asp](https://www.w3schools.com/howto/howto_css_image_overlay_title.asp), (style.css file, line 365-395).
+
+- Materialize Form Validation: [Code Institute Tutorial (Backend Development | Mini Project | Adding a task - Writing to the Database | Materialize Form Validation](https://learn.codeinstitute.net/courses), (script.js file, line 18-49).
+
+- jQuery Animated Flash Message: [Chttps://stackoverflow.com/questions/20437938/jquery-disappear-div-with-delay-then-appear-disappear-on-hover](https://stackoverflow.com/questions/20437938/jquery-disappear-div-with-delay-then-appear-disappear-on-hover), (script.js file, line 56-63).
+
+- Confirm password matching validation: [https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518](https://stackoverflow.com/questions/21727317/how-to-check-confirm-password-field-in-form-without-reloading-page/21727518), (script.js file, line 71-81).
+
+- Handling of the broken image link: [https://themeisle.com/blog/missing-images-on-website/](https://themeisle.com/blog/missing-images-on-website/),
+
+	(full_recipe.html file, line 27-28),<br>
+	(my_recipes.html file, line 28-29),<br>
+	(recipes.html file, line 36-37 and line 58-59)
 
 ### Resources
 Websites I have accessed for solutions/ questions and extra resources:
