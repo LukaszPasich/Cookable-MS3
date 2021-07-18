@@ -49,8 +49,9 @@ _Cookable_ is your very own personal recipe organiser. Save your favourite recip
 	- [Manual Testing](#manual-testing)
 	- [Bugs](#bugs)
 5. [Deployment](#deployment)
-    - [Github Pages Deployment](#github-pages-deployment)
-    - [Cloning](#cloning)
+    - [Forking GitHub Repository](#forking-github-repository)
+	- [Making a Local Clone](#making-a-local-clone)
+	- [Heroku Deployment](#heroku-deployment)
 6. [Credits](#credits)
 	- [Content](#content)
 	- [Media](#media)
@@ -359,6 +360,7 @@ If the user manually enters incorrect web address, or if 'error 404' happens for
 - [Materialize](https://materializecss.com/) grids were used in particular to create and maintain the design layout across different screen/viewport sizes and make the website responsive easily. Some dynamic components from Materialize were also used.
 - [Google Fonts](https://fonts.google.com) was used to link the "Montserrat" and "Zilla Slab" fonts.
 - [Font Awesome](https://fontawesome.com) was used for icons.
+- [RandomKeyGen](https://randomkeygen.com) was used for generating Fort Knox password for session user secret key.
 
 ### Languages
 - HTML5
@@ -996,11 +998,33 @@ in the _Automatic Deploys_ section select the branch you wish to use.
 
 ## Credits
 ### Content
-content ...
+- The textual content was inspired by and in some instances copied from these 2 websites:
+	- [Cookbook](https://thecookbookapp.com/#)
+	- [Foodies](http://foodiesharing.com/#)
+- The actual recipes uploaded initially by _admin_ and _user1_ were taken from:
+	- [Jamie Oliver](https://www.jamieoliver.com/) website.
+
 
 
 ### Media
-- image - by artist, downloaded from [www.vecteezy.com](https://www.vecteezy.com/...)
+
+Images for recipes:
+- Roast chicken - by Hayley Ryczek, downloaded from [www.unsplash.com](https://unsplash.com)
+- Scalloped potatoes - by jereskok, downloaded from [www.pixabay.com](https://pixabay.com)
+- Perfect roast beef - by Iman Zaker, downloaded from [www.unsplash.com](https://unsplash.com)
+- Spaghetti carbonara - by Bruna Branco, downloaded from [www.unsplash.com](https://unsplash.com)
+- Grilled mushroom risotto - by MadMax Chef, downloaded from [www.unsplash.com](https://unsplash.com)
+- Speedy quiche traybake - by Dilyara Garifullina, downloaded from [www.unsplash.com](https://unsplash.com)
+- Classic ratatouille - by wazscience, downloaded from [www.imgur.com](https://imgur.com)
+- Pumpkin soup - by Hayley Ryczek, downloaded from [www.unsplash.com](https://unsplash.com)
+- Grilled masala fish - by Alice Pasqual, downloaded from [www.unsplash.com](https://unsplash.com)
+- Green salad with lemon dressing - by Heather Barnes, downloaded from [www.unsplash.com](https://unsplash.com)
+- Chocolate porridge - by Eiliv-Sonas Aceron, downloaded from [www.unsplash.com](https://unsplash.com)
+- Berry tart - by Dilyara Garifullina, downloaded from [www.unsplash.com](https://unsplash.com)
+- Mango cooler - by Alexander Mils, downloaded from [www.unsplash.com](https://unsplash.com)
+- Pizza mozzarella - by heison, downloaded from [www.pixabay.com](https://pixabay.com)
+- Double-choc brownies - by NordWood Themes, downloaded from [www.unsplash.com](https://unsplash.com)
+- ...oops the link seems to be broken - by Hayley Ryczek, downloaded from [www.unsplash.com](https://unsplash.com)
 
 ### Code
 - Feature taken from this tutorial: [https://www.youtube.com/...](https://www.youtube.com/...), (script.js file, array declared in line 013).
